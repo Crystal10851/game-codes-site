@@ -1,0 +1,104 @@
+{
+  "slug": "honkai-star-rail",
+  "name": "Honkai: Star Rail",
+  "tagline": "Working Honkai: Star Rail codes for free Stellar Jade, Credits and upgrade materials.",
+  "description": "Honkai: Star Rail is HoYoverse's turn-based space-fantasy RPG. The team releases redemption codes during every version livestream (twice per major patch), and ad-hoc codes for milestones and promotional events. Livestream codes are short-lived, often expiring within a day or two, so it's worth redeeming the moment they go live.",
+  "platform": "PC, Mobile, PS5",
+  "developer": "HoYoverse",
+  "officialUrl": "https://hsr.hoyoverse.com",
+  "color": "#7b3fe4",
+  "redeemSteps": [
+    {
+      "title": "Reach Trailblaze Level 10",
+      "detail": "Your account must be at least TL 10 to redeem codes. New trailblazers should complete the opening Herta Space Station arc first."
+    },
+    {
+      "title": "Open the redemption portal",
+      "detail": "Visit the official page at hsr.hoyoverse.com/gift. You can also redeem in-game via Phone menu → Profile → Redemption Code (mobile only)."
+    },
+    {
+      "title": "Log in and select your server",
+      "detail": "Use your HoYoverse account and pick the correct server: America, Europe, Asia, or TW/HK/MO."
+    },
+    {
+      "title": "Enter the code",
+      "detail": "Type or paste the code exactly. Codes are case-sensitive."
+    },
+    {
+      "title": "Claim from in-game mail",
+      "detail": "Stellar Jade and items arrive in your in-game mailbox within minutes. Mail expires after 30 days."
+    }
+  ],
+  "faq": [
+    {
+      "question": "How often do new Honkai: Star Rail codes drop?",
+      "answer": "Three livestream codes are typically released for each new version (every ~6 weeks). Additional codes appear for milestones, anniversaries and special collaborations."
+    },
+    {
+      "question": "Why is my Honkai: Star Rail code invalid?",
+      "answer": "Most often the code has expired (livestream codes only last 24–48 hours), you entered it on the wrong server, or there was a typo. Codes are case-sensitive."
+    },
+    {
+      "question": "Can I redeem codes on multiple HoYoverse accounts?",
+      "answer": "Yes — each HoYoverse account can redeem the same code once. The same physical code cannot be used twice on a single account."
+    }
+  ],
+  "codes": [
+    {
+      "code": "STARRAILGIFT",
+      "reward": "50 Stellar Jade + 10,000 Credits",
+      "addedOn": "2026-01-01",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Permanent code, works on every server."
+    },
+    {
+      "code": "HSRVER2P9XKM",
+      "reward": "100 Stellar Jade + 4 Refined Aether",
+      "addedOn": "2026-05-02",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Version 3.2 livestream code."
+    },
+    {
+      "code": "HSRBN8KQJ4M2",
+      "reward": "100 Stellar Jade + 50,000 Credits",
+      "addedOn": "2026-05-02",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Version 3.2 livestream code."
+    },
+    {
+      "code": "HSRPM5RTYU38",
+      "reward": "100 Stellar Jade + 3 Traveler's Guide",
+      "addedOn": "2026-05-02",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Version 3.2 livestream code."
+    },
+    {
+      "code": "HSR3RDANNIV",
+      "reward": "200 Stellar Jade + Special Pass",
+      "addedOn": "2026-04-26",
+      "expiresOn": "2026-05-10",
+      "status": "expired",
+      "notes": "3rd anniversary celebration."
+    },
+    {
+      "code": "HSRVER31N8VG",
+      "reward": "100 Stellar Jade + 50,000 Credits",
+      "addedOn": "2026-03-21",
+      "expiresOn": "2026-03-23",
+      "status": "expired",
+      "notes": "Version 3.1 livestream."
+    },
+    {
+      "code": "HSRBG9PCMT34",
+      "reward": "100 Stellar Jade + 4 Refined Aether",
+      "addedOn": "2026-02-08",
+      "expiresOn": "2026-02-10",
+      "status": "expired",
+      "notes": ""
+    }
+  ]
+}

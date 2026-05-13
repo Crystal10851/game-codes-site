@@ -1,0 +1,69 @@
+name: Scrape codes from X
+
+# Polls configured X (Twitter) handles every 6 hours, extracts candidate
+# redeem codes via regex + trigger words, and opens a DRAFT PR for human
+# review when new candidates are found.
+#
+# Required secret:
+#   X_BEARER_TOKEN   App-only bearer token from developer.x.com.
+#                    Without it, the workflow runs but the script is a no-op.
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'   # every 6 hours UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: scrape-codes
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install deps
+        run: npm ci --no-audit --no-fund
+
+      - name: Scrape candidate codes
+        env:
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+        run: node scripts/scrape-codes.mjs
+
+      - name: Open draft PR if there are changes
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: 'chore(codes): auto-detected candidates from X'
+          title: 'Auto: candidate codes from X — please verify before merging'
+          body: |
+            Automated scrape from X has detected potential new redeem codes.
+
+            **Before merging — please:**
+            1. Open each tweet linked in the `notes` field.
+            2. Verify the code redeems successfully in-game.
+            3. Replace `"reward": "TBD — please verify in tweet"` with the real reward.
+            4. Remove any false positives (game-specific jargon that matched the regex).
+
+            Auto-detection is heuristic. Each scraping pass appends candidates to
+            the top of the relevant `codes[]` array.
+          branch: auto/scrape-codes
+          delete-branch: true
+          draft: true
+          add-paths: |
+            data/games/*.json
+            .cache/x-user-ids.json
+          labels: |
+            auto-pr
+            needs-review

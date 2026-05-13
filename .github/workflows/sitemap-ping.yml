@@ -1,0 +1,132 @@
+name: Sitemap ping
+
+# Pings search engines when game data or the sitemap definition changes.
+#
+# Required repo secrets:
+#   SITE_URL       Public site URL, e.g. https://yourdomain.com
+#   INDEXNOW_KEY   IndexNow key (16–128 hex chars). Generate with:
+#                    openssl rand -hex 16
+#                  Then host a static file at SITE_URL/<INDEXNOW_KEY>.txt
+#                  whose contents are exactly the key.
+#                  (Put it at public/<key>.txt and commit.)
+#
+# Note: Google's /ping?sitemap= endpoint was deprecated in June 2023.
+# Re-submit the sitemap from Google Search Console for Google indexing.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/games/**.json'
+      - 'src/app/sitemap.ts'
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: 'Game slug to ping (leave blank to ping only sitemap + home)'
+        required: false
+
+permissions:
+  contents: read
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Resolve site config
+        id: cfg
+        env:
+          SITE_URL_SECRET: ${{ secrets.SITE_URL }}
+        run: |
+          SITE_URL="${SITE_URL_SECRET:-https://example.com}"
+          SITE_URL="${SITE_URL%/}"
+          HOST="${SITE_URL#https://}"
+          HOST="${HOST#http://}"
+          echo "site_url=$SITE_URL" >> "$GITHUB_OUTPUT"
+          echo "host=$HOST" >> "$GITHUB_OUTPUT"
+          if [ -z "${{ secrets.INDEXNOW_KEY }}" ]; then
+            echo "::warning::INDEXNOW_KEY secret is unset — IndexNow ping will be skipped."
+          fi
+          if [ -z "$SITE_URL_SECRET" ]; then
+            echo "::warning::SITE_URL secret is unset — falling back to https://example.com."
+          fi
+
+      - name: Derive changed game slugs
+        id: slugs
+        run: |
+          MANUAL_SLUG="${{ github.event.inputs.slug }}"
+          if [ -n "$MANUAL_SLUG" ]; then
+            echo "list=$MANUAL_SLUG" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          CHANGED=$(git diff --name-only HEAD~1 HEAD -- 'data/games/*.json' || true)
+          SLUGS=""
+          while IFS= read -r f; do
+            [ -z "$f" ] && continue
+            slug=$(basename "$f" .json)
+            SLUGS="$SLUGS $slug"
+          done <<< "$CHANGED"
+          echo "list=$(echo $SLUGS | xargs)" >> "$GITHUB_OUTPUT"
+          echo "Detected slugs: $SLUGS"
+
+      - name: Build URL list
+        id: urls
+        env:
+          SITE: ${{ steps.cfg.outputs.site_url }}
+          SLUGS: ${{ steps.slugs.outputs.list }}
+        run: |
+          set -e
+          : > /tmp/urls.txt
+          echo "$SITE/" >> /tmp/urls.txt
+          echo "$SITE/sitemap.xml" >> /tmp/urls.txt
+          for slug in $SLUGS; do
+            echo "$SITE/$slug" >> /tmp/urls.txt
+            echo "$SITE/$slug/latest" >> /tmp/urls.txt
+            echo "$SITE/$slug/expired" >> /tmp/urls.txt
+            echo "$SITE/$slug/redeem-guide" >> /tmp/urls.txt
+          done
+          echo "URLs to ping:"
+          cat /tmp/urls.txt
+          json=$(jq -Rs 'split("\n") | map(select(length > 0))' < /tmp/urls.txt)
+          {
+            echo 'json<<URLEOF'
+            echo "$json"
+            echo 'URLEOF'
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Ping IndexNow (Bing / Yandex / Seznam / Naver)
+        if: ${{ secrets.INDEXNOW_KEY != '' }}
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+          HOST: ${{ steps.cfg.outputs.host }}
+          SITE: ${{ steps.cfg.outputs.site_url }}
+          URLS_JSON: ${{ steps.urls.outputs.json }}
+        run: |
+          body=$(jq -n \
+            --arg host "$HOST" \
+            --arg key "$INDEXNOW_KEY" \
+            --arg keyLoc "$SITE/$INDEXNOW_KEY.txt" \
+            --argjson urls "$URLS_JSON" \
+            '{host:$host, key:$key, keyLocation:$keyLoc, urlList:$urls}')
+          echo "Request body:"
+          echo "$body"
+          status=$(curl -sS -o /tmp/resp.txt -w '%{http_code}' \
+            -X POST https://api.indexnow.org/IndexNow \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            -d "$body")
+          echo "IndexNow HTTP $status"
+          cat /tmp/resp.txt || true
+          # 200/202 are success per IndexNow spec.
+          if [ "$status" != "200" ] && [ "$status" != "202" ]; then
+            echo "::error::IndexNow ping failed with HTTP $status"
+            exit 1
+          fi
+
+      - name: Reminders
+        run: |
+          echo "::notice::Google's /ping sitemap endpoint was deprecated in June 2023. Re-submit via Google Search Console → Sitemaps."
+          echo "::notice::Sitemap: ${{ steps.cfg.outputs.site_url }}/sitemap.xml"

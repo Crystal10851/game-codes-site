@@ -1,0 +1,128 @@
+{
+  "slug": "blox-fruits",
+  "name": "Blox Fruits",
+  "tagline": "Latest working Blox Fruits codes for free XP boosts, Beli and stat resets.",
+  "description": "Blox Fruits is a Roblox One Piece-inspired adventure where players sail the seas, master Devil Fruits and fight bosses. New codes drop with each update, giving free 2x XP boosts, in-game Beli, fragments and stat resets. This page is updated whenever a new code is released so you can grab every reward before it expires.",
+  "platform": "Roblox",
+  "developer": "Gamer Robot Inc.",
+  "officialUrl": "https://www.roblox.com/games/2753915549/Blox-Fruits",
+  "color": "#1b3aa5",
+  "redeemSteps": [
+    {
+      "title": "Launch Blox Fruits",
+      "detail": "Open Roblox and start a Blox Fruits session. You can be on any island or in any sea."
+    },
+    {
+      "title": "Open the main menu",
+      "detail": "Press M on PC or tap the menu icon on mobile to bring up the in-game menu."
+    },
+    {
+      "title": "Click the Twitter / X icon",
+      "detail": "Inside the menu, click the small blue bird icon. A code redemption text box will appear."
+    },
+    {
+      "title": "Paste the code",
+      "detail": "Copy a code from this page and paste it exactly as shown — codes are case-sensitive."
+    },
+    {
+      "title": "Hit Try",
+      "detail": "Press the Try button. Valid codes will instantly grant the reward."
+    }
+  ],
+  "faq": [
+    {
+      "question": "How often are new Blox Fruits codes released?",
+      "answer": "New codes usually drop alongside major updates, milestones (likes/visits) and developer livestreams — roughly every 2–4 weeks."
+    },
+    {
+      "question": "Why is my Blox Fruits code not working?",
+      "answer": "Codes are case-sensitive and expire fast. Make sure you copied the code exactly as listed. If it still fails, it has likely expired — check the Expired Codes page."
+    },
+    {
+      "question": "Can I redeem a code twice?",
+      "answer": "No. Each Blox Fruits code can only be redeemed once per account."
+    }
+  ],
+  "codes": [
+    {
+      "code": "ADMIN_TROLL",
+      "reward": "20 minutes of 2x XP",
+      "addedOn": "2026-04-22",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Released after the latest update livestream."
+    },
+    {
+      "code": "FRUITY_2026",
+      "reward": "30 minutes of 2x XP",
+      "addedOn": "2026-04-10",
+      "expiresOn": null,
+      "status": "active",
+      "notes": ""
+    },
+    {
+      "code": "SEAEVENT_NEW",
+      "reward": "Stat reset",
+      "addedOn": "2026-03-28",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "One-time stat refund."
+    },
+    {
+      "code": "FUDD10_V2",
+      "reward": "10 Beli",
+      "addedOn": "2026-03-15",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Symbolic reward, but still active."
+    },
+    {
+      "code": "KITT_RESET",
+      "reward": "Stat reset",
+      "addedOn": "2026-02-20",
+      "expiresOn": null,
+      "status": "active",
+      "notes": ""
+    },
+    {
+      "code": "BIGNEWS",
+      "reward": "20 minutes of 2x XP",
+      "addedOn": "2026-01-08",
+      "expiresOn": "2026-03-01",
+      "status": "expired",
+      "notes": ""
+    },
+    {
+      "code": "UPDATE20",
+      "reward": "20 minutes of 2x XP",
+      "addedOn": "2025-12-12",
+      "expiresOn": "2026-02-15",
+      "status": "expired",
+      "notes": ""
+    },
+    {
+      "code": "SUB2NOOBMASTER123",
+      "reward": "20 minutes of 2x XP",
+      "addedOn": "2025-11-04",
+      "expiresOn": "2026-01-01",
+      "status": "expired",
+      "notes": ""
+    },
+    {
+      "code": "AXIORE",
+      "reward": "20 minutes of 2x XP",
+      "addedOn": "2025-09-18",
+      "expiresOn": "2025-12-01",
+      "status": "expired",
+      "notes": ""
+    },
+    {
+      "code": "TANTAIGAMING",
+      "reward": "15 minutes of 2x XP",
+      "addedOn": "2025-08-02",
+      "expiresOn": "2025-11-01",
+      "status": "expired",
+      "notes": ""
+    }
+  ]
+}

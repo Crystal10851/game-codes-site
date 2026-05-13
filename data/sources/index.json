@@ -1,0 +1,26 @@
+{
+  "blox-fruits": {
+    "handles": ["BloxFruits"],
+    "tweetLookback": 10
+  },
+  "genshin-impact": {
+    "handles": ["GenshinImpact"],
+    "tweetLookback": 10
+  },
+  "honkai-star-rail": {
+    "handles": ["honkaistarrail"],
+    "tweetLookback": 10
+  },
+  "king-legacy": {
+    "handles": [],
+    "tweetLookback": 10
+  },
+  "anime-adventures": {
+    "handles": [],
+    "tweetLookback": 10
+  },
+  "pet-simulator-99": {
+    "handles": ["BIGGamesPS"],
+    "tweetLookback": 10
+  }
+}

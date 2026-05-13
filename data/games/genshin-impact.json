@@ -1,0 +1,108 @@
+{
+  "slug": "genshin-impact",
+  "name": "Genshin Impact",
+  "tagline": "Working Genshin Impact codes for free Primogems, Mora and Hero's Wit.",
+  "description": "Genshin Impact is HoYoverse's open-world action RPG, set in the fantasy world of Teyvat. HoYoverse releases new redemption codes during every version livestream (typically the day a new version goes live), plus occasional codes for milestones, partnerships and special events. Codes expire quickly — usually within 24 to 48 hours — so it pays to redeem them the moment they drop.",
+  "platform": "PC, Mobile, PS4/5",
+  "developer": "HoYoverse",
+  "officialUrl": "https://genshin.hoyoverse.com",
+  "color": "#1f6feb",
+  "redeemSteps": [
+    {
+      "title": "Reach Adventure Rank 10",
+      "detail": "Your account must be at least AR 10 before you can redeem any code. New players: clear the Statue of the Seven quest in Mondstadt first."
+    },
+    {
+      "title": "Open the redemption page",
+      "detail": "Go to the official HoYoverse redemption portal at genshin.hoyoverse.com/en/gift. You can also redeem in-game via Settings → Account → Redeem Now (mobile only)."
+    },
+    {
+      "title": "Log in with your HoYoverse account",
+      "detail": "Use the same account linked to your Genshin Impact profile. Pick the correct server (America, Europe, Asia or TW/HK/MO)."
+    },
+    {
+      "title": "Enter the code",
+      "detail": "Paste the code exactly as shown. Codes are case-sensitive."
+    },
+    {
+      "title": "Claim in-game",
+      "detail": "Rewards arrive via in-game mail. Open Paimon menu → Mail and tap Claim. Mail is held for 30 days."
+    }
+  ],
+  "faq": [
+    {
+      "question": "How long do Genshin Impact codes stay active?",
+      "answer": "Livestream codes usually expire 24 to 48 hours after they're announced. Permanent codes like GENSHINGIFT remain active indefinitely. Always redeem fresh codes immediately."
+    },
+    {
+      "question": "Why does my Genshin code say 'invalid'?",
+      "answer": "Common reasons: the code expired, you typed it incorrectly (codes are case-sensitive), or you selected the wrong server. Double-check each before contacting support."
+    },
+    {
+      "question": "Can I redeem the same code on multiple servers?",
+      "answer": "No. Each code can be redeemed once per HoYoverse account, on a single server."
+    },
+    {
+      "question": "Where do my rewards go after redeeming?",
+      "answer": "Primogems, Mora and items arrive via in-game mail within a few minutes. Open Paimon menu → Mail to claim them within 30 days."
+    }
+  ],
+  "codes": [
+    {
+      "code": "GENSHINGIFT",
+      "reward": "50 Primogems + 3 Hero's Wit",
+      "addedOn": "2026-01-01",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Permanent code for new and returning players."
+    },
+    {
+      "code": "5BPTJD2BPYV9",
+      "reward": "100 Primogems + 10 Mystic Enhancement Ore",
+      "addedOn": "2026-04-28",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Version 5.6 livestream code."
+    },
+    {
+      "code": "TB7CJD3VPYV9",
+      "reward": "100 Primogems + 5 Hero's Wit",
+      "addedOn": "2026-04-28",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Version 5.6 livestream code."
+    },
+    {
+      "code": "GA7CJD3WPVB8",
+      "reward": "100 Primogems + 50,000 Mora",
+      "addedOn": "2026-04-28",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Version 5.6 livestream code."
+    },
+    {
+      "code": "BSNUEAGE4D9D",
+      "reward": "60 Primogems + 5 Hero's Wit",
+      "addedOn": "2026-03-15",
+      "expiresOn": "2026-03-17",
+      "status": "expired",
+      "notes": "Version 5.5 livestream."
+    },
+    {
+      "code": "GENSHINEPIC",
+      "reward": "100 Primogems + 10 Mystic Enhancement Ore",
+      "addedOn": "2026-02-02",
+      "expiresOn": "2026-02-04",
+      "status": "expired",
+      "notes": "Version 5.4 livestream."
+    },
+    {
+      "code": "NTQUYBHSTUV9",
+      "reward": "100 Primogems + 50,000 Mora",
+      "addedOn": "2025-12-15",
+      "expiresOn": "2025-12-17",
+      "status": "expired",
+      "notes": ""
+    }
+  ]
+}

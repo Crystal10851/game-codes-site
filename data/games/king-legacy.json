@@ -1,0 +1,104 @@
+{
+  "slug": "king-legacy",
+  "name": "King Legacy",
+  "tagline": "Working King Legacy codes for free gems, stat resets and Beli boosts.",
+  "description": "King Legacy is a Roblox One Piece-inspired adventure where players hunt Devil Fruits, master Haki and battle bosses across the seas. New codes drop after major updates, follower milestones, and developer livestreams. Most codes grant gems, stat resets or temporary XP and Beli boosts.",
+  "platform": "Roblox",
+  "developer": "Venture Studios",
+  "officialUrl": "https://www.roblox.com/games/2862773538/King-Legacy",
+  "color": "#0ea5e9",
+  "redeemSteps": [
+    {
+      "title": "Launch King Legacy",
+      "detail": "Open Roblox and start any King Legacy session. You can be on any island."
+    },
+    {
+      "title": "Open the in-game menu",
+      "detail": "Press M on PC or tap the menu button on mobile to bring up the main menu."
+    },
+    {
+      "title": "Tap the Twitter / X icon",
+      "detail": "Inside the menu, tap the small blue bird icon. The code entry box appears."
+    },
+    {
+      "title": "Enter the code",
+      "detail": "Paste the code exactly as shown — codes are case-sensitive and often include numbers and underscores."
+    },
+    {
+      "title": "Press Redeem",
+      "detail": "Working codes reward you instantly. If nothing happens, the code has likely expired."
+    }
+  ],
+  "faq": [
+    {
+      "question": "How often do King Legacy codes release?",
+      "answer": "Codes typically drop with each major update (every 2–6 weeks), plus extra codes for follower and like milestones on Twitter/X."
+    },
+    {
+      "question": "Why is my King Legacy code not working?",
+      "answer": "King Legacy codes are case-sensitive and may include version numbers. Triple-check the spelling. If it still fails, it has likely expired — head to the Expired Codes page."
+    },
+    {
+      "question": "Can I redeem the same code twice?",
+      "answer": "No. Each code can only be redeemed once per Roblox account."
+    }
+  ],
+  "codes": [
+    {
+      "code": "Update4.8.0",
+      "reward": "30 minutes of 2x Drop boost",
+      "addedOn": "2026-05-01",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Released with the 4.8.0 update."
+    },
+    {
+      "code": "1MFAVS",
+      "reward": "20 minutes of 2x XP",
+      "addedOn": "2026-04-12",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "1 million favourites milestone."
+    },
+    {
+      "code": "ResetMyStats",
+      "reward": "Stat reset",
+      "addedOn": "2026-03-20",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Refunds all stat points."
+    },
+    {
+      "code": "VENTURE_BELI",
+      "reward": "30 minutes of 2x Beli",
+      "addedOn": "2026-02-14",
+      "expiresOn": null,
+      "status": "active",
+      "notes": ""
+    },
+    {
+      "code": "Update4.7.0",
+      "reward": "30 minutes of 2x Drop boost",
+      "addedOn": "2026-03-02",
+      "expiresOn": "2026-04-30",
+      "status": "expired",
+      "notes": ""
+    },
+    {
+      "code": "700KFOLLOWERS",
+      "reward": "20 minutes of 2x XP",
+      "addedOn": "2026-01-18",
+      "expiresOn": "2026-03-01",
+      "status": "expired",
+      "notes": ""
+    },
+    {
+      "code": "BIGNEWS_KL",
+      "reward": "Stat reset",
+      "addedOn": "2025-11-05",
+      "expiresOn": "2026-01-15",
+      "status": "expired",
+      "notes": ""
+    }
+  ]
+}
