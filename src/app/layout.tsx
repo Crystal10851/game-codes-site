@@ -35,6 +35,14 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, 'max-image-preview': 'large' },
   },
+  verification: {
+    ...(siteConfig.verification.google
+      ? { google: siteConfig.verification.google }
+      : {}),
+    ...(siteConfig.verification.bing
+      ? { other: { 'msvalidate.01': siteConfig.verification.bing } }
+      : {}),
+  },
 };
 
 export const viewport: Viewport = {

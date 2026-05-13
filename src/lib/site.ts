@@ -13,6 +13,10 @@ export const siteConfig = {
     enabled: process.env.NEXT_PUBLIC_ADSENSE_ENABLED === 'true',
     clientId: process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? 'ca-pub-XXXXXXXXXXXXXXXX',
   },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? '',
+    bing: process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION ?? '',
+  },
   analytics: {
     provider: (process.env.NEXT_PUBLIC_ANALYTICS ?? 'none') as
       | 'none'
