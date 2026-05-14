@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Container } from './Container';
 import { siteConfig } from '@/lib/site';
 import { getAllSummaries } from '@/lib/games';
+import { MobileMenu } from './MobileMenu';
 
 export function Nav() {
   const games = getAllSummaries();
@@ -35,7 +36,10 @@ export function Nav() {
           </span>
           <span>{siteConfig.shortName}</span>
         </Link>
-        <nav aria-label="Games" className="flex flex-wrap items-center gap-1">
+        <nav
+          aria-label="Games"
+          className="hidden flex-wrap items-center gap-1 lg:flex"
+        >
           {games.map((g) => (
             <Link
               key={g.slug}
@@ -46,6 +50,7 @@ export function Nav() {
             </Link>
           ))}
         </nav>
+        <MobileMenu games={games} />
       </Container>
     </header>
   );
