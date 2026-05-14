@@ -99,13 +99,16 @@ jobs:
           } >> "$GITHUB_OUTPUT"
 
       - name: Ping IndexNow (Bing / Yandex / Seznam / Naver)
-        if: ${{ secrets.INDEXNOW_KEY != '' }}
         env:
           INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
           HOST: ${{ steps.cfg.outputs.host }}
           SITE: ${{ steps.cfg.outputs.site_url }}
           URLS_JSON: ${{ steps.urls.outputs.json }}
         run: |
+          if [ -z "$INDEXNOW_KEY" ]; then
+            echo "::notice::INDEXNOW_KEY secret is unset — skipping IndexNow ping."
+            exit 0
+          fi
           body=$(jq -n \
             --arg host "$HOST" \
             --arg key "$INDEXNOW_KEY" \
