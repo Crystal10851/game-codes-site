@@ -41,10 +41,9 @@ export function getGame(slug: string): Game | null {
 export function getGameSummary(game: Game): GameSummary {
   const active = game.codes.filter((c) => c.status === 'active');
   const expired = game.codes.filter((c) => c.status === 'expired');
-  const lastUpdated = game.codes
-    .map((c) => c.addedOn)
-    .sort()
-    .reverse()[0] ?? new Date().toISOString().slice(0, 10);
+  const dates = game.codes.map((c) => c.addedOn);
+  if (game.lastVerifiedOn) dates.push(game.lastVerifiedOn);
+  const lastUpdated = dates.sort().reverse()[0] ?? new Date().toISOString().slice(0, 10);
   return {
     slug: game.slug,
     name: game.name,

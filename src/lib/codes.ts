@@ -18,7 +18,9 @@ export function getExpiredCodes(game: Game): GameCode[] {
 }
 
 export function getLastUpdated(game: Game): string {
-  const dates = game.codes.map((c) => c.addedOn).sort();
+  const dates = game.codes.map((c) => c.addedOn);
+  if (game.lastVerifiedOn) dates.push(game.lastVerifiedOn);
+  dates.sort();
   return dates[dates.length - 1] ?? new Date().toISOString().slice(0, 10);
 }
 

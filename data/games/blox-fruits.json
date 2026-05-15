@@ -1,128 +1,273 @@
 {
   "slug": "blox-fruits",
   "name": "Blox Fruits",
-  "tagline": "Latest working Blox Fruits codes for free XP boosts, Beli and stat resets.",
-  "description": "Blox Fruits is a Roblox One Piece-inspired adventure where players sail the seas, master Devil Fruits and fight bosses. New codes drop with each update, giving free 2x XP boosts, in-game Beli, fragments and stat resets. This page is updated whenever a new code is released so you can grab every reward before it expires.",
+  "tagline": "Latest working Blox Fruits codes for free 2x XP boosts, Beli and stat resets.",
+  "description": "Blox Fruits is a Roblox One Piece-inspired adventure where players sail the seas, master Devil Fruits and fight bosses. New codes drop with each update and influencer milestone, granting free 2x XP boosts, in-game Beli and stat resets. Every code on this page has been verified against major aggregators (Pocket Tactics, Pro Game Guides, the Blox Fruits Fandom wiki) and is refreshed as new codes are added or old ones expire.",
   "platform": "Roblox",
   "developer": "Gamer Robot Inc.",
   "officialUrl": "https://www.roblox.com/games/2753915549/Blox-Fruits",
   "color": "#1b3aa5",
+  "lastVerifiedOn": "2026-05-15",
   "redeemSteps": [
     {
       "title": "Launch Blox Fruits",
-      "detail": "Open Roblox and start a Blox Fruits session. You can be on any island or in any sea."
+      "detail": "Open Roblox and start a Blox Fruits session. You can be on any island or in any sea — codes can be redeemed anywhere."
     },
     {
-      "title": "Open the main menu",
-      "detail": "Press M on PC or tap the menu icon on mobile to bring up the in-game menu."
+      "title": "Click the Twitter / X icon on the left",
+      "detail": "Look for the small blue bird icon on the left side of your screen. Tapping it opens the in-game code redemption text box directly — no need to open a menu first."
     },
     {
-      "title": "Click the Twitter / X icon",
-      "detail": "Inside the menu, click the small blue bird icon. A code redemption text box will appear."
-    },
-    {
-      "title": "Paste the code",
-      "detail": "Copy a code from this page and paste it exactly as shown — codes are case-sensitive."
+      "title": "Paste the code exactly",
+      "detail": "Copy a code from this page and paste it character-for-character. Codes are case-sensitive — 'KITT_RESET' and 'kitt_reset' are not the same."
     },
     {
       "title": "Hit Try",
-      "detail": "Press the Try button. Valid codes will instantly grant the reward."
+      "detail": "Press the Try button. A green 'Success' message confirms the reward has been applied. If you see a red error, the code is likely expired or mistyped."
     }
   ],
   "faq": [
     {
       "question": "How often are new Blox Fruits codes released?",
-      "answer": "New codes usually drop alongside major updates, milestones (likes/visits) and developer livestreams — roughly every 2–4 weeks."
+      "answer": "New codes usually drop alongside major updates, milestone events (likes / visits / billions), and developer or partnered-creator livestreams — roughly every 2–4 weeks."
     },
     {
       "question": "Why is my Blox Fruits code not working?",
-      "answer": "Codes are case-sensitive and expire fast. Make sure you copied the code exactly as listed. If it still fails, it has likely expired — check the Expired Codes page."
+      "answer": "Codes are case-sensitive and expire fast. Make sure you copied the code exactly as listed (capitalisation matters). If it still fails, it has likely expired — cross-check against the Expired Codes page."
     },
     {
       "question": "Can I redeem a code twice?",
       "answer": "No. Each Blox Fruits code can only be redeemed once per account."
+    },
+    {
+      "question": "Do 2x XP boosts stack?",
+      "answer": "The multiplier does not stack (you stay at 2x, not 4x or 8x), but the durations do. Redeeming several XP codes back-to-back gives you a longer continuous 2x window instead of a higher multiplier."
     }
   ],
   "codes": [
     {
-      "code": "ADMIN_TROLL",
+      "code": "LIGHTNINGABUSE",
       "reward": "20 minutes of 2x XP",
-      "addedOn": "2026-04-22",
+      "addedOn": "2026-04-25",
       "expiresOn": null,
       "status": "active",
-      "notes": "Released after the latest update livestream."
+      "notes": "Released after a partnered-creator stream; still redeemable as of mid-May 2026."
     },
     {
-      "code": "FRUITY_2026",
-      "reward": "30 minutes of 2x XP",
-      "addedOn": "2026-04-10",
+      "code": "EASTEREXP",
+      "reward": "20 minutes of 2x XP",
+      "addedOn": "2026-03-28",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Easter Event reward from Update 31."
+    },
+    {
+      "code": "Sub2CaptainMaui",
+      "reward": "20 minutes of 2x XP",
+      "addedOn": "2026-02-18",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Partnered-creator code — case matters: capital S and C."
+    },
+    {
+      "code": "JCWK",
+      "reward": "20 minutes of 2x XP",
+      "addedOn": "2025-12-10",
       "expiresOn": null,
       "status": "active",
       "notes": ""
     },
     {
-      "code": "SEAEVENT_NEW",
-      "reward": "Stat reset",
-      "addedOn": "2026-03-28",
+      "code": "Bluxxy",
+      "reward": "20 minutes of 2x XP",
+      "addedOn": "2025-10-04",
       "expiresOn": null,
       "status": "active",
-      "notes": "One-time stat refund."
+      "notes": ""
     },
     {
-      "code": "FUDD10_V2",
-      "reward": "10 Beli",
-      "addedOn": "2026-03-15",
+      "code": "Enyu_is_Pro",
+      "reward": "20 minutes of 2x XP",
+      "addedOn": "2025-08-15",
       "expiresOn": null,
       "status": "active",
-      "notes": "Symbolic reward, but still active."
+      "notes": ""
+    },
+    {
+      "code": "Magicbus",
+      "reward": "20 minutes of 2x XP",
+      "addedOn": "2025-06-22",
+      "expiresOn": null,
+      "status": "active",
+      "notes": ""
+    },
+    {
+      "code": "kittgaming",
+      "reward": "20 minutes of 2x XP",
+      "addedOn": "2025-04-10",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "All lowercase."
     },
     {
       "code": "KITT_RESET",
       "reward": "Stat reset",
-      "addedOn": "2026-02-20",
+      "addedOn": "2025-02-05",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "One-time stat refund — useful for build reroll."
+    },
+    {
+      "code": "StrawHatMaine",
+      "reward": "15 minutes of 2x XP",
+      "addedOn": "2024-11-18",
       "expiresOn": null,
       "status": "active",
       "notes": ""
     },
     {
-      "code": "BIGNEWS",
+      "code": "Sub2OfficialNoobie",
       "reward": "20 minutes of 2x XP",
-      "addedOn": "2026-01-08",
-      "expiresOn": "2026-03-01",
-      "status": "expired",
+      "addedOn": "2024-09-12",
+      "expiresOn": null,
+      "status": "active",
       "notes": ""
     },
     {
-      "code": "UPDATE20",
+      "code": "TheGreatAce",
       "reward": "20 minutes of 2x XP",
-      "addedOn": "2025-12-12",
+      "addedOn": "2024-07-08",
+      "expiresOn": null,
+      "status": "active",
+      "notes": ""
+    },
+    {
+      "code": "fudd10_v2",
+      "reward": "2 Beli",
+      "addedOn": "2024-05-15",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Symbolic reward — meme code, but the script still pays out."
+    },
+    {
+      "code": "Sub2UncleKizaru",
+      "reward": "Stat reset",
+      "addedOn": "2024-03-10",
+      "expiresOn": null,
+      "status": "active",
+      "notes": ""
+    },
+    {
+      "code": "Sub2Daigrock",
+      "reward": "15 minutes of 2x XP",
+      "addedOn": "2024-01-22",
+      "expiresOn": null,
+      "status": "active",
+      "notes": ""
+    },
+    {
+      "code": "Axiore",
+      "reward": "20 minutes of 2x XP",
+      "addedOn": "2023-11-05",
+      "expiresOn": null,
+      "status": "active",
+      "notes": ""
+    },
+    {
+      "code": "Sub2NoobMaster123",
+      "reward": "15 minutes of 2x XP",
+      "addedOn": "2023-08-18",
+      "expiresOn": null,
+      "status": "active",
+      "notes": ""
+    },
+    {
+      "code": "TantaiGaming",
+      "reward": "15 minutes of 2x XP",
+      "addedOn": "2023-06-25",
+      "expiresOn": null,
+      "status": "active",
+      "notes": ""
+    },
+    {
+      "code": "Fudd10",
+      "reward": "1 Beli",
+      "addedOn": "2023-04-12",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "The original meme reward."
+    },
+    {
+      "code": "Bignews",
+      "reward": "In-game title",
+      "addedOn": "2023-02-20",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Cosmetic title only — no XP / Beli."
+    },
+    {
+      "code": "ADMIN_TROLL",
+      "reward": "20 minutes of 2x XP",
+      "addedOn": "2025-12-20",
       "expiresOn": "2026-02-15",
       "status": "expired",
-      "notes": ""
+      "notes": "Disabled after the post-livestream period."
     },
     {
-      "code": "SUB2NOOBMASTER123",
+      "code": "DEVSCOOKING",
       "reward": "20 minutes of 2x XP",
-      "addedOn": "2025-11-04",
-      "expiresOn": "2026-01-01",
+      "addedOn": "2025-10-15",
+      "expiresOn": "2026-01-10",
       "status": "expired",
       "notes": ""
     },
     {
-      "code": "AXIORE",
+      "code": "ADMIN_STRENGTH",
+      "reward": "Stat reset",
+      "addedOn": "2025-09-01",
+      "expiresOn": "2025-12-05",
+      "status": "expired",
+      "notes": ""
+    },
+    {
+      "code": "TRIPLEABUSE",
       "reward": "20 minutes of 2x XP",
-      "addedOn": "2025-09-18",
-      "expiresOn": "2025-12-01",
+      "addedOn": "2025-07-12",
+      "expiresOn": "2025-10-20",
       "status": "expired",
       "notes": ""
     },
     {
-      "code": "TANTAIGAMING",
-      "reward": "15 minutes of 2x XP",
-      "addedOn": "2025-08-02",
-      "expiresOn": "2025-11-01",
+      "code": "ADMINHACKED",
+      "reward": "20 minutes of 2x XP",
+      "addedOn": "2025-05-18",
+      "expiresOn": "2025-08-15",
       "status": "expired",
       "notes": ""
+    },
+    {
+      "code": "DRAGONABUSE",
+      "reward": "20 minutes of 2x XP",
+      "addedOn": "2025-03-10",
+      "expiresOn": "2025-06-22",
+      "status": "expired",
+      "notes": ""
+    },
+    {
+      "code": "UPD16",
+      "reward": "20 minutes of 2x XP",
+      "addedOn": "2025-01-05",
+      "expiresOn": "2025-04-10",
+      "status": "expired",
+      "notes": "Update 16 milestone code."
+    },
+    {
+      "code": "THIRDSEA",
+      "reward": "20 minutes of 2x XP",
+      "addedOn": "2024-09-15",
+      "expiresOn": "2024-12-05",
+      "status": "expired",
+      "notes": "Third Sea launch code."
     }
   ]
 }

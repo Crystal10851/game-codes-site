@@ -31,6 +31,7 @@ export interface Game {
   redeemSteps: RedeemStep[];
   faq: FaqItem[];
   codes: GameCode[];
+  lastVerifiedOn?: string;
 }
 
 export interface GameSummary {
