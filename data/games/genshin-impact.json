@@ -2,11 +2,12 @@
   "slug": "genshin-impact",
   "name": "Genshin Impact",
   "tagline": "Working Genshin Impact codes for free Primogems, Mora and Hero's Wit.",
-  "description": "Genshin Impact is HoYoverse's open-world action RPG, set in the fantasy world of Teyvat. HoYoverse releases new redemption codes during every version livestream (typically the day a new version goes live), plus occasional codes for milestones, partnerships and special events. Codes expire quickly — usually within 24 to 48 hours — so it pays to redeem them the moment they drop.",
+  "description": "Genshin Impact is HoYoverse's open-world action RPG, set in the fantasy world of Teyvat. HoYoverse releases new redemption codes during every version livestream (typically the day a new version goes live), plus occasional codes for milestones, partnerships and special events. Livestream codes expire quickly — usually within 24 to 48 hours — so it pays to redeem them the moment they drop. Permanent codes such as GENSHINGIFT remain active for new and returning players.",
   "platform": "PC, Mobile, PS4/5",
   "developer": "HoYoverse",
   "officialUrl": "https://genshin.hoyoverse.com",
   "color": "#1f6feb",
+  "lastVerifiedOn": "2026-05-16",
   "redeemSteps": [
     {
       "title": "Reach Adventure Rank 10",
@@ -57,52 +58,76 @@
       "notes": "Permanent code for new and returning players."
     },
     {
-      "code": "5BPTJD2BPYV9",
+      "code": "PFY1S40I88T9",
+      "reward": "60 Primogems + 5 Adventurer's Experience",
+      "addedOn": "2026-05-13",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Latest version livestream code."
+    },
+    {
+      "code": "FEOMBCVX6UO7",
+      "reward": "10,000 Mora + 10 Adventurer's Experience + 5 Fine Enhancement Ore + 5 Jueyun Chili Chicken + 5 Stir-Fried Fish Noodles",
+      "addedOn": "2026-05-13",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Latest version livestream code."
+    },
+    {
+      "code": "A0NBWRZZI3XJ",
+      "reward": "20 Primogems + 160 Geodes of Replication",
+      "addedOn": "2026-05-13",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Event-themed code."
+    },
+    {
+      "code": "PSCA8NL4ZSPD",
+      "reward": "60 Primogems + 5 Adventurer's Experience",
+      "addedOn": "2026-05-13",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Latest version livestream code."
+    },
+    {
+      "code": "BACKTOSUMERU",
       "reward": "100 Primogems + 10 Mystic Enhancement Ore",
-      "addedOn": "2026-04-28",
-      "expiresOn": null,
-      "status": "active",
-      "notes": "Version 5.6 livestream code."
+      "addedOn": "2026-04-10",
+      "expiresOn": "2026-04-15",
+      "status": "expired",
+      "notes": "Sumeru re-visit campaign."
     },
     {
-      "code": "TB7CJD3VPYV9",
+      "code": "NicolaCoco",
       "reward": "100 Primogems + 5 Hero's Wit",
-      "addedOn": "2026-04-28",
-      "expiresOn": null,
-      "status": "active",
-      "notes": "Version 5.6 livestream code."
+      "addedOn": "2026-03-25",
+      "expiresOn": "2026-03-30",
+      "status": "expired",
+      "notes": "Creator collab code."
     },
     {
-      "code": "GA7CJD3WPVB8",
+      "code": "WilltoWin",
       "reward": "100 Primogems + 50,000 Mora",
-      "addedOn": "2026-04-28",
-      "expiresOn": null,
-      "status": "active",
-      "notes": "Version 5.6 livestream code."
+      "addedOn": "2026-03-15",
+      "expiresOn": "2026-03-20",
+      "status": "expired",
+      "notes": ""
+    },
+    {
+      "code": "snezhnaya20260812",
+      "reward": "200 Primogems",
+      "addedOn": "2026-02-20",
+      "expiresOn": "2026-02-25",
+      "status": "expired",
+      "notes": "Region-themed event code."
     },
     {
       "code": "BSNUEAGE4D9D",
       "reward": "60 Primogems + 5 Hero's Wit",
-      "addedOn": "2026-03-15",
-      "expiresOn": "2026-03-17",
+      "addedOn": "2026-01-25",
+      "expiresOn": "2026-01-27",
       "status": "expired",
       "notes": "Version 5.5 livestream."
-    },
-    {
-      "code": "GENSHINEPIC",
-      "reward": "100 Primogems + 10 Mystic Enhancement Ore",
-      "addedOn": "2026-02-02",
-      "expiresOn": "2026-02-04",
-      "status": "expired",
-      "notes": "Version 5.4 livestream."
-    },
-    {
-      "code": "NTQUYBHSTUV9",
-      "reward": "100 Primogems + 50,000 Mora",
-      "addedOn": "2025-12-15",
-      "expiresOn": "2025-12-17",
-      "status": "expired",
-      "notes": ""
     }
   ]
 }

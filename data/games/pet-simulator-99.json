@@ -1,12 +1,13 @@
 {
   "slug": "pet-simulator-99",
   "name": "Pet Simulator 99",
-  "tagline": "Working Pet Simulator 99 codes for free diamonds, lucky boosts and rare pets.",
-  "description": "Pet Simulator 99 is BIG Games' flagship Roblox title where players collect pets, hatch eggs and grind for diamonds. Codes are dropped with each major update and at engagement milestones (likes, visits, follower goals). Most codes reward diamonds, short-duration luck/boost buffs and occasionally exclusive pets — redeem them stacked before opening high-value eggs to maximise pulls.",
+  "tagline": "Pet Simulator 99 code list — active and expired codes for diamonds, lucky boosts and rare pets.",
+  "description": "Pet Simulator 99 is BIG Games' flagship Roblox title where players collect pets, hatch eggs and grind for diamonds. Unlike most Roblox games, BIG Games rarely releases free in-game text codes — most codes are distributed via physical merchandise (PSX TCG packs, plushies, real-world pet toys) or short-lived live-event drops. As of mid-May 2026 there are no public free codes active, but this page is refreshed whenever BIG Games releases a free promo code or hosts a milestone event.",
   "platform": "Roblox",
   "developer": "BIG Games",
   "officialUrl": "https://www.roblox.com/games/8737899170/Pet-Simulator-99",
   "color": "#f59e0b",
+  "lastVerifiedOn": "2026-05-16",
   "redeemSteps": [
     {
       "title": "Launch Pet Simulator 99",
@@ -31,66 +32,30 @@
   ],
   "faq": [
     {
-      "question": "How often does BIG Games release new codes?",
-      "answer": "Codes drop with every major Pet Simulator 99 update (roughly monthly) and at milestone events like 100M visits or like targets."
+      "question": "Why are there no active Pet Simulator 99 codes right now?",
+      "answer": "BIG Games' main code-distribution channel for PS99 is physical merchandise — boxed plushies, the PSX trading card game, and licensed pet toys each include a unique code. Free public codes are reserved for short milestone events (visit count goals, anniversaries) and tend to expire within hours."
+    },
+    {
+      "question": "How do I get a code from Pet Simulator 99 merchandise?",
+      "answer": "Each official BIG Games product ships with a unique scratch-off or printed code. Redeem it once, in-game, on the account you want to receive the pet or item. Codes are not transferable between accounts after redemption."
     },
     {
       "question": "Are Pet Simulator 99 codes one-time use?",
-      "answer": "Yes — each code can only be redeemed once per Roblox account."
+      "answer": "Yes — each code can only be redeemed once per Roblox account. Merchandise codes are also one-time per code (you cannot share a single code across multiple accounts)."
     },
     {
       "question": "When should I use luck and boost codes?",
-      "answer": "Stack luck codes immediately before opening high-tier eggs, and use diamond boosts right before a long grinding session for maximum benefit."
+      "answer": "If a public boost code does drop, stack luck codes immediately before opening high-tier eggs, and use diamond boosts right before a long grinding session for maximum benefit."
     }
   ],
   "codes": [
-    {
-      "code": "update99",
-      "reward": "10,000 Diamonds",
-      "addedOn": "2026-05-05",
-      "expiresOn": null,
-      "status": "active",
-      "notes": "Latest update bonus."
-    },
-    {
-      "code": "freediamonds",
-      "reward": "5,000 Diamonds",
-      "addedOn": "2026-04-20",
-      "expiresOn": null,
-      "status": "active",
-      "notes": ""
-    },
-    {
-      "code": "luckyboost",
-      "reward": "30 minutes of 2x Luck",
-      "addedOn": "2026-04-08",
-      "expiresOn": null,
-      "status": "active",
-      "notes": "Use right before opening eggs."
-    },
-    {
-      "code": "happybday",
-      "reward": "Birthday Pet + 2,000 Diamonds",
-      "addedOn": "2026-03-25",
-      "expiresOn": null,
-      "status": "active",
-      "notes": "BIG Games anniversary."
-    },
-    {
-      "code": "huge2026",
-      "reward": "20 minutes of 2x Diamonds",
-      "addedOn": "2026-03-12",
-      "expiresOn": null,
-      "status": "active",
-      "notes": ""
-    },
     {
       "code": "winterhuge",
       "reward": "Winter Pet + 5,000 Diamonds",
       "addedOn": "2025-12-20",
       "expiresOn": "2026-02-01",
       "status": "expired",
-      "notes": "Winter event."
+      "notes": "Winter event reward."
     },
     {
       "code": "1bvisits",
@@ -98,7 +63,7 @@
       "addedOn": "2025-11-04",
       "expiresOn": "2026-01-15",
       "status": "expired",
-      "notes": "1 billion visits."
+      "notes": "1 billion visits milestone."
     },
     {
       "code": "release99",
@@ -107,6 +72,22 @@
       "expiresOn": "2025-09-01",
       "status": "expired",
       "notes": "Release-day code."
+    },
+    {
+      "code": "TitanicFireDragon",
+      "reward": "Titanic Fire Dragon (merch code, single-use)",
+      "addedOn": "2025-08-15",
+      "expiresOn": "2025-10-15",
+      "status": "expired",
+      "notes": "Distributed via licensed plushie line."
+    },
+    {
+      "code": "BagOfDiamonds",
+      "reward": "Bag of Diamonds (merch code, single-use)",
+      "addedOn": "2025-07-10",
+      "expiresOn": "2025-09-30",
+      "status": "expired",
+      "notes": "PSX TCG promo."
     }
   ]
 }

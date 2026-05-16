@@ -2,11 +2,12 @@
   "slug": "king-legacy",
   "name": "King Legacy",
   "tagline": "Working King Legacy codes for free gems, stat resets and Beli boosts.",
-  "description": "King Legacy is a Roblox One Piece-inspired adventure where players hunt Devil Fruits, master Haki and battle bosses across the seas. New codes drop after major updates, follower milestones, and developer livestreams. Most codes grant gems, stat resets or temporary XP and Beli boosts.",
+  "description": "King Legacy is a Roblox One Piece-inspired adventure where players hunt Devil Fruits, master Haki and battle bosses across the seas. New codes drop after major updates, follower milestones, and developer livestreams. Most codes grant gems, stat resets or temporary XP and Beli boosts. Every code on this page has been cross-checked against the latest Pro Game Guides update list.",
   "platform": "Roblox",
   "developer": "Venture Studios",
   "officialUrl": "https://www.roblox.com/games/2862773538/King-Legacy",
   "color": "#0ea5e9",
+  "lastVerifiedOn": "2026-05-16",
   "redeemSteps": [
     {
       "title": "Launch King Legacy",
@@ -36,7 +37,7 @@
     },
     {
       "question": "Why is my King Legacy code not working?",
-      "answer": "King Legacy codes are case-sensitive and may include version numbers. Triple-check the spelling. If it still fails, it has likely expired — head to the Expired Codes page."
+      "answer": "King Legacy codes are case-sensitive and may include version numbers or special characters. Triple-check the spelling. If it still fails, it has likely expired — head to the Expired Codes page."
     },
     {
       "question": "Can I redeem the same code twice?",
@@ -45,60 +46,108 @@
   ],
   "codes": [
     {
-      "code": "Update4.8.0",
-      "reward": "30 minutes of 2x Drop boost",
-      "addedOn": "2026-05-01",
+      "code": "<3LEEPUNGG",
+      "reward": "30 minutes of 2x XP",
+      "addedOn": "2026-04-22",
       "expiresOn": null,
       "status": "active",
-      "notes": "Released with the 4.8.0 update."
+      "notes": "Creator-themed XP boost code."
     },
     {
-      "code": "1MFAVS",
-      "reward": "20 minutes of 2x XP",
-      "addedOn": "2026-04-12",
-      "expiresOn": null,
-      "status": "active",
-      "notes": "1 million favourites milestone."
-    },
-    {
-      "code": "ResetMyStats",
+      "code": "2MFAV",
       "reward": "Stat reset",
-      "addedOn": "2026-03-20",
+      "addedOn": "2026-04-08",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "2 million favourites milestone."
+    },
+    {
+      "code": "FREESTATSRESET",
+      "reward": "Stat reset",
+      "addedOn": "2026-03-15",
       "expiresOn": null,
       "status": "active",
       "notes": "Refunds all stat points."
     },
     {
-      "code": "VENTURE_BELI",
-      "reward": "30 minutes of 2x Beli",
-      "addedOn": "2026-02-14",
+      "code": "WELCOMETOKINGLEGACY",
+      "reward": "30 minutes of 2x XP",
+      "addedOn": "2026-02-28",
       "expiresOn": null,
       "status": "active",
-      "notes": ""
+      "notes": "Standard welcome code for new players."
     },
     {
-      "code": "Update4.7.0",
-      "reward": "30 minutes of 2x Drop boost",
-      "addedOn": "2026-03-02",
-      "expiresOn": "2026-04-30",
+      "code": "DragonColorRefund",
+      "reward": "50 Gems (10 Gems if your previous color was the original red)",
+      "addedOn": "2026-02-10",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Compensation for players who owned the old Rainbow Dragon color."
+    },
+    {
+      "code": "FIXEDDROPBOOST",
+      "reward": "10 Fortune Tales",
+      "addedOn": "2026-03-10",
+      "expiresOn": "2026-03-25",
       "status": "expired",
       "notes": ""
     },
     {
-      "code": "700KFOLLOWERS",
-      "reward": "20 minutes of 2x XP",
-      "addedOn": "2026-01-18",
-      "expiresOn": "2026-03-01",
+      "code": "FIXEDBUG1003",
+      "reward": "3 Gold Keys",
+      "addedOn": "2026-03-03",
+      "expiresOn": "2026-04-01",
+      "status": "expired",
+      "notes": "Compensation after a 10/03 bug fix."
+    },
+    {
+      "code": "Update10Release",
+      "reward": "10 Gems",
+      "addedOn": "2025-12-18",
+      "expiresOn": "2026-01-25",
+      "status": "expired",
+      "notes": "Update 10 launch reward."
+    },
+    {
+      "code": "Peodiz",
+      "reward": "100,000 Cash",
+      "addedOn": "2025-11-22",
+      "expiresOn": "2026-01-20",
+      "status": "expired",
+      "notes": "Creator code."
+    },
+    {
+      "code": "FreePterSpin",
+      "reward": "10x Copper Key Hope",
+      "addedOn": "2025-10-30",
+      "expiresOn": "2025-12-15",
       "status": "expired",
       "notes": ""
     },
     {
-      "code": "BIGNEWS_KL",
-      "reward": "Stat reset",
-      "addedOn": "2025-11-05",
-      "expiresOn": "2026-01-15",
+      "code": "RainbowDragon",
+      "reward": "100 Gems (eligible owners only)",
+      "addedOn": "2025-10-12",
+      "expiresOn": "2025-12-01",
       "status": "expired",
-      "notes": ""
+      "notes": "Original Rainbow Dragon owner reward."
+    },
+    {
+      "code": "SKGames",
+      "reward": "30 minutes of 2x XP",
+      "addedOn": "2025-09-15",
+      "expiresOn": "2025-11-15",
+      "status": "expired",
+      "notes": "Required joining the Sea King Games Roblox group."
+    },
+    {
+      "code": "DinoxLive",
+      "reward": "100,000 Cash",
+      "addedOn": "2025-08-20",
+      "expiresOn": "2025-10-30",
+      "status": "expired",
+      "notes": "Livestream code."
     }
   ]
 }

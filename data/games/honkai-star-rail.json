@@ -2,11 +2,12 @@
   "slug": "honkai-star-rail",
   "name": "Honkai: Star Rail",
   "tagline": "Working Honkai: Star Rail codes for free Stellar Jade, Credits and upgrade materials.",
-  "description": "Honkai: Star Rail is HoYoverse's turn-based space-fantasy RPG. The team releases redemption codes during every version livestream (twice per major patch), and ad-hoc codes for milestones and promotional events. Livestream codes are short-lived, often expiring within a day or two, so it's worth redeeming the moment they go live.",
+  "description": "Honkai: Star Rail is HoYoverse's turn-based space-fantasy RPG. The team releases redemption codes during every version livestream (twice per major patch), and ad-hoc codes for milestones and promotional events. Livestream codes are short-lived, often expiring within a day or two, so it's worth redeeming the moment they go live. STARRAILGIFT is a long-running permanent code for new and returning players.",
   "platform": "PC, Mobile, PS5",
   "developer": "HoYoverse",
   "officialUrl": "https://hsr.hoyoverse.com",
   "color": "#7b3fe4",
+  "lastVerifiedOn": "2026-05-16",
   "redeemSteps": [
     {
       "title": "Reach Trailblaze Level 10",
@@ -46,39 +47,111 @@
   "codes": [
     {
       "code": "STARRAILGIFT",
-      "reward": "50 Stellar Jade + 10,000 Credits",
+      "reward": "50 Stellar Jade + 10,000 Credits + 2 Traveler's Guide + 5 Bottled Soda",
       "addedOn": "2026-01-01",
       "expiresOn": null,
       "status": "active",
       "notes": "Permanent code, works on every server."
     },
     {
-      "code": "HSRVER2P9XKM",
-      "reward": "100 Stellar Jade + 4 Refined Aether",
-      "addedOn": "2026-05-02",
+      "code": "VS3Q5VK9CMFP",
+      "reward": "50 Stellar Jade + 10,000 Credits",
+      "addedOn": "2026-05-12",
       "expiresOn": null,
       "status": "active",
-      "notes": "Version 3.2 livestream code."
+      "notes": "Latest version livestream code."
     },
     {
-      "code": "HSRBN8KQJ4M2",
+      "code": "QS395DJQU4HK",
+      "reward": "60 Stellar Jade",
+      "addedOn": "2026-05-12",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Latest version livestream code."
+    },
+    {
+      "code": "SILVERWOLFLV999",
+      "reward": "3 Traveler's Guide + 2 Badge Battle Robes",
+      "addedOn": "2026-05-05",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Silver Wolf-themed event code."
+    },
+    {
+      "code": "OMEGA",
+      "reward": "60 Stellar Jade + 1 Fuel",
+      "addedOn": "2026-04-28",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Story event code."
+    },
+    {
+      "code": "CREATIONNYMPH",
+      "reward": "60 Stellar Jade + 1 Fuel",
+      "addedOn": "2026-04-22",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Event-themed code."
+    },
+    {
+      "code": "FAREWELL",
+      "reward": "60 Stellar Jade + 1 Fuel",
+      "addedOn": "2026-04-15",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Farewell story event code."
+    },
+    {
+      "code": "IFYOUAREREADINGTHIS",
+      "reward": "60 Stellar Jade + 1 Fuel",
+      "addedOn": "2026-04-10",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Easter-egg style code."
+    },
+    {
+      "code": "4TKSX77Y58QK",
+      "reward": "30 Stellar Jade + 3 Traveler's Guide + 5 Condensed Aether + 4 Lost Gold Fragments + 20,000 Credits",
+      "addedOn": "2026-04-01",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Promotional bundle code."
+    },
+    {
+      "code": "5S6ZHRWTDNJB",
+      "reward": "60 Stellar Jade",
+      "addedOn": "2026-03-25",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Compensation / event code."
+    },
+    {
+      "code": "EB28LCJRU4W3",
+      "reward": "50 Stellar Jade + 10,000 Credits",
+      "addedOn": "2026-03-15",
+      "expiresOn": "2026-03-20",
+      "status": "expired",
+      "notes": "Previous version livestream."
+    },
+    {
+      "code": "AceDetective",
+      "reward": "3 Traveler's Guide + 2 Cold Jokes",
+      "addedOn": "2026-02-25",
+      "expiresOn": "2026-03-10",
+      "status": "expired",
+      "notes": "Detective-themed event."
+    },
+    {
+      "code": "HERESTHECODE",
       "reward": "100 Stellar Jade + 50,000 Credits",
-      "addedOn": "2026-05-02",
-      "expiresOn": null,
-      "status": "active",
-      "notes": "Version 3.2 livestream code."
+      "addedOn": "2026-02-10",
+      "expiresOn": "2026-02-20",
+      "status": "expired",
+      "notes": ""
     },
     {
-      "code": "HSRPM5RTYU38",
-      "reward": "100 Stellar Jade + 3 Traveler's Guide",
-      "addedOn": "2026-05-02",
-      "expiresOn": null,
-      "status": "active",
-      "notes": "Version 3.2 livestream code."
-    },
-    {
-      "code": "HSR3RDANNIV",
-      "reward": "200 Stellar Jade + Special Pass",
+      "code": "HAPPY3RDANNIV",
+      "reward": "100 Stellar Jade + 4 Refined Aether",
       "addedOn": "2026-04-26",
       "expiresOn": "2026-05-10",
       "status": "expired",
@@ -91,14 +164,6 @@
       "expiresOn": "2026-03-23",
       "status": "expired",
       "notes": "Version 3.1 livestream."
-    },
-    {
-      "code": "HSRBG9PCMT34",
-      "reward": "100 Stellar Jade + 4 Refined Aether",
-      "addedOn": "2026-02-08",
-      "expiresOn": "2026-02-10",
-      "status": "expired",
-      "notes": ""
     }
   ]
 }
