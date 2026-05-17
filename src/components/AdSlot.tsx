@@ -34,16 +34,7 @@ export function AdSlot({
     }
   }, [enabled]);
 
-  if (!enabled) {
-    return (
-      <div
-        className={`flex h-24 items-center justify-center rounded-md border border-dashed border-slate-300 bg-slate-50 text-xs text-slate-400 ${className}`}
-        aria-hidden
-      >
-        Ad placeholder ({slot})
-      </div>
-    );
-  }
+  if (!enabled) return null;
 
   return (
     <ins
