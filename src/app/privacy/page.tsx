@@ -6,7 +6,7 @@ import { buildMetadata } from '@/lib/seo';
 import { siteConfig, absoluteUrl } from '@/lib/site';
 import { formatDate } from '@/lib/codes';
 
-const LAST_UPDATED = '2026-05-13';
+const LAST_UPDATED = '2026-05-18';
 
 export const metadata: Metadata = buildMetadata({
   title: `Privacy Policy — ${siteConfig.name}`,
@@ -131,11 +131,11 @@ export default function PrivacyPage() {
       <h2 className="mt-10 text-2xl font-bold text-slate-900">Analytics</h2>
       <p className="mt-2 text-slate-700">
         We use privacy-respecting analytics — currently Vercel Web Analytics
-        and/or Plausible Analytics — to understand how visitors find and
-        navigate the Site. These tools are cookieless, do not track you
-        across other websites, and do not collect data that personally
-        identifies you. We use the aggregated reports solely to improve
-        our content, performance and reliability.
+        — to understand how visitors find and navigate the Site. This tool
+        is cookieless, does not track you across other websites, and does
+        not collect data that personally identifies you. We use the
+        aggregated reports solely to improve our content, performance and
+        reliability.
       </p>
 
       <h2 className="mt-10 text-2xl font-bold text-slate-900">

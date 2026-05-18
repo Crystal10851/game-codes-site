@@ -52,12 +52,15 @@ export default function AboutPage() {
       </h2>
       <ul className="mt-2 list-disc space-y-2 pl-6 text-slate-700">
         <li>
-          Official developer accounts (X / Twitter, Discord, YouTube
-          livestreams).
+          Official developer announcements on X / Twitter, Discord and
+          livestreams.
         </li>
-        <li>Patch notes and in-game announcements.</li>
         <li>
-          Community submissions, which we always verify before publishing.
+          Patch notes, in-game event banners and seasonal reveals.
+        </li>
+        <li>
+          Cross-checking against established game-coverage outlets that
+          publish their own code roundups.
         </li>
       </ul>
 
@@ -65,11 +68,12 @@ export default function AboutPage() {
         Editorial standards
       </h2>
       <p className="mt-2 text-slate-700">
-        Every code is tested in-game on a real account before publication. When
-        a code is reported broken we re-test within the day; if confirmed
-        expired, it is moved to the Expired Codes archive with the date it
-        stopped working. We never paywall codes, never make readers wait
-        behind countdowns, and never republish a code we couldn’t verify.
+        Every code we list has been cross-referenced against at least one
+        reputable source before going up. When a code is reported broken —
+        by a reader or by an upstream source — we move it to the Expired
+        Codes archive with the date it stopped working. We don’t paywall
+        codes, never gate them behind countdown timers, and never list a code
+        without a source we trust.
       </p>
 
       <h2 className="mt-10 text-2xl font-bold text-slate-900">
