@@ -138,6 +138,91 @@ to lock them today.
 
 ---
 
+## Internal link strategy
+
+Based on 2026-05-19 audit of heartopia.gg (the closest "completed wiki"
+analogue this site is aiming at). The point of this section is that
+**internal link density is a bigger SEO lever than per-item detail pages**,
+and the prior plan over-weighted detail pages.
+
+### What heartopia.gg actually does
+
+- ~24 distinct hub URLs (one per game subsystem: pets, fish, recipes,
+  NPCs, home plots, events, tools, beginner guide, hobbies, etc.).
+- Most hubs are **single long pages with embedded sections**, not
+  paginated indexes — items live inside the hub, not as `/hub/<item>`.
+- A handful of hand-picked long-tail detail pages exist (`/villagers/vanya/`,
+  `/mushroom-pie-recipe`) — chosen for keyword value, not generated
+  for every item.
+- 35–45 internal links per page on average. Density comes from
+  three places, in this order of weight:
+  1. **Inline prose links** inside the hub copy ("Visit our Vanya
+     guide for trading tips, check fishing spots map for locations…").
+  2. **Mega-footer** with ~19 links present on every page.
+  3. **Top nav** (10 primary + 8 secondary).
+
+### Revised hub plan for Blox Fruits
+
+Original plan (locked 2026-05-19 morning): 7 hubs + 50 fruit detail
+pages. Revised same-day after heartopia audit:
+
+- **Detail pages: cut from 50 → 10–15**. Pick the highest-search-volume
+  fruits (the 10 seed entries above are the starting set). Remaining ~40
+  live as section anchors inside `/blox-fruits/fruits` rather than
+  individual URLs. Detail pages are chosen for keyword value, not
+  written for every item.
+- **Hub count: 7 → 13**. Original 7 plus:
+  - `/blox-fruits/grinding-guide` — "how to grind blox fruits fast"
+  - `/blox-fruits/beginner-guide` — "blox fruits guide for beginners 2026"
+  - `/blox-fruits/raids` — raid mechanics + reward tables
+  - `/blox-fruits/quests` — quest flow + level progression
+  - `/blox-fruits/accessories` — accessory system
+  - `/blox-fruits/locations` — island/map progression
+
+13 hubs is roughly half the heartopia density. Realistic target for
+Phase 1; the remaining gap closes in Phase 2 or by adding Phase 1.5
+hubs based on Search Console keyword data.
+
+### Inline prose linking convention
+
+Every hub page must include a 200–300 word intro paragraph above the
+data section. The intro **must contain 3–5 contextual links to other
+hubs**, written as natural prose, not a list. Example pattern for
+`/blox-fruits/tier-list`:
+
+> "Tier rankings below reflect awakened forms. New players still
+> deciding their first purchase should start with the
+> [beginner guide](/blox-fruits/beginner-guide) and the
+> [grinding guide](/blox-fruits/grinding-guide) — the meta picks here
+> are not the same as the easiest picks to level with.
+> [Race choice](/blox-fruits/races) and
+> [fighting style pairing](/blox-fruits/fighting-styles) shift these
+> rankings substantially in PvP."
+
+Implementation: allow markdown link syntax in JSON `intro` and
+`tierRationale` fields; render with a markdown parser at build time.
+No new dependency required — `react-markdown` or a tiny inline parser.
+
+### Footer pattern (shipped 2026-05-19)
+
+`src/components/Footer.tsx` expanded from 9 internal links to 21,
+using only existing routes (24 game-route URLs already prerender). Four
+columns: All Games, Latest Codes, Redeem Guides, Site. **Zero new pages
+introduced** — no AdSense risk from footer.
+
+When Phase 1 hubs ship in 2026-06+, add a fifth column ("Blox Fruits
+Guides") linking to the new hubs. Do **not** pre-add those links before
+the hubs exist — 404s in the footer signal "site under construction" to
+AdSense reviewers.
+
+### Top nav
+
+Currently `/<game>` switcher only. After Phase 1 ships, add a Blox
+Fruits dropdown listing the 13 hubs. Out of scope for the 2026-05-27
+AdSense apply window — leave nav alone until after approval.
+
+---
+
 ## Maintenance contract
 
 - **`/blox-fruits/tier-list` is weekly**. 5-minute touch: bump `lastUpdated`

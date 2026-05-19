@@ -8,8 +8,8 @@ export function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer className="mt-16 border-t border-slate-200 bg-slate-50">
-      <Container className="grid gap-8 py-10 sm:grid-cols-2 md:grid-cols-4">
-        <div className="md:col-span-2">
+      <Container className="py-10">
+        <div className="mb-10 max-w-2xl">
           <h2 className="text-base font-semibold text-slate-900">
             {siteConfig.name}
           </h2>
@@ -24,40 +24,81 @@ export function Footer() {
             </a>
           </p>
         </div>
-        <div>
-          <h2 className="text-base font-semibold text-slate-900">Games</h2>
-          <ul className="mt-2 space-y-1 text-sm">
-            {games.map((g) => (
-              <li key={g.slug}>
+        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
+          <div>
+            <h3 className="text-sm font-semibold text-slate-900">All Game Codes</h3>
+            <ul className="mt-2 space-y-1 text-sm">
+              {games.map((g) => (
+                <li key={g.slug}>
+                  <Link
+                    href={`/${g.slug}`}
+                    className="text-slate-600 hover:text-brand-700"
+                  >
+                    {g.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold text-slate-900">Latest Codes</h3>
+            <ul className="mt-2 space-y-1 text-sm">
+              {games.map((g) => (
+                <li key={`latest-${g.slug}`}>
+                  <Link
+                    href={`/${g.slug}/latest`}
+                    className="text-slate-600 hover:text-brand-700"
+                  >
+                    {g.name} latest
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold text-slate-900">Redeem Guides</h3>
+            <ul className="mt-2 space-y-1 text-sm">
+              {games.map((g) => (
+                <li key={`guide-${g.slug}`}>
+                  <Link
+                    href={`/${g.slug}/redeem-guide`}
+                    className="text-slate-600 hover:text-brand-700"
+                  >
+                    How to redeem {g.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold text-slate-900">Site</h3>
+            <ul className="mt-2 space-y-1 text-sm">
+              <li>
                 <Link
-                  href={`/${g.slug}`}
+                  href="/about"
                   className="text-slate-600 hover:text-brand-700"
                 >
-                  {g.name} codes
+                  About
                 </Link>
               </li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <h2 className="text-base font-semibold text-slate-900">Site</h2>
-          <ul className="mt-2 space-y-1 text-sm text-slate-600">
-            <li>
-              <Link href="/about" className="hover:text-brand-700">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact" className="hover:text-brand-700">
-                Contact
-              </Link>
-            </li>
-            <li>
-              <Link href="/privacy" className="hover:text-brand-700">
-                Privacy Policy
-              </Link>
-            </li>
-          </ul>
+              <li>
+                <Link
+                  href="/contact"
+                  className="text-slate-600 hover:text-brand-700"
+                >
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/privacy"
+                  className="text-slate-600 hover:text-brand-700"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </Container>
       <div className="border-t border-slate-200">
