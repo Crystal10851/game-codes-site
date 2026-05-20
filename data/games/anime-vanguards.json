@@ -1,0 +1,133 @@
+{
+  "slug": "anime-vanguards",
+  "name": "Anime Vanguards",
+  "tagline": "Latest working Anime Vanguards codes for free trait rerolls, gems, gold and memoria shards.",
+  "description": "Anime Vanguards is a Roblox tower-defense game developed by Kitawari, where players summon anime-inspired units to defend against waves of enemies across colliding worlds. Released in late 2024 and currently on Update 12+, it has rapidly become the leading anime tower-defense experience on Roblox, absorbing much of the audience that previously played Anime Adventures. Codes are released around major updates and milestone events, granting free trait rerolls, gems, gold, memoria shards, and flowers — all useful for stacking before opening a unit banner. Every code listed here has been cross-referenced against major aggregators (Pocket Tactics, Pro Game Guides, Beebom) and the Anime Vanguards Fandom wiki, and is refreshed as new codes drop or old ones expire.",
+  "platform": "Roblox",
+  "developer": "Kitawari",
+  "officialUrl": "https://www.roblox.com/games/16146832113/Anime-Vanguards",
+  "color": "#7c3aed",
+  "lastVerifiedOn": "2026-05-20",
+  "redeemSteps": [
+    {
+      "title": "Launch Anime Vanguards",
+      "detail": "Open Roblox and start an Anime Vanguards session. You'll land in the main lobby — the code menu is accessible from there once the UI loads."
+    },
+    {
+      "title": "Open the Profile menu",
+      "detail": "Tap the Profile icon on the right-hand side of the screen. The Codes redeem entry recently moved here from the settings menu in a UI update — older guides pointing to the gear icon are out of date."
+    },
+    {
+      "title": "Tap the Codes icon",
+      "detail": "On the profile panel, tap the Codes icon on the left side to open the code input box."
+    },
+    {
+      "title": "Paste the code exactly",
+      "detail": "Copy a code from this page and paste it character-for-character. Codes are case-sensitive — 'BumBum' and 'bumbum' are not the same, and copy-paste is recommended over typing."
+    },
+    {
+      "title": "Hit Redeem Code",
+      "detail": "A confirmation message appears on success. If a code is rejected, double-check capitalisation first, then check whether the code has expired (most Anime Vanguards codes last only about two weeks)."
+    }
+  ],
+  "faq": [
+    {
+      "question": "How often are new Anime Vanguards codes released?",
+      "answer": "New codes drop around major updates, milestone events (visits / favourites), and partnered-creator livestreams. Per the developers, codes typically work for roughly two weeks after release, so the practical refresh cadence is biweekly. Note: as of mid-May 2026 there is a temporary code freeze in effect ahead of the team's next 'high-effort' update — currently active codes remain valid but new drops are paused until that update ships."
+    },
+    {
+      "question": "Why is my Anime Vanguards code not working?",
+      "answer": "The two most common reasons are case sensitivity (the redemption box is strict — 'OopsiePoopsie' is not the same as 'oopsiepoopsie') and expiry (most codes only last about two weeks). A handful of codes also have a minimum account level — those will redeem but show 'requirement not met' until you reach the listed level."
+    },
+    {
+      "question": "Can I redeem the same code twice?",
+      "answer": "No. Each Anime Vanguards code can only be redeemed once per account. Re-pasting a redeemed code will return an 'already used' message."
+    },
+    {
+      "question": "What's the best time to use trait rerolls and memoria shards from codes?",
+      "answer": "Save trait rerolls until you've pulled the unit you actually want to optimise — rerolling on a placeholder unit wastes the rolls. Memoria shards are best banked until you have a clear evolution target so you don't fragment the resource across multiple units."
+    }
+  ],
+  "codes": [
+    {
+      "code": "OopsiePoopsie2",
+      "reward": "100 Trait Rerolls, 100 Memoria Shards, 10,000 Flowers",
+      "addedOn": "2026-05-08",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Apology-themed code released after a brief mid-update outage; still redeemable as of mid-May 2026."
+    },
+    {
+      "code": "OopsiePoopsie",
+      "reward": "100 Trait Rerolls, 100 Memoria Shards, 50,000 Flowers",
+      "addedOn": "2026-04-30",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "First of the 'OopsiePoopsie' pair — larger flower payout than the v2 follow-up."
+    },
+    {
+      "code": "HeHasArrived",
+      "reward": "100 Trait Rerolls, 10,000 Flowers",
+      "addedOn": "2026-04-22",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Released alongside a new banner unit reveal."
+    },
+    {
+      "code": "BumBum",
+      "reward": "50 Trait Rerolls, 50 Memoria Shards, 5,000 Flowers, 50,000 Gold, 2,000 Gems",
+      "addedOn": "2026-04-15",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Most balanced reward bundle currently active — useful regardless of progression stage."
+    },
+    {
+      "code": "TooMuchPain",
+      "reward": "Trait rerolls + gems (exact amounts vary by source)",
+      "addedOn": "2026-04-08",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Older active code; rewards reported inconsistently across aggregators — redeem to confirm."
+    },
+    {
+      "code": "Shinobi",
+      "reward": "In-game rewards (requires account level 15+)",
+      "addedOn": "2026-03-25",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Has a minimum-level gate. Save until you've cleared the early story."
+    },
+    {
+      "code": "ExtraWeek",
+      "reward": "Bonus event currency",
+      "addedOn": "2026-03-18",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Released to extend a limited-time event; may auto-expire when that event window closes."
+    },
+    {
+      "code": "UPD12RELEASE",
+      "reward": "Update 12 launch reward",
+      "addedOn": "2026-03-01",
+      "expiresOn": "2026-03-15",
+      "status": "expired",
+      "notes": "Standard 2-week launch window."
+    },
+    {
+      "code": "BILLIONVISITS",
+      "reward": "Visit milestone reward",
+      "addedOn": "2026-02-10",
+      "expiresOn": "2026-02-24",
+      "status": "expired",
+      "notes": "Marked the 1B visits milestone."
+    },
+    {
+      "code": "VALENTINES2026",
+      "reward": "Valentine's event currency",
+      "addedOn": "2026-02-14",
+      "expiresOn": "2026-02-28",
+      "status": "expired",
+      "notes": "Event-locked, expired with the Valentine's banner."
+    }
+  ]
+}

@@ -9,6 +9,20 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: [],
   },
+  async redirects() {
+    return [
+      {
+        source: '/anime-adventures',
+        destination: '/anime-vanguards',
+        permanent: true,
+      },
+      {
+        source: '/anime-adventures/:path*',
+        destination: '/anime-vanguards/:path*',
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
