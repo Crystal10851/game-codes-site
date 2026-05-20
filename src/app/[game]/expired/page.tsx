@@ -6,6 +6,7 @@ import { GameHeader } from '@/components/GameHeader';
 import { CodeList } from '@/components/CodeList';
 import { AdSlot } from '@/components/AdSlot';
 import { JsonLd } from '@/components/JsonLd';
+import { AuthorByline } from '@/components/AuthorByline';
 import { getGame, getGameSlugs } from '@/lib/games';
 import { getExpiredCodes, getLastUpdated } from '@/lib/codes';
 import { buildMetadata } from '@/lib/seo';
@@ -44,6 +45,7 @@ export default async function ExpiredPage({ params }: PageProps) {
   const game = getGame(slug);
   if (!game) notFound();
   const expired = getExpiredCodes(game);
+  const lastUpdated = getLastUpdated(game);
 
   const breadcrumbLd = {
     '@context': 'https://schema.org',
@@ -69,6 +71,7 @@ export default async function ExpiredPage({ params }: PageProps) {
     <Container className="space-y-8 py-8">
       <JsonLd id="ld-expired" data={breadcrumbLd} />
       <GameHeader game={game} active="/expired" />
+      <AuthorByline verifiedOn={lastUpdated} />
 
       <AdSlot slot={`${game.slug}-expired-top`} />
 

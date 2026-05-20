@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { Container } from '@/components/Container';
 import { GameHeader } from '@/components/GameHeader';
 import { JsonLd } from '@/components/JsonLd';
+import { AuthorByline } from '@/components/AuthorByline';
 import { getGame } from '@/lib/games';
 import { buildMetadata } from '@/lib/seo';
 import { absoluteUrl } from '@/lib/site';
@@ -151,13 +152,14 @@ export default function BloxFruitsTierListPage() {
     <Container className="space-y-10 py-8">
       <JsonLd id="ld-tier-list" data={[articleLd, breadcrumbLd, itemListLd]} />
       <GameHeader game={game} active="/tier-list" />
+      <AuthorByline verifiedOn={lastUpdated} />
 
       <section>
         <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">
           Blox Fruits Tier List ({new Date().getFullYear()})
         </h1>
         <p className="mt-2 text-sm text-slate-500">
-          Last updated {formatDate(lastUpdated)} · Refreshed weekly · {fruits.length} fruits ranked
+          {fruits.length} fruits ranked across overall, PvP, and grinding · Editorial picks
         </p>
         <p className="mt-4 max-w-3xl text-slate-700 leading-relaxed">
           {renderInlineLinks(intro)}

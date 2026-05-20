@@ -1,5 +1,5 @@
 import type { GameCode } from '@/lib/types';
-import { formatDate } from '@/lib/codes';
+import { formatDate, isRecentlyAdded } from '@/lib/codes';
 import { CopyButton } from './CopyButton';
 
 interface Props {
@@ -9,6 +9,7 @@ interface Props {
 
 export function CodeCard({ entry, variant = 'active' }: Props) {
   const isExpired = variant === 'expired' || entry.status === 'expired';
+  const isFresh = !isExpired && isRecentlyAdded(entry.addedOn);
   return (
     <article
       className={`flex flex-col gap-3 rounded-lg border p-4 sm:flex-row sm:items-center sm:justify-between ${
@@ -35,6 +36,11 @@ export function CodeCard({ entry, variant = 'active' }: Props) {
           ) : (
             <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-xs font-medium text-emerald-700">
               Working
+            </span>
+          )}
+          {isFresh && (
+            <span className="rounded-full bg-rose-500 px-2 py-0.5 text-xs font-bold uppercase tracking-wide text-white shadow-sm">
+              New
             </span>
           )}
         </div>

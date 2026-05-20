@@ -24,6 +24,13 @@ export function getLastUpdated(game: Game): string {
   return dates[dates.length - 1] ?? new Date().toISOString().slice(0, 10);
 }
 
+export function isRecentlyAdded(iso: string, withinDays = 7): boolean {
+  const added = new Date(iso).getTime();
+  if (Number.isNaN(added)) return false;
+  const cutoff = Date.now() - withinDays * 24 * 60 * 60 * 1000;
+  return added >= cutoff;
+}
+
 export function formatDate(iso: string): string {
   const d = new Date(iso);
   if (Number.isNaN(d.getTime())) return iso;

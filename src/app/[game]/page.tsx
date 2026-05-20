@@ -7,6 +7,8 @@ import { CodeList } from '@/components/CodeList';
 import { AdSlot } from '@/components/AdSlot';
 import { AffiliateBar } from '@/components/AffiliateBar';
 import { JsonLd } from '@/components/JsonLd';
+import { AuthorByline } from '@/components/AuthorByline';
+import { RefreshPromise } from '@/components/RefreshPromise';
 import { getGame, getGameSlugs } from '@/lib/games';
 import { getLatestCodes, getExpiredCodes, getLastUpdated } from '@/lib/codes';
 import { buildMetadata } from '@/lib/seo';
@@ -85,6 +87,9 @@ export default async function GamePage({ params }: PageProps) {
     <Container className="space-y-8 py-8">
       <JsonLd id="ld-article" data={[articleLd, breadcrumbLd]} />
       <GameHeader game={game} active="" />
+      <AuthorByline verifiedOn={lastUpdated} />
+
+      <RefreshPromise gameName={game.name} />
 
       <AdSlot slot={`${game.slug}-overview-top`} />
 

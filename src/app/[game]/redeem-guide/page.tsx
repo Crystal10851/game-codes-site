@@ -5,6 +5,7 @@ import { GameHeader } from '@/components/GameHeader';
 import { AdSlot } from '@/components/AdSlot';
 import { AffiliateBar } from '@/components/AffiliateBar';
 import { JsonLd } from '@/components/JsonLd';
+import { AuthorByline } from '@/components/AuthorByline';
 import { getGame, getGameSlugs } from '@/lib/games';
 import { getLastUpdated } from '@/lib/codes';
 import { buildMetadata } from '@/lib/seo';
@@ -42,6 +43,7 @@ export default async function RedeemGuidePage({ params }: PageProps) {
   const { game: slug } = await params;
   const game = getGame(slug);
   if (!game) notFound();
+  const lastUpdated = getLastUpdated(game);
 
   const howToLd = {
     '@context': 'https://schema.org',
@@ -95,6 +97,7 @@ export default async function RedeemGuidePage({ params }: PageProps) {
         data={faqLd ? [howToLd, faqLd, breadcrumbLd] : [howToLd, breadcrumbLd]}
       />
       <GameHeader game={game} active="/redeem-guide" />
+      <AuthorByline verifiedOn={lastUpdated} />
 
       <AdSlot slot={`${game.slug}-redeem-top`} />
 

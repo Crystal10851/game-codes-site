@@ -5,6 +5,7 @@ import { GameHeader } from '@/components/GameHeader';
 import { CodeList } from '@/components/CodeList';
 import { AdSlot } from '@/components/AdSlot';
 import { JsonLd } from '@/components/JsonLd';
+import { AuthorByline } from '@/components/AuthorByline';
 import { getGame, getGameSlugs } from '@/lib/games';
 import { getLatestCodes, getLastUpdated } from '@/lib/codes';
 import { buildMetadata } from '@/lib/seo';
@@ -83,6 +84,7 @@ export default async function LatestPage({ params }: PageProps) {
     <Container className="space-y-8 py-8">
       <JsonLd id="ld-latest" data={[breadcrumbLd, itemListLd]} />
       <GameHeader game={game} active="/latest" />
+      <AuthorByline verifiedOn={lastUpdated} />
 
       <AdSlot slot={`${game.slug}-latest-top`} />
 
