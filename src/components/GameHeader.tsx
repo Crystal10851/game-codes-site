@@ -2,12 +2,16 @@ import Link from 'next/link';
 import type { Game } from '@/lib/types';
 import { getLastUpdated, formatDate } from '@/lib/codes';
 
-const TABS = [
+const BASE_TABS = [
   { href: '', label: 'Overview' },
   { href: '/latest', label: 'Latest Codes' },
   { href: '/expired', label: 'Expired Codes' },
   { href: '/redeem-guide', label: 'Redeem Guide' },
 ];
+
+const EXTRA_TABS_BY_SLUG: Record<string, { href: string; label: string }[]> = {
+  'blox-fruits': [{ href: '/tier-list', label: 'Tier List' }],
+};
 
 export function GameHeader({
   game,
@@ -17,6 +21,7 @@ export function GameHeader({
   active: '' | '/latest' | '/expired' | '/redeem-guide' | '/tier-list';
 }) {
   const lastUpdated = getLastUpdated(game);
+  const tabs = [...BASE_TABS, ...(EXTRA_TABS_BY_SLUG[game.slug] ?? [])];
   return (
     <section
       className="rounded-xl border border-slate-200 bg-gradient-to-br from-brand-50 to-white p-6"
@@ -36,7 +41,7 @@ export function GameHeader({
         aria-label={`${game.name} sections`}
         className="mt-5 flex flex-wrap gap-2"
       >
-        {TABS.map((t) => {
+        {tabs.map((t) => {
           const href = `/${game.slug}${t.href}`;
           const isActive = t.href === active;
           return (

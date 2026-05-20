@@ -133,6 +133,36 @@ export default async function GamePage({ params }: PageProps) {
         </Link>
       </section>
 
+      {game.slug === 'blox-fruits' && (
+        <section aria-labelledby="tier-cta-heading">
+          <Link
+            href="/blox-fruits/tier-list"
+            className="group block rounded-xl border-2 border-brand-200 bg-gradient-to-br from-brand-50 to-white p-5 transition hover:border-brand-400 hover:shadow-md"
+          >
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wide text-brand-700">
+                  New · Updated weekly
+                </p>
+                <h2
+                  id="tier-cta-heading"
+                  className="mt-1 text-xl font-bold text-slate-900"
+                >
+                  Blox Fruits Tier List (2026)
+                </h2>
+                <p className="mt-1 text-sm text-slate-600">
+                  Top 10 fruits ranked across overall, PvP, and grinding —
+                  with rationale, pros and cons, and best combos.
+                </p>
+              </div>
+              <span className="rounded-full bg-brand-500 px-4 py-2 text-sm font-semibold text-white shadow-sm transition group-hover:bg-brand-700">
+                See the rankings →
+              </span>
+            </div>
+          </Link>
+        </section>
+      )}
+
       <AffiliateBar game={game} />
 
       <AdSlot slot={`${game.slug}-overview-mid`} />
