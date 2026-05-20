@@ -14,7 +14,7 @@ export function GameHeader({
   active,
 }: {
   game: Game;
-  active: '' | '/latest' | '/expired' | '/redeem-guide';
+  active: '' | '/latest' | '/expired' | '/redeem-guide' | '/tier-list';
 }) {
   const lastUpdated = getLastUpdated(game);
   return (

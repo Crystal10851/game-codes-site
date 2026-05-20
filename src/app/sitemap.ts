@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next';
 import { getAllGames } from '@/lib/games';
 import { getLastUpdated } from '@/lib/codes';
 import { absoluteUrl } from '@/lib/site';
+import bloxFruitsTierList from '../../data/games/blox-fruits/tier-list.json';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const games = getAllGames();
@@ -33,6 +34,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.3,
     },
   ];
+
+  entries.push({
+    url: absoluteUrl('/blox-fruits/tier-list'),
+    lastModified: new Date(bloxFruitsTierList.meta.lastUpdated),
+    changeFrequency: 'weekly',
+    priority: 0.8,
+  });
 
   for (const game of games) {
     const lastModified = new Date(getLastUpdated(game));

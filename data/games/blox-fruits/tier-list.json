@@ -1,0 +1,279 @@
+{
+  "meta": {
+    "lastUpdated": "2026-05-20",
+    "intro": "These Blox Fruits tier rankings reflect awakened forms in the current meta and are refreshed weekly. New players still deciding their first purchase should start with the basics on the [Blox Fruits hub](/blox-fruits) and the step-by-step [redeem guide](/blox-fruits/redeem-guide) before committing Beli or Robux — the meta picks here are not the same as the easiest picks to level with. If a fruit you just got isn't on this list, it likely sits in the B–C range and is fine for casual play; the ten below are the ones that consistently win PvP fights, clear bosses fastest, or trade for the highest value. Tier calls here are editorial and judged from current upstream wiki consensus plus our own play-testing notes, refreshed every Sunday. For freshly added in-game promos that pair well with whichever fruit you pick, see the [latest working codes](/blox-fruits/latest) — XP boosts are particularly worth stacking when you're grinding a new Mythical."
+  },
+  "fruits": [
+    {
+      "slug": "dragon",
+      "name": "Dragon",
+      "type": "Beast",
+      "rarity": "Mythical",
+      "tiers": { "overall": "S+", "pvp": "S+", "grinding": "S+" },
+      "tierRationale": "Dragon is the current meta-defining pick. Awakened form gives you full-screen air-pressure zoning, a transformation that doubles your survivability, and combo-extenders that close out PvP fights from neutral. Grinding is also class-leading thanks to the AOE pressure scaling with level.",
+      "pros": [
+        "Awakened transformation is the strongest defensive layer in the game right now",
+        "Air-pressure zoning denies space at a range no other fruit matches",
+        "Top-tier in all three dimensions — rare even among Mythicals"
+      ],
+      "cons": [
+        "Highest Robux cost of any fruit; Beli grind is also brutal",
+        "Awakening fragment cost is steep — expect multiple raid cycles",
+        "Skill ceiling is high; new owners often underperform B-tier picks until ~50 hours in"
+      ],
+      "bestCombos": {
+        "sword": "Hallow Scythe or Shisui",
+        "fightingStyle": "Sharkman Karate",
+        "notes": "Pair with Ghoul or Shark race for sustained pressure; Cyborg race is also strong for the energy regen."
+      },
+      "howToObtain": [
+        "Blox Fruit Dealer (rare Mythical roll)",
+        "Random sea spawn (very rare)",
+        "Trading from another player"
+      ]
+    },
+    {
+      "slug": "leopard",
+      "name": "Leopard",
+      "type": "Beast",
+      "rarity": "Mythical",
+      "tiers": { "overall": "S+", "pvp": "S+", "grinding": "S" },
+      "tierRationale": "Classic PvP king. The fastest combo-extender in the game lets you chain Z and X almost indefinitely with the right race. Grinding drops slightly behind Dragon and Buddha because the AOE is smaller, but combo damage on bosses is still top-tier.",
+      "pros": [
+        "Single best combo-extender — TKO and TKO follow-ups are nearly unblockable",
+        "Movement speed buff in transformation makes catching runners trivial",
+        "Holds value in trading even years after release"
+      ],
+      "cons": [
+        "Awakening adds less than most Mythicals — the base form is already most of the value",
+        "Bossing relies on staying close, which Dragon avoids",
+        "Counter-picked hard by Spirit and Venom in 1v1 trades"
+      ],
+      "bestCombos": {
+        "sword": "Cursed Dual Katana",
+        "fightingStyle": "Godhuman",
+        "notes": "Ghoul race nearly required for the lifesteal — Leopard's only weakness is sustain in long trades."
+      },
+      "howToObtain": [
+        "Blox Fruit Dealer (Mythical roll)",
+        "Trading — typically valued just under Dragon"
+      ]
+    },
+    {
+      "slug": "dough",
+      "name": "Dough",
+      "type": "Natural",
+      "rarity": "Mythical",
+      "tiers": { "overall": "S", "pvp": "S+", "grinding": "A" },
+      "tierRationale": "Awakened Dough sits a hair below Dragon in PvP — the AOE on the Z move and the size of the V trap give it the second-best zoning kit. Grinding is decent thanks to the wide hitboxes, but cooldowns lag behind Buddha and Dragon for sustained farming.",
+      "pros": [
+        "Awakening completely transforms the kit — pre-awakening Dough is mid-tier, awakened is meta",
+        "Massive AOE traps make group fights and sea events trivial",
+        "Lower Robux cost than Dragon or Leopard for similar PvP performance"
+      ],
+      "cons": [
+        "Pre-awakening it's a B-tier fruit, which means a long fragment grind before payoff",
+        "Cooldowns on the strong moves are long — windows of vulnerability after every commitment",
+        "Less popular in trading than other Mythicals"
+      ],
+      "bestCombos": {
+        "sword": "Yama or Shisui",
+        "fightingStyle": "Death Step",
+        "notes": "Mink race for the speed makes landing the awakened V trap consistent."
+      },
+      "howToObtain": [
+        "Blox Fruit Dealer (Mythical roll)",
+        "Random sea spawn"
+      ]
+    },
+    {
+      "slug": "buddha",
+      "name": "Buddha",
+      "type": "Beast",
+      "rarity": "Legendary",
+      "tiers": { "overall": "S", "pvp": "A", "grinding": "S+" },
+      "tierRationale": "The grinding workhorse. Transformation gives you huge hitboxes, M1 lifesteal scaling, and damage reduction — three reasons Buddha clears mob farms and bossing faster than any other fruit. PvP is solid but not top-tier; the slow moves get out-spaced by Dragon and Dough.",
+      "pros": [
+        "Cheapest path to clean grinding at high levels — saves real Beli grind",
+        "Damage reduction in transformation lets you tank hits that would one-shot other fruits",
+        "Easy to use — minimal skill expression needed to be effective"
+      ],
+      "cons": [
+        "PvP ceiling is capped — hard-countered by any zoning fruit",
+        "Single-target boss damage isn't class-leading despite the lifesteal",
+        "Looks visually unimpressive, which matters for trading liquidity"
+      ],
+      "bestCombos": {
+        "sword": "Saber V2",
+        "fightingStyle": "Godhuman",
+        "notes": "Shark race for the underwater grinding bonus; Cyborg also great for the extra health."
+      },
+      "howToObtain": [
+        "Blox Fruit Dealer (Legendary roll, common compared to Mythicals)",
+        "Random sea spawn (relatively frequent)"
+      ]
+    },
+    {
+      "slug": "spirit",
+      "name": "Spirit",
+      "type": "Natural",
+      "rarity": "Mythical",
+      "tiers": { "overall": "A", "pvp": "S", "grinding": "D" },
+      "tierRationale": "A genuine PvP terror — summon mechanics let you fight with effective two-vs-one numbers, and the spectral form ignores most projectile damage. The catch is grinding: the kit has zero AOE, so mob clears are painful. Pick Spirit only if you're a PvP main.",
+      "pros": [
+        "Summon mechanic gives a real numerical advantage in 1v1s",
+        "Spectral mode is the most unique defensive layer in the game",
+        "Niche but devoted following — trading liquidity holds up"
+      ],
+      "cons": [
+        "Grinding is the worst of any Mythical — D-tier for a reason",
+        "Heavy keybind dependence; not pick-up-and-play",
+        "Awakening adds quality-of-life but doesn't fix the grinding problem"
+      ],
+      "bestCombos": {
+        "sword": "Shisui",
+        "fightingStyle": "Sharkman Karate",
+        "notes": "Ghoul race for sustain; Spirit's defense pairs uniquely well with lifesteal."
+      },
+      "howToObtain": [
+        "Blox Fruit Dealer (rare Mythical roll)",
+        "Trading"
+      ]
+    },
+    {
+      "slug": "venom",
+      "name": "Venom",
+      "type": "Natural",
+      "rarity": "Mythical",
+      "tiers": { "overall": "A", "pvp": "A", "grinding": "B" },
+      "tierRationale": "Poison damage-over-time makes Venom consistent — you can land a tick from neutral and force the opponent to commit. Awakening adds toxic AOE that makes the kit a strong all-rounder. The ceiling is lower than Dragon or Dough, but the floor is much higher.",
+      "pros": [
+        "DoT removes the need to commit to risky combo openers",
+        "Toxic AOE makes group PvP and Castle of Sea Beasts trivial",
+        "Forgiving for intermediate players — high floor, moderate ceiling"
+      ],
+      "cons": [
+        "Outclassed at the top end by Dragon, Leopard, and Dough",
+        "Awakening is required to be competitive — long fragment grind",
+        "Trading value lags behind despite the strength"
+      ],
+      "bestCombos": {
+        "sword": "Cursed Dual Katana",
+        "fightingStyle": "Death Step",
+        "notes": "Ghoul or Cyborg race; both reinforce the attrition playstyle."
+      },
+      "howToObtain": [
+        "Blox Fruit Dealer (Mythical roll)",
+        "Random sea spawn"
+      ]
+    },
+    {
+      "slug": "shadow",
+      "name": "Shadow",
+      "type": "Natural",
+      "rarity": "Mythical",
+      "tiers": { "overall": "A", "pvp": "A", "grinding": "A" },
+      "tierRationale": "The textbook generalist — no extremes in any direction. Awakened Shadow has solid AOE for grinding, a passive damage buff during night-time, and a teleport that's serviceable for combo extension. If you're new to the Mythical tier and unsure what playstyle you want, Shadow is the safest pick.",
+      "pros": [
+        "All three dimensions are A-tier — no glaring weakness",
+        "Night-time damage passive is a free bonus most fruits don't get",
+        "Teleport opens up combo routes that other fruits can't access"
+      ],
+      "cons": [
+        "Never the best at anything — outpicked by specialists in every category",
+        "Night-only passive means daytime fights lose value",
+        "Visual effects are subtle, hurting trading appeal"
+      ],
+      "bestCombos": {
+        "sword": "Yama",
+        "fightingStyle": "Godhuman",
+        "notes": "Mink race amplifies the mobility theme; works with most races though."
+      },
+      "howToObtain": [
+        "Blox Fruit Dealer (Mythical roll)",
+        "Random sea spawn"
+      ]
+    },
+    {
+      "slug": "rumble",
+      "name": "Rumble",
+      "type": "Elemental",
+      "rarity": "Legendary",
+      "tiers": { "overall": "A", "pvp": "A", "grinding": "B" },
+      "tierRationale": "Lightning coverage with reliable hitboxes — Rumble is the textbook 'second fruit' for accounts that already have a grinder. PvP is genuinely good thanks to the long-range bolt and a strong escape on F. Grinding falls behind because the AOE doesn't scale as well as Beast fruits.",
+      "pros": [
+        "One of the most reliable PvP picks at the Legendary price point",
+        "Long-range coverage means you can pressure runners and runners can't escape",
+        "Awakening cost is moderate — accessible upgrade path"
+      ],
+      "cons": [
+        "Grinding falls off in late-game farms",
+        "Counter-picked by Sand and Light (light wins the speed war)",
+        "Less trading value than equivalent-tier Beast fruits"
+      ],
+      "bestCombos": {
+        "sword": "Shisui",
+        "fightingStyle": "Electric Claw",
+        "notes": "Mink race doubles the speed identity; great for chase-down playstyle."
+      },
+      "howToObtain": [
+        "Blox Fruit Dealer (Legendary roll, achievable)",
+        "Trading — common availability"
+      ]
+    },
+    {
+      "slug": "light",
+      "name": "Light",
+      "type": "Elemental",
+      "rarity": "Rare",
+      "tiers": { "overall": "B", "pvp": "B", "grinding": "S" },
+      "tierRationale": "The budget grinder's best friend. Cheap to obtain, fast travel speed, and AOE moves that clear mob camps in seconds — Light is what most accounts use to grind from ~700 to ~1500 before swapping. PvP is mediocre by Mythical standards but viable against other Rare/Legendary opponents.",
+      "pros": [
+        "Cheapest path to S-tier grinding — accessible early",
+        "Travel speed in elemental form saves dozens of hours over the playthrough",
+        "Forgiving — beginners can use Light effectively from day one"
+      ],
+      "cons": [
+        "PvP ceiling is hard-capped at B — outclassed by every Mythical",
+        "No awakening — what you see is what you get",
+        "Trading floor is low because supply is high"
+      ],
+      "bestCombos": {
+        "sword": "Saber",
+        "fightingStyle": "Electric",
+        "notes": "Any race works; pick based on what your endgame fruit will be."
+      },
+      "howToObtain": [
+        "Blox Fruit Dealer (Rare roll, common)",
+        "Random sea spawn (frequent)"
+      ]
+    },
+    {
+      "slug": "phoenix",
+      "name": "Phoenix",
+      "type": "Elemental",
+      "rarity": "Mythical",
+      "tiers": { "overall": "B", "pvp": "B", "grinding": "A" },
+      "tierRationale": "Self-heal makes Phoenix the most forgiving Mythical, which is exactly why it gets overpicked by new players and then sold. The fly mode is genuinely useful for grinding sea events and reaching out-of-bounds raid spawns, but PvP is well below the Mythical average — the heal is read easily and counter-pressured.",
+      "pros": [
+        "Self-sustain in grinding makes long sessions painless",
+        "Permanent fly mode is a real quality-of-life upgrade for sea travel",
+        "Easiest Mythical to play — strong recommendation for first-time Mythical owners"
+      ],
+      "cons": [
+        "PvP ceiling is the lowest of any Mythical — hard-countered by AOE damage",
+        "Awakening fragment grind is long for what's effectively a quality-of-life fruit",
+        "Resale value drops once players realize the PvP ceiling"
+      ],
+      "bestCombos": {
+        "sword": "Saddi or Bisento",
+        "fightingStyle": "Sharkman Karate",
+        "notes": "Shark race underwater bonus stacks well with the sustain theme."
+      },
+      "howToObtain": [
+        "Blox Fruit Dealer (Mythical roll)",
+        "Random sea spawn"
+      ]
+    }
+  ]
+}
