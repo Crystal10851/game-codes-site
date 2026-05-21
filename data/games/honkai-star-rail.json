@@ -7,7 +7,7 @@
   "developer": "HoYoverse",
   "officialUrl": "https://hsr.hoyoverse.com",
   "color": "#7b3fe4",
-  "lastVerifiedOn": "2026-05-16",
+  "lastVerifiedOn": "2026-05-21",
   "redeemSteps": [
     {
       "title": "Reach Trailblaze Level 10",
@@ -52,6 +52,14 @@
       "expiresOn": null,
       "status": "active",
       "notes": "Permanent code, works on every server."
+    },
+    {
+      "code": "SitByEvanescia",
+      "reward": "3 Traveler's Guide + 2 Bottled Quantum Ghosts",
+      "addedOn": "2026-05-21",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Verified against Pocket Tactics 2026-05-21."
     },
     {
       "code": "VS3Q5VK9CMFP",
