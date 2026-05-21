@@ -299,29 +299,52 @@ existing `tiers.{overall,pvp,grinding}` carry the playstyle-fit signal.
 
 ### Recommendation algorithm (deterministic)
 
+Budget is a **ladder**, not a categorical match. `quizSignals.budget` on each
+fruit declares the *minimum* tier of access the player needs. The user's Q1
+answer is the *maximum* they're willing to spend, so a `beli` fruit is
+eligible for every Q1 answer, a `low-robux` fruit is eligible for
+`low-robux | high-robux | trading`, and so on. (Earlier draft used exact
+equality — that incorrectly hid free `beli` fruits from a user who picked
+`low-robux`.)
+
 ```
-candidates = fruits.filter(f => f.quizSignals.budget matches Q1)
-                   .filter(f => Q3 !== "new" || f.quizSignals.beginnerFriendly)
-                   .filter(f => Q3 !== "veteran" || rank(f.tiers.overall) >= rank("A"))
+budgetRank = { "beli": 1, "low-robux": 2, "high-robux": 3, "trading": 4 }
+tierRank   = { "S+": 6, "S": 5, "A": 4, "B": 3, "C": 2, "D": 1 }
+
+candidates = fruits
+  .filter(f => budgetRank[f.quizSignals.budget] <= budgetRank[Q1])    // ladder, not equality
+  .filter(f => Q3 !== "new"     || f.quizSignals.beginnerFriendly)
+  .filter(f => Q3 !== "veteran" || tierRank[f.tiers.overall] >= tierRank["A"])
 
 rankBy = {
-  pvp:        f => rank(f.tiers.pvp),
-  grinding:   f => rank(f.tiers.grinding),
-  bossing:    f => rank(f.tiers.grinding),   // boss = grinding-adjacent in BF
-  "all-around": f => rank(f.tiers.overall),
+  pvp:          f => tierRank[f.tiers.pvp],
+  grinding:     f => tierRank[f.tiers.grinding],
+  bossing:      f => tierRank[f.tiers.grinding],   // boss = grinding-adjacent in BF
+  "all-around": f => tierRank[f.tiers.overall],
 }[Q2]
 
 sorted = candidates.sort(rankBy desc)
 top = sorted[0]
 alsoConsider = sorted.slice(1, 3)
-skipThese = sorted.reverse().slice(0, 2)   // worst matches by same dim
+
+// "Skip these" should be ACTIVELY wrong picks for this profile, not
+// merely the bottom of the candidate set. Bottom-of-candidates is
+// still "fine for this budget+experience", which is the wrong message.
+// Instead: pull from outside the candidate set, ranked by how badly
+// they fit Q2 (worst on the user's playstyle dimension first), and
+// prefer fruits that are commonly mis-recommended (Mythical rarity or
+// `quizSignals.budget === "high-robux"`) so the warning is meaningful.
+skipPool = fruits.filter(f => !candidates.includes(f))
+                 .filter(f => f.rarity === "Mythical" || f.quizSignals.budget === "high-robux")
+skipThese = skipPool.sort(rankBy asc).slice(0, 2)
+// Each skipThese entry renders with a one-sentence reason — e.g.
+// "spirit is a PvP-only fruit; for grinding it ranks D."
 ```
 
-Where `rank("S+") = 6, S = 5, A = 4, B = 3, C = 2, D = 1`.
-
-If `candidates.length === 0` (over-restrictive combo): fall back to ignoring
-the budget filter and adding a warning to the result that the user's
-desired playstyle requires a bigger budget than they selected.
+If `candidates.length === 0` (over-restrictive combo, e.g. `new` + `pvp` +
+`beli`): fall back to ignoring the budget filter and adding a warning to
+the result that the user's desired playstyle requires a bigger budget
+than they selected.
 
 ### Implementation
 
@@ -333,6 +356,27 @@ desired playstyle requires a bigger budget than they selected.
 - Data import from `data/games/blox-fruits/tier-list.json` (same path
   the tier-list page uses).
 - Build budget: **4–6 hours** total. No new dependencies.
+
+**Prerequisite — add slug anchors to the tier-list page.** Result CTAs
+link to `/blox-fruits/tier-list#<slug>`, but the current
+`src/app/blox-fruits/tier-list/page.tsx` does not emit per-fruit `id`
+attributes. Before (or as part of) the quiz build, add `id={fruit.slug}`
+to the wrapping element of each fruit card. Without this, every result
+link from the quiz scrolls to the top of the page. Verify after the edit
+by opening `/blox-fruits/tier-list#dragon` and confirming the browser
+scrolls to the dragon card.
+
+**Mobile-first wizard layout.** Use a one-question-per-screen wizard
+with a progress indicator (`1/3`, `2/3`, `3/3`) on every viewport — do
+not branch desktop vs mobile. Cleaner code path and the result screen is
+identical on both. Reset on page reload — quiz is 3 questions, no
+`localStorage` warranted.
+
+**Result copy guidance.** `skipThese` reasons should be a single specific
+sentence ("Spirit is a PvP-only fruit; for grinding it ranks D"), not
+generic ("not recommended"). Each candidate fruit already has
+`tierRationale` + `pros` + `cons` in the JSON — pull the relevant cons
+sentence rather than writing new copy at build time.
 
 ### SEO
 
