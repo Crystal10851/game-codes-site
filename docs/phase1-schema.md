@@ -357,15 +357,6 @@ than they selected.
   the tier-list page uses).
 - Build budget: **4–6 hours** total. No new dependencies.
 
-**Prerequisite — add slug anchors to the tier-list page.** Result CTAs
-link to `/blox-fruits/tier-list#<slug>`, but the current
-`src/app/blox-fruits/tier-list/page.tsx` does not emit per-fruit `id`
-attributes. Before (or as part of) the quiz build, add `id={fruit.slug}`
-to the wrapping element of each fruit card. Without this, every result
-link from the quiz scrolls to the top of the page. Verify after the edit
-by opening `/blox-fruits/tier-list#dragon` and confirming the browser
-scrolls to the dragon card.
-
 **Mobile-first wizard layout.** Use a one-question-per-screen wizard
 with a progress indicator (`1/3`, `2/3`, `3/3`) on every viewport — do
 not branch desktop vs mobile. Cleaner code path and the result screen is
