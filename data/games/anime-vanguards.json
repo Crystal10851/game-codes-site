@@ -7,7 +7,7 @@
   "developer": "Kitawari",
   "officialUrl": "https://www.roblox.com/games/16146832113/Anime-Vanguards",
   "color": "#7c3aed",
-  "lastVerifiedOn": "2026-05-21",
+  "lastVerifiedOn": "2026-05-26",
   "redeemSteps": [
     {
       "title": "Launch Anime Vanguards",
@@ -78,32 +78,32 @@
       "reward": "50 Trait Rerolls, 50 Memoria Shards, 5,000 Flowers, 50,000 Gold, 2,000 Gems",
       "addedOn": "2026-04-15",
       "expiresOn": null,
-      "status": "active",
-      "notes": "Most balanced reward bundle currently active — useful regardless of progression stage."
+      "status": "expired",
+      "notes": "Event reward bundle; confirmed expired upstream (Pocket Tactics) by 2026-05-26."
     },
     {
       "code": "TooMuchPain",
       "reward": "Trait rerolls + gems (exact amounts vary by source)",
       "addedOn": "2026-04-08",
       "expiresOn": null,
-      "status": "active",
-      "notes": "Older active code; rewards reported inconsistently across aggregators — redeem to confirm."
+      "status": "expired",
+      "notes": "Older event code; confirmed expired upstream (Pocket Tactics) by 2026-05-26."
     },
     {
       "code": "Shinobi",
       "reward": "In-game rewards (requires account level 15+)",
       "addedOn": "2026-03-25",
       "expiresOn": null,
-      "status": "active",
-      "notes": "Has a minimum-level gate. Save until you've cleared the early story."
+      "status": "expired",
+      "notes": "Had a minimum-level gate; confirmed expired upstream (Pocket Tactics) by 2026-05-26."
     },
     {
       "code": "ExtraWeek",
       "reward": "Bonus event currency",
       "addedOn": "2026-03-18",
       "expiresOn": null,
-      "status": "active",
-      "notes": "Released to extend a limited-time event; may auto-expire when that event window closes."
+      "status": "expired",
+      "notes": "Limited-time event code; its event window has since closed (expired by 2026-05-26)."
     },
     {
       "code": "UPD12RELEASE",

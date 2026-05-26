@@ -7,7 +7,7 @@
   "developer": "HoYoverse",
   "officialUrl": "https://genshin.hoyoverse.com",
   "color": "#1f6feb",
-  "lastVerifiedOn": "2026-05-21",
+  "lastVerifiedOn": "2026-05-26",
   "redeemSteps": [
     {
       "title": "Reach Adventure Rank 10",
@@ -58,6 +58,22 @@
       "notes": "Permanent code for new and returning players."
     },
     {
+      "code": "OHOHONICOLE",
+      "reward": "30 Primogems, 20,000 Mora, 3 Tattered Warrants",
+      "addedOn": "2026-05-26",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Nicole event code; verified active on Pocket Tactics 2026-05-26 — livestream-window codes expire fast, redeem promptly."
+    },
+    {
+      "code": "MageNicolesPuzzle",
+      "reward": "30 Primogems, 5 Chenyu Adeptea, 1 Fruit Tandem Turnovers, 1 Midsommar Torte",
+      "addedOn": "2026-05-26",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Nicole puzzle event code; verified active on Pocket Tactics 2026-05-26 — redeem promptly."
+    },
+    {
       "code": "PFY1S40I88T9",
       "reward": "60 Primogems + 5 Adventurer's Experience",
       "addedOn": "2026-05-13",
@@ -70,15 +86,15 @@
       "reward": "10,000 Mora + 10 Adventurer's Experience + 5 Fine Enhancement Ore + 5 Jueyun Chili Chicken + 5 Stir-Fried Fish Noodles",
       "addedOn": "2026-05-13",
       "expiresOn": null,
-      "status": "active",
-      "notes": "Latest version livestream code."
+      "status": "expired",
+      "notes": "Past version livestream code; expired."
     },
     {
       "code": "A0NBWRZZI3XJ",
       "reward": "20 Primogems + 160 Geodes of Replication",
       "addedOn": "2026-05-13",
       "expiresOn": null,
-      "status": "active",
+      "status": "expired",
       "notes": "Event-themed code."
     },
     {
