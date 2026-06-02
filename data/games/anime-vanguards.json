@@ -7,7 +7,7 @@
   "developer": "Kitawari",
   "officialUrl": "https://www.roblox.com/games/16146832113/Anime-Vanguards",
   "color": "#7c3aed",
-  "lastVerifiedOn": "2026-05-31",
+  "lastVerifiedOn": "2026-06-02",
   "redeemSteps": [
     {
       "title": "Launch Anime Vanguards",
@@ -50,28 +50,60 @@
   ],
   "codes": [
     {
+      "code": "DMCAFree",
+      "reward": "1,500 Trait Rerolls (requires account level 30+)",
+      "addedOn": "2026-06-02",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Version 9.0 code, tested working upstream (Pocket Tactics, 2026-06-01). Level 30 gate."
+    },
+    {
+      "code": "Liberation",
+      "reward": "50 Memoria Shards + 5 Rainbow Essence Stones (requires account level 30+)",
+      "addedOn": "2026-06-02",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Version 9.0 code, tested working upstream (Pocket Tactics, 2026-06-01). Level 30 gate."
+    },
+    {
+      "code": "223",
+      "reward": "50 Trait Rerolls + 50 Green Essence Stones (requires account level 30+)",
+      "addedOn": "2026-06-02",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Version 9.0 code, tested working upstream (Pocket Tactics, 2026-06-01). Level 30 gate."
+    },
+    {
+      "code": "Cog5th",
+      "reward": "50 Trait Rerolls + 50 Memoria Shards (requires account level 30+)",
+      "addedOn": "2026-06-02",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Version 9.0 code, tested working upstream (Pocket Tactics, 2026-06-01). Level 30 gate."
+    },
+    {
       "code": "OopsiePoopsie2",
       "reward": "100 Trait Rerolls, 100 Memoria Shards, 10,000 Flowers",
       "addedOn": "2026-05-08",
-      "expiresOn": null,
-      "status": "active",
-      "notes": "Apology-themed code released after a brief mid-update outage; still redeemable as of mid-May 2026."
+      "expiresOn": "2026-06-01",
+      "status": "expired",
+      "notes": "Confirmed expired upstream (Pocket Tactics) by 2026-06-01 — rotated out with the version 9.0 code drop."
     },
     {
       "code": "OopsiePoopsie",
       "reward": "100 Trait Rerolls, 100 Memoria Shards, 50,000 Flowers",
       "addedOn": "2026-04-30",
-      "expiresOn": null,
-      "status": "active",
-      "notes": "First of the 'OopsiePoopsie' pair — larger flower payout than the v2 follow-up."
+      "expiresOn": "2026-06-01",
+      "status": "expired",
+      "notes": "Confirmed expired upstream (Pocket Tactics) by 2026-06-01 — rotated out with the version 9.0 code drop."
     },
     {
       "code": "HeHasArrived",
       "reward": "100 Trait Rerolls, 10,000 Flowers",
       "addedOn": "2026-04-22",
-      "expiresOn": null,
-      "status": "active",
-      "notes": "Released alongside a new banner unit reveal."
+      "expiresOn": "2026-06-01",
+      "status": "expired",
+      "notes": "Confirmed expired upstream (Pocket Tactics) by 2026-06-01 — rotated out with the version 9.0 code drop."
     },
     {
       "code": "BumBum",

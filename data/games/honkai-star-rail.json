@@ -7,7 +7,7 @@
   "developer": "HoYoverse",
   "officialUrl": "https://hsr.hoyoverse.com",
   "color": "#7b3fe4",
-  "lastVerifiedOn": "2026-05-31",
+  "lastVerifiedOn": "2026-06-02",
   "redeemSteps": [
     {
       "title": "Reach Trailblaze Level 10",
@@ -57,33 +57,33 @@
       "code": "SitByEvanescia",
       "reward": "3 Traveler's Guide + 2 Bottled Quantum Ghosts",
       "addedOn": "2026-05-21",
-      "expiresOn": null,
-      "status": "active",
-      "notes": "Verified against Pocket Tactics 2026-05-21."
+      "expiresOn": "2026-06-01",
+      "status": "expired",
+      "notes": "4.3 livestream code, expired upstream by 2026-06-01 (Pocket Tactics)."
     },
     {
       "code": "VS3Q5VK9CMFP",
       "reward": "50 Stellar Jade + 10,000 Credits",
       "addedOn": "2026-05-12",
-      "expiresOn": null,
-      "status": "active",
-      "notes": "Latest version livestream code."
+      "expiresOn": "2026-06-01",
+      "status": "expired",
+      "notes": "4.3 livestream code, expired upstream by 2026-06-01 (Pocket Tactics)."
     },
     {
       "code": "QS395DJQU4HK",
       "reward": "60 Stellar Jade",
       "addedOn": "2026-05-12",
-      "expiresOn": null,
-      "status": "active",
-      "notes": "Latest version livestream code."
+      "expiresOn": "2026-06-01",
+      "status": "expired",
+      "notes": "4.3 livestream code, expired upstream by 2026-06-01 (Pocket Tactics)."
     },
     {
       "code": "SILVERWOLFLV999",
       "reward": "3 Traveler's Guide + 2 Badge Battle Robes",
       "addedOn": "2026-05-05",
-      "expiresOn": null,
-      "status": "active",
-      "notes": "Silver Wolf-themed event code."
+      "expiresOn": "2026-06-01",
+      "status": "expired",
+      "notes": "Silver Wolf-themed event code, expired upstream by 2026-06-01 (Pocket Tactics)."
     },
     {
       "code": "OMEGA",

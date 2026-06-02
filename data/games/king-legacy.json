@@ -7,7 +7,7 @@
   "developer": "Venture Studios",
   "officialUrl": "https://www.roblox.com/games/2862773538/King-Legacy",
   "color": "#0ea5e9",
-  "lastVerifiedOn": "2026-05-31",
+  "lastVerifiedOn": "2026-06-02",
   "redeemSteps": [
     {
       "title": "Launch King Legacy",
@@ -113,9 +113,9 @@
       "code": "Peodiz",
       "reward": "100,000 Cash",
       "addedOn": "2025-11-22",
-      "expiresOn": "2026-01-20",
-      "status": "expired",
-      "notes": "Creator code."
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Creator code, re-confirmed active upstream (Pocket Tactics, 2026-06-01) — King Legacy keeps legacy codes redeemable indefinitely."
     },
     {
       "code": "FreePterSpin",
@@ -127,27 +127,27 @@
     },
     {
       "code": "RainbowDragon",
-      "reward": "100 Gems (eligible owners only)",
+      "reward": "100 Gems (requires unlocked rainbow dragon color before update seven)",
       "addedOn": "2025-10-12",
-      "expiresOn": "2025-12-01",
-      "status": "expired",
-      "notes": "Original Rainbow Dragon owner reward."
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Legacy compensation code for original Rainbow Dragon owners — permanently redeemable for eligible accounts (Pocket Tactics, 2026-06-01)."
     },
     {
       "code": "SKGames",
-      "reward": "30 minutes of 2x XP",
+      "reward": "30 minutes of 2x XP (requires Sea King Games Roblox group membership)",
       "addedOn": "2025-09-15",
-      "expiresOn": "2025-11-15",
-      "status": "expired",
-      "notes": "Required joining the Sea King Games Roblox group."
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Group-membership-gated code, still redeemable upstream (Pocket Tactics, 2026-06-01)."
     },
     {
       "code": "DinoxLive",
       "reward": "100,000 Cash",
       "addedOn": "2025-08-20",
-      "expiresOn": "2025-10-30",
-      "status": "expired",
-      "notes": "Livestream code."
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Livestream code, re-confirmed active upstream (Pocket Tactics, 2026-06-01) — King Legacy keeps legacy codes redeemable indefinitely."
     }
   ]
 }
