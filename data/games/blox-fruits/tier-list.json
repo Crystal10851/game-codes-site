@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastUpdated": "2026-05-31",
-    "intro": "These Blox Fruits tier rankings reflect awakened forms in the current meta and are refreshed weekly. New players still deciding their first purchase should start with the basics on the [Blox Fruits hub](/blox-fruits) and the step-by-step [redeem guide](/blox-fruits/redeem-guide) before committing Beli or Robux — the meta picks here are not the same as the easiest picks to level with. If a fruit you just got isn't on this list, it likely sits in the B–C range and is fine for casual play; the ten below are the ones that consistently win PvP fights, clear bosses fastest, or trade for the highest value. Tier calls here are editorial and judged from current upstream wiki consensus plus our own play-testing notes, refreshed every Sunday. For freshly added in-game promos that pair well with whichever fruit you pick, see the [latest working codes](/blox-fruits/latest) — XP boosts are particularly worth stacking when you're grinding a new Mythical."
+    "lastUpdated": "2026-06-05",
+    "intro": "These Blox Fruits tier rankings reflect awakened forms in the current meta and are refreshed weekly. New players still deciding their first purchase should start with the basics on the [Blox Fruits hub](/blox-fruits) and the step-by-step [redeem guide](/blox-fruits/redeem-guide) before committing Beli or Robux — the meta picks here are not the same as the easiest picks to level with. If you're not sure which fruit fits your playstyle, the [Fruit Decision Helper](/blox-fruits/which-fruit) walks you through four questions and recommends the top three matches. The 25 fruits below cover every Common through Mythical that's still relevant in the current patch; freshly added or pre-rework removals are omitted. Tier calls here are editorial and judged from current upstream wiki consensus plus our own play-testing notes, refreshed every Sunday. For freshly added in-game promos that pair well with whichever fruit you pick, see the [latest working codes](/blox-fruits/latest) — XP boosts are particularly worth stacking when you're grinding a new Mythical."
   },
   "fruits": [
     {
@@ -9,6 +9,9 @@
       "name": "Dragon",
       "type": "Beast",
       "rarity": "Mythical",
+      "emoji": "🐉",
+      "oneLineReason": "Meta-defining PvP and grinding kit; nothing else is close.",
+      "youtubeQuery": "blox fruits dragon awakened showcase",
       "tiers": { "overall": "S+", "pvp": "S+", "grinding": "S+" },
       "tierRationale": "Dragon is the current meta-defining pick. Awakened form gives you full-screen air-pressure zoning, a transformation that doubles your survivability, and combo-extenders that close out PvP fights from neutral. Grinding is also class-leading thanks to the AOE pressure scaling with level.",
       "pros": [
@@ -30,13 +33,22 @@
         "Blox Fruit Dealer (rare Mythical roll)",
         "Random sea spawn (very rare)",
         "Trading from another player"
-      ]
+      ],
+      "quizSignals": {
+        "budget": "high",
+        "roles": ["pvp", "grinding", "boss", "trading"],
+        "newPlayerFriendly": false,
+        "partyFit": ["solo", "duo", "group"]
+      }
     },
     {
       "slug": "leopard",
       "name": "Leopard",
       "type": "Beast",
       "rarity": "Mythical",
+      "emoji": "🐆",
+      "oneLineReason": "Best combo-extender in the game; PvP king if you can land it.",
+      "youtubeQuery": "blox fruits leopard awakened pvp",
       "tiers": { "overall": "S+", "pvp": "S+", "grinding": "S" },
       "tierRationale": "Classic PvP king. The fastest combo-extender in the game lets you chain Z and X almost indefinitely with the right race. Grinding drops slightly behind Dragon and Buddha because the AOE is smaller, but combo damage on bosses is still top-tier.",
       "pros": [
@@ -57,13 +69,22 @@
       "howToObtain": [
         "Blox Fruit Dealer (Mythical roll)",
         "Trading — typically valued just under Dragon"
-      ]
+      ],
+      "quizSignals": {
+        "budget": "high",
+        "roles": ["pvp", "boss", "trading"],
+        "newPlayerFriendly": false,
+        "partyFit": ["solo", "duo"]
+      }
     },
     {
       "slug": "dough",
       "name": "Dough",
       "type": "Natural",
       "rarity": "Mythical",
+      "emoji": "🥖",
+      "oneLineReason": "Awakened AOE traps; second-best PvP fruit at a lower Robux floor.",
+      "youtubeQuery": "blox fruits dough awakened pvp",
       "tiers": { "overall": "S", "pvp": "S+", "grinding": "A" },
       "tierRationale": "Awakened Dough sits a hair below Dragon in PvP — the AOE on the Z move and the size of the V trap give it the second-best zoning kit. Grinding is decent thanks to the wide hitboxes, but cooldowns lag behind Buddha and Dragon for sustained farming.",
       "pros": [
@@ -84,13 +105,22 @@
       "howToObtain": [
         "Blox Fruit Dealer (Mythical roll)",
         "Random sea spawn"
-      ]
+      ],
+      "quizSignals": {
+        "budget": "high",
+        "roles": ["pvp", "boss"],
+        "newPlayerFriendly": false,
+        "partyFit": ["solo", "duo", "group"]
+      }
     },
     {
       "slug": "buddha",
       "name": "Buddha",
       "type": "Beast",
       "rarity": "Legendary",
+      "emoji": "🧘",
+      "oneLineReason": "Cheapest fast path to clean grinding; tank everything, no combos needed.",
+      "youtubeQuery": "blox fruits buddha grinding",
       "tiers": { "overall": "S", "pvp": "A", "grinding": "S+" },
       "tierRationale": "The grinding workhorse. Transformation gives you huge hitboxes, M1 lifesteal scaling, and damage reduction — three reasons Buddha clears mob farms and bossing faster than any other fruit. PvP is solid but not top-tier; the slow moves get out-spaced by Dragon and Dough.",
       "pros": [
@@ -111,13 +141,22 @@
       "howToObtain": [
         "Blox Fruit Dealer (Legendary roll, common compared to Mythicals)",
         "Random sea spawn (relatively frequent)"
-      ]
+      ],
+      "quizSignals": {
+        "budget": "mid",
+        "roles": ["grinding", "boss"],
+        "newPlayerFriendly": true,
+        "partyFit": ["solo", "duo", "group"]
+      }
     },
     {
       "slug": "spirit",
       "name": "Spirit",
       "type": "Natural",
       "rarity": "Mythical",
+      "emoji": "👻",
+      "oneLineReason": "Summon + spectral kit; PvP only — grinding will hurt.",
+      "youtubeQuery": "blox fruits spirit pvp showcase",
       "tiers": { "overall": "A", "pvp": "S", "grinding": "D" },
       "tierRationale": "A genuine PvP terror — summon mechanics let you fight with effective two-vs-one numbers, and the spectral form ignores most projectile damage. The catch is grinding: the kit has zero AOE, so mob clears are painful. Pick Spirit only if you're a PvP main.",
       "pros": [
@@ -138,13 +177,22 @@
       "howToObtain": [
         "Blox Fruit Dealer (rare Mythical roll)",
         "Trading"
-      ]
+      ],
+      "quizSignals": {
+        "budget": "high",
+        "roles": ["pvp"],
+        "newPlayerFriendly": false,
+        "partyFit": ["solo", "duo"]
+      }
     },
     {
       "slug": "venom",
       "name": "Venom",
       "type": "Natural",
       "rarity": "Mythical",
+      "emoji": "🐍",
+      "oneLineReason": "Damage-over-time forces commitment; high-floor all-rounder.",
+      "youtubeQuery": "blox fruits venom awakened showcase",
       "tiers": { "overall": "A", "pvp": "A", "grinding": "B" },
       "tierRationale": "Poison damage-over-time makes Venom consistent — you can land a tick from neutral and force the opponent to commit. Awakening adds toxic AOE that makes the kit a strong all-rounder. The ceiling is lower than Dragon or Dough, but the floor is much higher.",
       "pros": [
@@ -165,13 +213,22 @@
       "howToObtain": [
         "Blox Fruit Dealer (Mythical roll)",
         "Random sea spawn"
-      ]
+      ],
+      "quizSignals": {
+        "budget": "high",
+        "roles": ["pvp", "grinding", "boss"],
+        "newPlayerFriendly": true,
+        "partyFit": ["solo", "duo", "group"]
+      }
     },
     {
       "slug": "shadow",
       "name": "Shadow",
       "type": "Natural",
       "rarity": "Mythical",
+      "emoji": "🌑",
+      "oneLineReason": "Safe-pick generalist; A everywhere, S nowhere.",
+      "youtubeQuery": "blox fruits shadow awakened showcase",
       "tiers": { "overall": "A", "pvp": "A", "grinding": "A" },
       "tierRationale": "The textbook generalist — no extremes in any direction. Awakened Shadow has solid AOE for grinding, a passive damage buff during night-time, and a teleport that's serviceable for combo extension. If you're new to the Mythical tier and unsure what playstyle you want, Shadow is the safest pick.",
       "pros": [
@@ -192,13 +249,58 @@
       "howToObtain": [
         "Blox Fruit Dealer (Mythical roll)",
         "Random sea spawn"
-      ]
+      ],
+      "quizSignals": {
+        "budget": "high",
+        "roles": ["pvp", "grinding", "boss"],
+        "newPlayerFriendly": true,
+        "partyFit": ["solo", "duo", "group"]
+      }
+    },
+    {
+      "slug": "gravity",
+      "name": "Gravity",
+      "type": "Natural",
+      "rarity": "Legendary",
+      "emoji": "🪐",
+      "oneLineReason": "Orbital-pull AOE; reliable PvP at a Legendary price point.",
+      "youtubeQuery": "blox fruits gravity pvp showcase",
+      "tiers": { "overall": "A", "pvp": "A", "grinding": "B" },
+      "tierRationale": "Gravity rewards positioning more than reaction speed. The pull-in on Z and the meteor on X give you a complete neutral game without needing combos. Grinding works once you learn the cast timing, but it's slower than Beast fruits and the AOE shape favors clusters of enemies, not spread mobs.",
+      "pros": [
+        "One of the few Legendary fruits that genuinely competes with Mythicals in 1v1",
+        "Pull-in setups are reliable openers for any sword you bring",
+        "Cheaper Robux barrier than Mythical PvP fruits with similar payoff"
+      ],
+      "cons": [
+        "Cast animations are long — punished hard by Light or Rumble speed",
+        "Grinding scales poorly on spread enemy spawns",
+        "No awakening, so the ceiling caps below Mythical zoners"
+      ],
+      "bestCombos": {
+        "sword": "Cursed Dual Katana",
+        "fightingStyle": "Godhuman",
+        "notes": "Mink race covers the slow cast windows; Ghoul also viable for sustain."
+      },
+      "howToObtain": [
+        "Blox Fruit Dealer (Legendary roll)",
+        "Trading — moderate liquidity"
+      ],
+      "quizSignals": {
+        "budget": "mid",
+        "roles": ["pvp", "boss"],
+        "newPlayerFriendly": false,
+        "partyFit": ["solo", "duo", "group"]
+      }
     },
     {
       "slug": "rumble",
       "name": "Rumble",
       "type": "Elemental",
       "rarity": "Legendary",
+      "emoji": "⚡",
+      "oneLineReason": "Long-range bolts and a strong escape; reliable Legendary PvP.",
+      "youtubeQuery": "blox fruits rumble awakened pvp",
       "tiers": { "overall": "A", "pvp": "A", "grinding": "B" },
       "tierRationale": "Lightning coverage with reliable hitboxes — Rumble is the textbook 'second fruit' for accounts that already have a grinder. PvP is genuinely good thanks to the long-range bolt and a strong escape on F. Grinding falls behind because the AOE doesn't scale as well as Beast fruits.",
       "pros": [
@@ -219,13 +321,94 @@
       "howToObtain": [
         "Blox Fruit Dealer (Legendary roll, achievable)",
         "Trading — common availability"
-      ]
+      ],
+      "quizSignals": {
+        "budget": "mid",
+        "roles": ["pvp"],
+        "newPlayerFriendly": true,
+        "partyFit": ["solo", "duo"]
+      }
+    },
+    {
+      "slug": "quake",
+      "name": "Quake",
+      "type": "Natural",
+      "rarity": "Legendary",
+      "emoji": "💥",
+      "oneLineReason": "Shockwave AOE; classic mid-game grinder with PvP upside.",
+      "youtubeQuery": "blox fruits quake showcase",
+      "tiers": { "overall": "A", "pvp": "B", "grinding": "A" },
+      "tierRationale": "Quake's shockwaves are some of the best AOE in the Legendary bracket — wide hitboxes, decent damage, and uppercut combo openers. PvP is functional but not exceptional; once people learn to dodge the linear shockwave it loses bite. Solid mid-game pick between Light and a Mythical.",
+      "pros": [
+        "Strong AOE for mob clears at Sea 2 and early Sea 3 levels",
+        "Uppercut on F is one of the better combo-starters at this tier",
+        "Holds value in trading among newer players who skip Light"
+      ],
+      "cons": [
+        "Linear hitboxes are dodged easily by experienced players",
+        "Falls off hard once you can access Mythical fruits",
+        "Awakening only adds incremental value — not a fruit you keep long-term"
+      ],
+      "bestCombos": {
+        "sword": "Saber V2",
+        "fightingStyle": "Death Step",
+        "notes": "Any race works; Mink for movement, Cyborg for survivability."
+      },
+      "howToObtain": [
+        "Blox Fruit Dealer (Legendary roll)",
+        "Random sea spawn"
+      ],
+      "quizSignals": {
+        "budget": "mid",
+        "roles": ["grinding", "pvp"],
+        "newPlayerFriendly": true,
+        "partyFit": ["solo", "duo", "group"]
+      }
+    },
+    {
+      "slug": "magma",
+      "name": "Magma",
+      "type": "Elemental",
+      "rarity": "Legendary",
+      "emoji": "🌋",
+      "oneLineReason": "Burn DoT plus wide AOE; the budget pre-Mythical grinder.",
+      "youtubeQuery": "blox fruits magma awakened grinding",
+      "tiers": { "overall": "B", "pvp": "B", "grinding": "A" },
+      "tierRationale": "Magma's awakened form is one of the cleanest pre-Mythical grinders. The burn DoT scales well into mid-game mob health pools, and the moves have generous hitboxes. PvP is workable thanks to the same DoT but lacks any real burst potential — you'll lose to anything that can rush you down.",
+      "pros": [
+        "Awakened grinding is comparable to Light at a moderately higher cost",
+        "Burn DoT compounds with sword damage for steady chip pressure",
+        "Forgiving cooldowns — beginner-friendly rotation"
+      ],
+      "cons": [
+        "PvP ceiling caps at B — outpaced by every zoner",
+        "Awakening fragment grind is long relative to the payoff",
+        "Trading liquidity is weak post-rework"
+      ],
+      "bestCombos": {
+        "sword": "Saber",
+        "fightingStyle": "Sharkman Karate",
+        "notes": "Cyborg race for survivability during long grinding sessions."
+      },
+      "howToObtain": [
+        "Blox Fruit Dealer (Legendary roll, frequent)",
+        "Random sea spawn"
+      ],
+      "quizSignals": {
+        "budget": "mid",
+        "roles": ["grinding"],
+        "newPlayerFriendly": true,
+        "partyFit": ["solo", "duo", "group"]
+      }
     },
     {
       "slug": "light",
       "name": "Light",
       "type": "Elemental",
       "rarity": "Rare",
+      "emoji": "✨",
+      "oneLineReason": "Cheap, fast, and clears mobs all the way to 1500. Budget GOAT.",
+      "youtubeQuery": "blox fruits light grinding showcase",
       "tiers": { "overall": "B", "pvp": "B", "grinding": "S" },
       "tierRationale": "The budget grinder's best friend. Cheap to obtain, fast travel speed, and AOE moves that clear mob camps in seconds — Light is what most accounts use to grind from ~700 to ~1500 before swapping. PvP is mediocre by Mythical standards but viable against other Rare/Legendary opponents.",
       "pros": [
@@ -246,13 +429,22 @@
       "howToObtain": [
         "Blox Fruit Dealer (Rare roll, common)",
         "Random sea spawn (frequent)"
-      ]
+      ],
+      "quizSignals": {
+        "budget": "low",
+        "roles": ["grinding"],
+        "newPlayerFriendly": true,
+        "partyFit": ["solo", "duo", "group"]
+      }
     },
     {
       "slug": "phoenix",
       "name": "Phoenix",
       "type": "Elemental",
       "rarity": "Mythical",
+      "emoji": "🦅",
+      "oneLineReason": "Self-heal and permanent fly; easiest Mythical, weakest in PvP.",
+      "youtubeQuery": "blox fruits phoenix awakened showcase",
       "tiers": { "overall": "B", "pvp": "B", "grinding": "A" },
       "tierRationale": "Self-heal makes Phoenix the most forgiving Mythical, which is exactly why it gets overpicked by new players and then sold. The fly mode is genuinely useful for grinding sea events and reaching out-of-bounds raid spawns, but PvP is well below the Mythical average — the heal is read easily and counter-pressured.",
       "pros": [
@@ -273,7 +465,445 @@
       "howToObtain": [
         "Blox Fruit Dealer (Mythical roll)",
         "Random sea spawn"
-      ]
+      ],
+      "quizSignals": {
+        "budget": "high",
+        "roles": ["grinding", "boss"],
+        "newPlayerFriendly": true,
+        "partyFit": ["solo", "duo", "group"]
+      }
+    },
+    {
+      "slug": "rubber",
+      "name": "Rubber",
+      "type": "Natural",
+      "rarity": "Rare",
+      "emoji": "🎈",
+      "oneLineReason": "Gear-style speed buff; awakening makes it punch above its rarity.",
+      "youtubeQuery": "blox fruits rubber awakened showcase",
+      "tiers": { "overall": "B", "pvp": "B", "grinding": "C" },
+      "tierRationale": "Pre-awakening Rubber is a mid-tier joke pick; awakened it becomes a real PvP fruit thanks to lightning-fast Z chains and the bounce mechanic. Grinding suffers because the kit is single-target-focused. A surprise sleeper for players who want a cheap PvP option.",
+      "pros": [
+        "Awakened Z chains hit faster than most Legendary moves",
+        "Immune to ranged stuns in awakened form — niche but real upside",
+        "Cheap Robux floor for a PvP-capable fruit"
+      ],
+      "cons": [
+        "Pre-awakening it's borderline unplayable",
+        "Grinding is C-tier; need a second fruit to level efficiently",
+        "Limited combo identity outside the Z chain"
+      ],
+      "bestCombos": {
+        "sword": "Shisui",
+        "fightingStyle": "Electric Claw",
+        "notes": "Mink race amplifies the speed identity; this fruit is built around outpacing the opponent."
+      },
+      "howToObtain": [
+        "Blox Fruit Dealer (Rare roll)",
+        "Random sea spawn"
+      ],
+      "quizSignals": {
+        "budget": "low",
+        "roles": ["pvp"],
+        "newPlayerFriendly": false,
+        "partyFit": ["solo", "duo"]
+      }
+    },
+    {
+      "slug": "sand",
+      "name": "Sand",
+      "type": "Elemental",
+      "rarity": "Uncommon",
+      "emoji": "⏳",
+      "oneLineReason": "Vacuum suction plus elemental immunity; a sleeper PvP pick.",
+      "youtubeQuery": "blox fruits sand awakened pvp",
+      "tiers": { "overall": "B", "pvp": "B", "grinding": "C" },
+      "tierRationale": "Sand has a genuinely strong PvP suction kit — the V move pulls opponents into your sword range from across the screen. Elemental immunity helps against newer players. Grinding is the weak link: the kit lacks any large AOE and depends on melee follow-through.",
+      "pros": [
+        "Suction pull is one of the better positioning tools at Uncommon rarity",
+        "Elemental immunity against weaker opponents",
+        "Cheap Beli cost — accessible mid-game pick"
+      ],
+      "cons": [
+        "Grinding is genuinely bad — single-target focus dominates the kit",
+        "Awakening adds little; this fruit doesn't scale to endgame",
+        "Counter-picked by Light, Rumble, and any zoner"
+      ],
+      "bestCombos": {
+        "sword": "Saber",
+        "fightingStyle": "Death Step",
+        "notes": "Cyborg race for the sustain Sand doesn't generate on its own."
+      },
+      "howToObtain": [
+        "Blox Fruit Dealer (Uncommon roll, common)",
+        "Random sea spawn"
+      ],
+      "quizSignals": {
+        "budget": "low",
+        "roles": ["pvp"],
+        "newPlayerFriendly": true,
+        "partyFit": ["solo", "duo"]
+      }
+    },
+    {
+      "slug": "diamond",
+      "name": "Diamond",
+      "type": "Natural",
+      "rarity": "Uncommon",
+      "emoji": "💎",
+      "oneLineReason": "Defensive Z stance; cheap PvP option for combo-focused builds.",
+      "youtubeQuery": "blox fruits diamond pvp showcase",
+      "tiers": { "overall": "B", "pvp": "B", "grinding": "C" },
+      "tierRationale": "Diamond's body-hardening Z makes it one of the more durable Uncommons in 1v1 PvP. The kit is built around tanking openers and counter-comboing, which works against impatient opponents. Grinding is poor: no AOE, no movement, no fun.",
+      "pros": [
+        "Damage reduction stance gives genuine defensive identity at low rarity",
+        "Strong against low-skill aggressive players who can't bait the stance",
+        "Cheap to acquire and trade"
+      ],
+      "cons": [
+        "Grinding is painfully slow — single-target only",
+        "High-skill opponents bait the stance and punish on cooldown",
+        "No awakening; the ceiling is fixed"
+      ],
+      "bestCombos": {
+        "sword": "Cursed Dual Katana",
+        "fightingStyle": "Godhuman",
+        "notes": "Human race for the additional dodge i-frames pairs nicely with the stance pattern."
+      },
+      "howToObtain": [
+        "Blox Fruit Dealer (Uncommon roll)",
+        "Random sea spawn"
+      ],
+      "quizSignals": {
+        "budget": "low",
+        "roles": ["pvp"],
+        "newPlayerFriendly": true,
+        "partyFit": ["solo", "duo"]
+      }
+    },
+    {
+      "slug": "ice",
+      "name": "Ice",
+      "type": "Elemental",
+      "rarity": "Rare",
+      "emoji": "❄️",
+      "oneLineReason": "Freeze on hit and an ice cage; a solid budget mid-game fruit.",
+      "youtubeQuery": "blox fruits ice showcase",
+      "tiers": { "overall": "B", "pvp": "B", "grinding": "B" },
+      "tierRationale": "Ice's freeze chance on Z gives it a stop-start pressure pattern that's frustrating for newer opponents. The cage move sets up real combo windows when it connects. Grinding works thanks to the AOE on F, though the cooldowns force breathers between mob waves. A decent generalist at Rare rarity.",
+      "pros": [
+        "Freeze proc on hit creates free combo openings against weaker opponents",
+        "Ice cage is a genuine combo setup — rare for a Rare fruit",
+        "Travels at elemental speed; mob clears are reasonable"
+      ],
+      "cons": [
+        "Freeze chance is unreliable — feast-or-famine PvP",
+        "Counter-picked by Magma directly",
+        "No awakening; ceiling caps in mid-game"
+      ],
+      "bestCombos": {
+        "sword": "Saber",
+        "fightingStyle": "Death Step",
+        "notes": "Mink race for chase potential when the freeze procs."
+      },
+      "howToObtain": [
+        "Blox Fruit Dealer (Rare roll)",
+        "Random sea spawn"
+      ],
+      "quizSignals": {
+        "budget": "low",
+        "roles": ["pvp", "grinding"],
+        "newPlayerFriendly": true,
+        "partyFit": ["solo", "duo", "group"]
+      }
+    },
+    {
+      "slug": "dark",
+      "name": "Dark",
+      "type": "Elemental",
+      "rarity": "Uncommon",
+      "emoji": "🕷️",
+      "oneLineReason": "Pull-in plus a damage zone; an old-school combo opener.",
+      "youtubeQuery": "blox fruits dark showcase",
+      "tiers": { "overall": "B", "pvp": "B", "grinding": "C" },
+      "tierRationale": "Dark's pull-in on F is the cleanest opener at Uncommon rarity — connect it once and most opponents at this tier eat the full sword combo. The black hole zone keeps people honest. Grinding suffers from the lack of AOE damage in the kit beyond the single-target pulls.",
+      "pros": [
+        "F pull-in is a textbook combo opener — easy to learn",
+        "Black hole zone controls space in 1v1 fights",
+        "Cheap and accessible mid-game"
+      ],
+      "cons": [
+        "Grinding is single-target — slow against mob groups",
+        "Counter-picked by Light's speed",
+        "No awakening keeps the ceiling locked"
+      ],
+      "bestCombos": {
+        "sword": "Cursed Dual Katana",
+        "fightingStyle": "Godhuman",
+        "notes": "Any race works; pick based on what you're planning to upgrade to next."
+      },
+      "howToObtain": [
+        "Blox Fruit Dealer (Uncommon roll)",
+        "Random sea spawn"
+      ],
+      "quizSignals": {
+        "budget": "low",
+        "roles": ["pvp"],
+        "newPlayerFriendly": true,
+        "partyFit": ["solo", "duo"]
+      }
+    },
+    {
+      "slug": "flame",
+      "name": "Flame",
+      "type": "Elemental",
+      "rarity": "Uncommon",
+      "emoji": "🔥",
+      "oneLineReason": "Fast cooldowns and elemental travel; cheap early grinder.",
+      "youtubeQuery": "blox fruits flame showcase",
+      "tiers": { "overall": "B", "pvp": "C", "grinding": "B" },
+      "tierRationale": "Flame is the textbook 'first fruit after the starter' pick — short cooldowns, elemental immunity against weaker enemies, and decent travel speed. It's a stepping stone, not an endgame answer. PvP falls off fast once Legendary fruits enter the room.",
+      "pros": [
+        "Short cooldowns make leveling Mastery quick",
+        "Elemental travel is a meaningful upgrade from melee-only",
+        "Cheap Beli cost — a sensible first purchase"
+      ],
+      "cons": [
+        "Outclassed by Magma directly in every dimension",
+        "Damage falls off in mid-game",
+        "Trading liquidity is poor because supply is endless"
+      ],
+      "bestCombos": {
+        "sword": "Saber",
+        "fightingStyle": "Electric",
+        "notes": "Human race for the early-game ease; this fruit is a stepping stone anyway."
+      },
+      "howToObtain": [
+        "Blox Fruit Dealer (Uncommon roll, frequent)",
+        "Random sea spawn"
+      ],
+      "quizSignals": {
+        "budget": "low",
+        "roles": ["grinding"],
+        "newPlayerFriendly": true,
+        "partyFit": ["solo", "duo", "group"]
+      }
+    },
+    {
+      "slug": "paw",
+      "name": "Paw",
+      "type": "Natural",
+      "rarity": "Mythical",
+      "emoji": "🐾",
+      "oneLineReason": "Teleport-based pressure; unique kit, niche payoff.",
+      "youtubeQuery": "blox fruits paw showcase",
+      "tiers": { "overall": "B", "pvp": "B", "grinding": "C" },
+      "tierRationale": "Paw is the weird Mythical — teleport stamps, paw projectiles, and a unique kick-everything-away mechanic make it visually distinct, but the damage numbers don't match the rarity. Picked for novelty more than meta strength. Grinding is poor by Mythical standards.",
+      "pros": [
+        "Unique kit — there's nothing else like it",
+        "Teleport stamps reach across the map for picking off runners",
+        "Trading value holds up due to rarity and visual appeal"
+      ],
+      "cons": [
+        "Damage scaling lags behind every other Mythical",
+        "Grinding is C-tier — the kit doesn't translate to mob clears",
+        "Steep learning curve for the teleport mechanic"
+      ],
+      "bestCombos": {
+        "sword": "Yama",
+        "fightingStyle": "Godhuman",
+        "notes": "Mink race accelerates the teleport rotation; Ghoul for sustain."
+      },
+      "howToObtain": [
+        "Blox Fruit Dealer (Mythical roll)",
+        "Trading"
+      ],
+      "quizSignals": {
+        "budget": "high",
+        "roles": ["pvp", "fun", "trading"],
+        "newPlayerFriendly": false,
+        "partyFit": ["solo", "duo"]
+      }
+    },
+    {
+      "slug": "falcon",
+      "name": "Falcon",
+      "type": "Beast",
+      "rarity": "Uncommon",
+      "emoji": "🪶",
+      "oneLineReason": "Permanent flight at Uncommon price; mobility utility, weak damage.",
+      "youtubeQuery": "blox fruits falcon showcase",
+      "tiers": { "overall": "C", "pvp": "D", "grinding": "C" },
+      "tierRationale": "Falcon is bought for the wings, not the moves. Permanent flight at Uncommon rarity is a real utility — sea travel and reaching out-of-bounds boss spawns become trivial. But damage and PvP are bottom-tier. Treat Falcon as a travel tool, not a real combat fruit.",
+      "pros": [
+        "Cheap permanent flight — saves real grind time",
+        "Useful for trading and sea event logistics",
+        "Easy to obtain"
+      ],
+      "cons": [
+        "PvP is among the worst in the game",
+        "Damage scaling is awful past mid-game",
+        "Almost no one keeps it as their main fruit past Sea 2"
+      ],
+      "bestCombos": {
+        "sword": "Saber",
+        "fightingStyle": "Black Leg",
+        "notes": "Race choice doesn't matter much — this is a utility pick."
+      },
+      "howToObtain": [
+        "Blox Fruit Dealer (Uncommon roll)",
+        "Random sea spawn"
+      ],
+      "quizSignals": {
+        "budget": "low",
+        "roles": ["fun"],
+        "newPlayerFriendly": true,
+        "partyFit": ["solo", "duo", "group"]
+      }
+    },
+    {
+      "slug": "bomb",
+      "name": "Bomb",
+      "type": "Paramecia",
+      "rarity": "Common",
+      "emoji": "💣",
+      "oneLineReason": "Cheap starter; outgrown by hour ten of any account.",
+      "youtubeQuery": "blox fruits bomb showcase",
+      "tiers": { "overall": "C", "pvp": "C", "grinding": "C" },
+      "tierRationale": "Bomb is fine for the first ten hours of an account. The damage is okay, the AOE is workable, and the Beli cost is low. But every fruit on this list outclasses it within a single tier of upgrades. Don't buy Bomb if you can afford anything better.",
+      "pros": [
+        "Cheapest entry point for testing the Devil Fruit system",
+        "AOE moves help early Sea 1 mob clears",
+        "Easy to resell or eat through"
+      ],
+      "cons": [
+        "Outclassed by literally every Uncommon and above",
+        "PvP is non-existent past low levels",
+        "Trading value is rounded to zero"
+      ],
+      "bestCombos": {
+        "sword": "Cutlass",
+        "fightingStyle": "Combat",
+        "notes": "Race choice irrelevant — replace this fruit before you finalize race."
+      },
+      "howToObtain": [
+        "Blox Fruit Dealer (Common roll, very frequent)",
+        "Random sea spawn (frequent)"
+      ],
+      "quizSignals": {
+        "budget": "low",
+        "roles": ["fun"],
+        "newPlayerFriendly": true,
+        "partyFit": ["solo", "duo", "group"]
+      }
+    },
+    {
+      "slug": "spike",
+      "name": "Spike",
+      "type": "Paramecia",
+      "rarity": "Common",
+      "emoji": "🌵",
+      "oneLineReason": "Starter-tier; only useful if you found one in a sea spawn.",
+      "youtubeQuery": "blox fruits spike showcase",
+      "tiers": { "overall": "D", "pvp": "D", "grinding": "D" },
+      "tierRationale": "Spike is the textbook 'eat it because you found it' fruit. Slow projectiles, mediocre damage, no real combo identity. It's only on this list because new players keep asking if it's worth using. The answer is: only until you can buy literally anything else.",
+      "pros": [
+        "Costs almost nothing in Beli",
+        "Common enough that you'll see one for free in a sea spawn",
+        "Acceptable as a 'first fruit before you commit Robux' option"
+      ],
+      "cons": [
+        "Slow projectiles are dodged trivially in PvP",
+        "Grinding pace is worse than melee-only",
+        "Zero trade value"
+      ],
+      "bestCombos": {
+        "sword": "Cutlass",
+        "fightingStyle": "Combat",
+        "notes": "Stepping stone — don't optimize around this fruit."
+      },
+      "howToObtain": [
+        "Blox Fruit Dealer (Common roll)",
+        "Random sea spawn"
+      ],
+      "quizSignals": {
+        "budget": "low",
+        "roles": ["fun"],
+        "newPlayerFriendly": true,
+        "partyFit": ["solo", "duo", "group"]
+      }
+    },
+    {
+      "slug": "smoke",
+      "name": "Smoke",
+      "type": "Elemental",
+      "rarity": "Common",
+      "emoji": "💨",
+      "oneLineReason": "Cheapest elemental immunity; outgrown almost immediately.",
+      "youtubeQuery": "blox fruits smoke showcase",
+      "tiers": { "overall": "D", "pvp": "D", "grinding": "D" },
+      "tierRationale": "Smoke's only real selling point is being the cheapest Elemental — which means you get elemental travel and immunity to physical sword hits at a Common price. Damage and AOE are bottom of the barrel. Useful for Sea 1, outgrown by the time you reach the second island chain.",
+      "pros": [
+        "Cheapest entry into the Elemental immunity mechanic",
+        "Travels slightly faster than running",
+        "Easy to find — Common rarity"
+      ],
+      "cons": [
+        "Damage is the worst of any Elemental",
+        "PvP ceiling stops at the lowest player level brackets",
+        "Replaced by Flame within a single tier"
+      ],
+      "bestCombos": {
+        "sword": "Cutlass",
+        "fightingStyle": "Combat",
+        "notes": "Race choice irrelevant — Smoke is a transitional fruit only."
+      },
+      "howToObtain": [
+        "Blox Fruit Dealer (Common roll, frequent)",
+        "Random sea spawn"
+      ],
+      "quizSignals": {
+        "budget": "low",
+        "roles": ["fun"],
+        "newPlayerFriendly": true,
+        "partyFit": ["solo", "duo", "group"]
+      }
+    },
+    {
+      "slug": "spring",
+      "name": "Spring",
+      "type": "Paramecia",
+      "rarity": "Common",
+      "emoji": "🌀",
+      "oneLineReason": "Meme tier; the running joke of the Devil Fruit roster.",
+      "youtubeQuery": "blox fruits spring showcase",
+      "tiers": { "overall": "D", "pvp": "D", "grinding": "D" },
+      "tierRationale": "Spring is the universally-acknowledged worst fruit. The bounce moves don't combo into anything, the damage is negligible, and it can't even traverse water like Elementals can. Listed here only because new players keep finding one in a sea spawn and asking if it's salvageable. It isn't.",
+      "pros": [
+        "Funny",
+        "Free if you find one in the wild",
+        "Eating it counts toward fruit collection achievements"
+      ],
+      "cons": [
+        "Worst PvP fruit by consensus",
+        "Worst grinding fruit by consensus",
+        "No redemption arc — replace immediately"
+      ],
+      "bestCombos": {
+        "sword": "Anything you already own",
+        "fightingStyle": "Combat",
+        "notes": "Eat it, log the achievement, replace it with literally any Uncommon."
+      },
+      "howToObtain": [
+        "Blox Fruit Dealer (Common roll)",
+        "Random sea spawn"
+      ],
+      "quizSignals": {
+        "budget": "low",
+        "roles": ["fun"],
+        "newPlayerFriendly": true,
+        "partyFit": ["solo", "duo", "group"]
+      }
     }
   ]
 }

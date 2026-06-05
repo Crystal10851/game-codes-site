@@ -18,6 +18,9 @@ interface Fruit {
   name: string;
   type: string;
   rarity: string;
+  emoji?: string;
+  oneLineReason?: string;
+  youtubeQuery?: string;
   tiers: { overall: Tier; pvp: Tier; grinding: Tier };
   tierRationale: string;
   pros: string[];
@@ -30,6 +33,14 @@ interface Fruit {
   };
   howToObtain: string[];
 }
+
+const RARITY_STYLES: Record<string, string> = {
+  Mythical: 'bg-rose-50 text-rose-700 ring-rose-200',
+  Legendary: 'bg-amber-50 text-amber-700 ring-amber-200',
+  Rare: 'bg-sky-50 text-sky-700 ring-sky-200',
+  Uncommon: 'bg-emerald-50 text-emerald-700 ring-emerald-200',
+  Common: 'bg-slate-50 text-slate-600 ring-slate-200',
+};
 
 const TIER_ORDER: Tier[] = ['S+', 'S', 'A', 'B', 'C', 'D'];
 
@@ -72,7 +83,7 @@ export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
   return buildMetadata({
     title: `Blox Fruits Tier List (${year}) — Best Fruits Ranked`,
-    description: `Editorial Blox Fruits tier list for ${year}. Top 10 fruits ranked by overall, PvP, and grinding performance, with rationale, pros and cons, and best combos. Updated weekly.`,
+    description: `Editorial Blox Fruits tier list for ${year}. All 25 active fruits ranked by overall, PvP, and grinding performance, with rationale, pros and cons, and best combos. Updated weekly.`,
     path: '/blox-fruits/tier-list',
     type: 'article',
     modifiedTime: tierListData.meta.lastUpdated,
@@ -159,11 +170,27 @@ export default function BloxFruitsTierListPage() {
           Blox Fruits Tier List ({new Date().getFullYear()})
         </h1>
         <p className="mt-2 text-sm text-slate-500">
-          {fruits.length} fruits ranked across overall, PvP, and grinding · Editorial picks
+          {fruits.length} fruits ranked across overall, PvP, and grinding · Editorial picks · Updated {formatDate(lastUpdated)}
         </p>
         <p className="mt-4 max-w-3xl text-slate-700 leading-relaxed">
           {renderInlineLinks(intro)}
         </p>
+        <div className="mt-5 flex flex-wrap gap-3">
+          <Link
+            href="/blox-fruits/which-fruit"
+            className="inline-flex items-center gap-2 rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-700"
+          >
+            <span aria-hidden>🧭</span>
+            <span>Not sure? Take the Fruit Decision quiz</span>
+          </Link>
+          <Link
+            href="/blox-fruits/latest"
+            className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 shadow-sm hover:bg-slate-50"
+          >
+            <span aria-hidden>🎁</span>
+            <span>Latest XP codes</span>
+          </Link>
+        </div>
       </section>
 
       <section className="rounded-xl border border-slate-200 bg-slate-50 p-5">
@@ -237,17 +264,35 @@ export default function BloxFruitsTierListPage() {
 }
 
 function FruitCard({ fruit }: { fruit: Fruit }) {
+  const rarityClass =
+    RARITY_STYLES[fruit.rarity] ?? RARITY_STYLES.Common;
+  const youtubeUrl = fruit.youtubeQuery
+    ? `https://www.youtube.com/results?search_query=${encodeURIComponent(fruit.youtubeQuery)}`
+    : null;
   return (
     <article
       id={fruit.slug}
-      className="scroll-mt-20 rounded-xl border border-slate-200 bg-white p-5 shadow-sm"
+      className="scroll-mt-20 rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-brand-200 hover:shadow-md"
     >
-      <header className="flex flex-wrap items-baseline justify-between gap-2">
-        <div>
-          <h3 className="text-xl font-bold text-slate-900">{fruit.name}</h3>
-          <p className="mt-0.5 text-xs uppercase tracking-wide text-slate-500">
-            {fruit.type} · {fruit.rarity}
-          </p>
+      <header className="flex flex-wrap items-start justify-between gap-3">
+        <div className="flex items-start gap-3">
+          {fruit.emoji && (
+            <span
+              aria-hidden
+              className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-slate-50 text-3xl ring-1 ring-slate-200"
+            >
+              {fruit.emoji}
+            </span>
+          )}
+          <div>
+            <h3 className="text-xl font-bold text-slate-900">{fruit.name}</h3>
+            <div className="mt-1 flex flex-wrap items-center gap-1.5 text-xs">
+              <span className={`inline-flex items-center rounded-full px-2 py-0.5 font-semibold ring-1 ${rarityClass}`}>
+                {fruit.rarity}
+              </span>
+              <span className="text-slate-500">{fruit.type}</span>
+            </div>
+          </div>
         </div>
         <div className="flex flex-wrap gap-2 text-xs">
           <TierBadge label="Overall" tier={fruit.tiers.overall} />
@@ -255,6 +300,12 @@ function FruitCard({ fruit }: { fruit: Fruit }) {
           <TierBadge label="Grinding" tier={fruit.tiers.grinding} />
         </div>
       </header>
+
+      {fruit.oneLineReason && (
+        <p className="mt-3 rounded-md bg-brand-50 px-3 py-2 text-sm font-medium text-brand-900 ring-1 ring-brand-100">
+          {fruit.oneLineReason}
+        </p>
+      )}
 
       <p className="mt-3 text-slate-700 leading-relaxed">{fruit.tierRationale}</p>
 
@@ -321,6 +372,25 @@ function FruitCard({ fruit }: { fruit: Fruit }) {
           ))}
         </ul>
       </div>
+
+      {youtubeUrl && (
+        <div className="mt-4 border-t border-slate-100 pt-3">
+          <a
+            href={youtubeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-brand-700"
+          >
+            <span
+              aria-hidden
+              className="inline-flex h-5 w-5 items-center justify-center rounded bg-red-600 text-[10px] font-bold text-white"
+            >
+              ▶
+            </span>
+            Watch {fruit.name} showcases on YouTube
+          </a>
+        </div>
+      )}
     </article>
   );
 }

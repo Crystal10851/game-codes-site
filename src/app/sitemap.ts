@@ -35,12 +35,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  entries.push({
-    url: absoluteUrl('/blox-fruits/tier-list'),
-    lastModified: new Date(bloxFruitsTierList.meta.lastUpdated),
-    changeFrequency: 'weekly',
-    priority: 0.8,
-  });
+  entries.push(
+    {
+      url: absoluteUrl('/blox-fruits/tier-list'),
+      lastModified: new Date(bloxFruitsTierList.meta.lastUpdated),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: absoluteUrl('/blox-fruits/which-fruit'),
+      lastModified: new Date(bloxFruitsTierList.meta.lastUpdated),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+  );
 
   for (const game of games) {
     const lastModified = new Date(getLastUpdated(game));

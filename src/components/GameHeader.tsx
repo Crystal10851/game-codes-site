@@ -10,7 +10,10 @@ const BASE_TABS = [
 ];
 
 const EXTRA_TABS_BY_SLUG: Record<string, { href: string; label: string }[]> = {
-  'blox-fruits': [{ href: '/tier-list', label: 'Tier List' }],
+  'blox-fruits': [
+    { href: '/tier-list', label: 'Tier List' },
+    { href: '/which-fruit', label: 'Which Fruit?' },
+  ],
 };
 
 export function GameHeader({
@@ -18,7 +21,7 @@ export function GameHeader({
   active,
 }: {
   game: Game;
-  active: '' | '/latest' | '/expired' | '/redeem-guide' | '/tier-list';
+  active: '' | '/latest' | '/expired' | '/redeem-guide' | '/tier-list' | '/which-fruit';
 }) {
   const lastUpdated = getLastUpdated(game);
   const tabs = [...BASE_TABS, ...(EXTRA_TABS_BY_SLUG[game.slug] ?? [])];
