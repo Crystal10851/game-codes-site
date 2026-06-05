@@ -413,20 +413,58 @@ function Results({
     );
   }
 
+  const roleLabel: Record<Role, string> = {
+    pvp: 'PvP',
+    grinding: 'grinding',
+    boss: 'bossing',
+    trading: 'trading',
+    fun: 'just-for-fun runs',
+  };
+  const hasRoleMatch = answers.role
+    ? recommendations.some((rec) =>
+        rec.fruit.quizSignals?.roles.includes(answers.role!),
+      )
+    : true;
+
   return (
     <div className="space-y-5">
-      <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-5">
-        <p className="text-xs font-semibold uppercase tracking-wide text-emerald-800">
-          Your top matches
-        </p>
-        <h2 className="mt-1 text-2xl font-bold text-slate-900">
-          Three fruits that fit your answers
-        </h2>
-        <p className="mt-2 text-sm text-slate-700">
-          Ranked by overall fit. Tap any card to jump to the full tier-list
-          entry for pros, cons, and best sword/style combos.
-        </p>
-      </div>
+      {hasRoleMatch ? (
+        <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-5">
+          <p className="text-xs font-semibold uppercase tracking-wide text-emerald-800">
+            Your top matches
+          </p>
+          <h2 className="mt-1 text-2xl font-bold text-slate-900">
+            Three fruits that fit your answers
+          </h2>
+          <p className="mt-2 text-sm text-slate-700">
+            Ranked by overall fit. Tap any card to jump to the full tier-list
+            entry for pros, cons, and best sword/style combos.
+          </p>
+        </div>
+      ) : (
+        <div className="rounded-xl border border-amber-200 bg-amber-50 p-5">
+          <p className="text-xs font-semibold uppercase tracking-wide text-amber-800">
+            Closest fits — no exact role match
+          </p>
+          <h2 className="mt-1 text-2xl font-bold text-slate-900">
+            Nothing in your budget is actually built for {answers.role ? roleLabel[answers.role] : 'this role'}
+          </h2>
+          <p className="mt-2 text-sm text-slate-700">
+            The three picks below are the best of what your budget allows, but
+            none of them is genuinely a {answers.role ? roleLabel[answers.role] : 'role'} specialist —
+            read each card's reasons to see what it actually does well.
+            Raising your budget one tier usually unlocks a real match;{' '}
+            <button
+              type="button"
+              onClick={onReset}
+              className="font-semibold text-amber-900 underline-offset-2 hover:underline"
+            >
+              retake the quiz
+            </button>{' '}
+            to try.
+          </p>
+        </div>
+      )}
 
       <ol className="space-y-4">
         {recommendations.map((rec, i) => (
