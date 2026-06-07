@@ -525,29 +525,24 @@ function RecommendationCard({
 }) {
   const { fruit, reasons } = rec;
   const rarityClass = RARITY_STYLES[fruit.rarity] ?? RARITY_STYLES.Common;
-  const delay = (rank - 1) * 120;
+  const delay = (rank - 1) * 80;
   return (
     <li
       style={{ animationDelay: `${delay}ms` }}
-      className={`animate-fade-in-up relative rounded-2xl border bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg ${
-        primary
-          ? 'border-brand-300 ring-2 ring-brand-200 animate-pulse-glow'
-          : 'border-slate-200'
+      className={`animate-fade-in-up relative rounded-xl border bg-white p-5 shadow-sm transition hover:shadow-md ${
+        primary ? 'border-brand-300 ring-2 ring-brand-100' : 'border-slate-200'
       }`}
     >
       {primary && (
-        <span className="absolute -top-3 left-5 inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-amber-400 via-orange-500 to-rose-500 px-3 py-1 text-[11px] font-extrabold uppercase tracking-wider text-white shadow-md ring-2 ring-white">
-          <span aria-hidden>🏆</span>
+        <span className="absolute -top-2.5 left-5 inline-flex items-center rounded-md bg-brand-600 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">
           Best match
         </span>
       )}
       <div className="flex flex-wrap items-start gap-4">
         <div className="flex items-center gap-3">
           <span
-            className={`flex h-12 w-12 items-center justify-center rounded-full text-lg font-extrabold shadow-sm ${
-              primary
-                ? 'bg-gradient-to-br from-brand-500 to-brand-700 text-white ring-2 ring-brand-200'
-                : 'bg-slate-100 text-slate-700'
+            className={`flex h-10 w-10 items-center justify-center rounded-full text-base font-bold ${
+              primary ? 'bg-brand-600 text-white' : 'bg-slate-100 text-slate-700'
             }`}
           >
             #{rank}
@@ -555,9 +550,7 @@ function RecommendationCard({
           {fruit.emoji && (
             <span
               aria-hidden
-              className={`flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-slate-50 to-slate-100 text-4xl ring-1 ring-slate-200 shadow-sm ${
-                primary ? 'animate-float' : ''
-              }`}
+              className="flex h-14 w-14 items-center justify-center rounded-lg bg-slate-50 text-4xl ring-1 ring-slate-200"
             >
               {fruit.emoji}
             </span>
