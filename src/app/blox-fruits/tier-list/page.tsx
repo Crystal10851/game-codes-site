@@ -165,33 +165,63 @@ export default function BloxFruitsTierListPage() {
       <GameHeader game={game} active="/tier-list" />
       <AuthorByline verifiedOn={lastUpdated} />
 
-      <section>
-        <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">
-          Blox Fruits Tier List ({new Date().getFullYear()})
-        </h1>
-        <p className="mt-2 text-sm text-slate-500">
-          {fruits.length} fruits ranked across overall, PvP, and grinding · Editorial picks · Updated {formatDate(lastUpdated)}
-        </p>
-        <p className="mt-4 max-w-3xl text-slate-700 leading-relaxed">
-          {renderInlineLinks(intro)}
-        </p>
-        <div className="mt-5 flex flex-wrap gap-3">
-          <Link
-            href="/blox-fruits/which-fruit"
-            className="inline-flex items-center gap-2 rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-700"
-          >
-            <span aria-hidden>🧭</span>
-            <span>Not sure? Take the Fruit Decision quiz</span>
-          </Link>
-          <Link
-            href="/blox-fruits/latest"
-            className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 shadow-sm hover:bg-slate-50"
-          >
-            <span aria-hidden>🎁</span>
-            <span>Latest XP codes</span>
-          </Link>
+      <section className="animate-fade-in-up relative overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-600 via-fuchsia-600 to-rose-500 p-8 text-white shadow-xl sm:p-12">
+        <div className="animate-gradient absolute inset-0 bg-gradient-to-tr from-indigo-500/0 via-fuchsia-400/30 to-amber-400/40" aria-hidden />
+        <div className="absolute -right-12 -top-12 h-48 w-48 animate-float rounded-full bg-amber-300/30 blur-3xl" aria-hidden />
+        <div className="absolute -bottom-12 -left-12 h-48 w-48 animate-float rounded-full bg-sky-300/30 blur-3xl" style={{ animationDelay: '1.5s' }} aria-hidden />
+        <div className="relative">
+          <span className="inline-flex items-center gap-2 rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-wide backdrop-blur-sm ring-1 ring-white/30">
+            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-300" aria-hidden />
+            Updated {formatDate(lastUpdated)}
+          </span>
+          <h1 className="mt-4 text-4xl font-extrabold leading-tight drop-shadow-sm sm:text-5xl">
+            Blox Fruits Tier List <span className="block text-amber-200">({new Date().getFullYear()})</span>
+          </h1>
+          <p className="mt-3 text-sm font-medium text-white/85">
+            {fruits.length} fruits ranked across overall, PvP, and grinding · Editorial picks
+          </p>
+          <p className="mt-5 max-w-3xl text-base leading-relaxed text-white/95">
+            {renderInlineLinks(intro)}
+          </p>
+          <div className="mt-7 flex flex-wrap gap-3">
+            <Link
+              href="/blox-fruits/which-fruit"
+              className="inline-flex items-center gap-2 rounded-lg bg-white px-5 py-2.5 text-sm font-bold text-indigo-700 shadow-lg ring-1 ring-white/20 transition hover:scale-[1.03] hover:bg-amber-50"
+            >
+              <span aria-hidden className="text-base">🧭</span>
+              <span>Not sure? Take the Fruit Decision quiz</span>
+            </Link>
+            <Link
+              href="/blox-fruits/latest"
+              className="inline-flex items-center gap-2 rounded-lg border border-white/40 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/20"
+            >
+              <span aria-hidden className="text-base">🎁</span>
+              <span>Latest XP codes</span>
+            </Link>
+          </div>
         </div>
       </section>
+
+      <nav
+        aria-label="Jump to tier"
+        className="sticky top-0 z-30 -mx-4 flex flex-wrap items-center gap-2 border-b border-slate-200/80 bg-white/85 px-4 py-3 backdrop-blur-md sm:mx-0 sm:rounded-xl sm:border sm:border-slate-200 sm:px-4"
+      >
+        <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">Jump to:</span>
+        {grouped.map(({ tier, fruits: tierFruits }) => {
+          const style = TIER_STYLES[tier];
+          return (
+            <a
+              key={tier}
+              href={`#tier-${tier}`}
+              className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold ring-1 transition hover:scale-105 ${style.ring} ${style.bg} ${style.text}`}
+            >
+              <span>{tier}</span>
+              <span className="opacity-60">·</span>
+              <span className="opacity-80">{tierFruits.length}</span>
+            </a>
+          );
+        })}
+      </nav>
 
       <section className="rounded-xl border border-slate-200 bg-slate-50 p-5">
         <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-700">
@@ -210,10 +240,10 @@ export default function BloxFruitsTierListPage() {
       {grouped.map(({ tier, fruits: tierFruits }) => {
         const style = TIER_STYLES[tier];
         return (
-          <section key={tier} aria-labelledby={`tier-${tier}`}>
+          <section key={tier} aria-labelledby={`tier-${tier}`} className="scroll-mt-20">
             <div className="flex items-baseline gap-3">
               <span
-                className={`inline-flex h-10 w-14 items-center justify-center rounded-md ring-1 ${style.ring} ${style.bg} ${style.text} text-lg font-bold`}
+                className={`inline-flex h-12 w-16 items-center justify-center rounded-lg ring-2 ${style.ring} ${style.bg} ${style.text} text-2xl font-extrabold shadow-sm`}
               >
                 {tier}
               </span>
@@ -228,8 +258,8 @@ export default function BloxFruitsTierListPage() {
               </h2>
             </div>
             <div className="mt-4 grid gap-5">
-              {tierFruits.map((fruit) => (
-                <FruitCard key={fruit.slug} fruit={fruit} />
+              {tierFruits.map((fruit, idx) => (
+                <FruitCard key={fruit.slug} fruit={fruit} index={idx} />
               ))}
             </div>
           </section>
@@ -263,23 +293,25 @@ export default function BloxFruitsTierListPage() {
   );
 }
 
-function FruitCard({ fruit }: { fruit: Fruit }) {
+function FruitCard({ fruit, index = 0 }: { fruit: Fruit; index?: number }) {
   const rarityClass =
     RARITY_STYLES[fruit.rarity] ?? RARITY_STYLES.Common;
   const youtubeUrl = fruit.youtubeQuery
     ? `https://www.youtube.com/results?search_query=${encodeURIComponent(fruit.youtubeQuery)}`
     : null;
+  const delay = Math.min(index, 4) * 80;
   return (
     <article
       id={fruit.slug}
-      className="scroll-mt-20 rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-brand-200 hover:shadow-md"
+      style={{ animationDelay: `${delay}ms` }}
+      className="animate-fade-in-up scroll-mt-24 rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-brand-300 hover:shadow-lg"
     >
       <header className="flex flex-wrap items-start justify-between gap-3">
         <div className="flex items-start gap-3">
           {fruit.emoji && (
             <span
               aria-hidden
-              className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-slate-50 text-3xl ring-1 ring-slate-200"
+              className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-slate-50 to-slate-100 text-4xl ring-1 ring-slate-200 shadow-sm"
             >
               {fruit.emoji}
             </span>
@@ -374,22 +406,48 @@ function FruitCard({ fruit }: { fruit: Fruit }) {
       </div>
 
       {youtubeUrl && (
-        <div className="mt-4 border-t border-slate-100 pt-3">
-          <a
-            href={youtubeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-brand-700"
-          >
-            <span
+        <a
+          href={youtubeUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Watch ${fruit.name} showcases on YouTube`}
+          className="group relative mt-4 block overflow-hidden rounded-xl ring-1 ring-slate-200 transition hover:ring-red-300 hover:shadow-md"
+        >
+          <div className="relative aspect-video w-full bg-gradient-to-br from-slate-900 via-slate-800 to-zinc-900">
+            <div
               aria-hidden
-              className="inline-flex h-5 w-5 items-center justify-center rounded bg-red-600 text-[10px] font-bold text-white"
-            >
-              ▶
+              className="absolute inset-0 opacity-40"
+              style={{
+                backgroundImage:
+                  'radial-gradient(circle at 30% 40%, rgba(244,63,94,0.35), transparent 55%), radial-gradient(circle at 75% 70%, rgba(99,102,241,0.30), transparent 55%)',
+              }}
+            />
+            {fruit.emoji && (
+              <span
+                aria-hidden
+                className="absolute right-6 top-1/2 -translate-y-1/2 text-7xl opacity-25 drop-shadow-lg transition group-hover:scale-110 group-hover:opacity-40 sm:text-8xl"
+              >
+                {fruit.emoji}
+              </span>
+            )}
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
+              <span
+                aria-hidden
+                className="flex h-16 w-16 items-center justify-center rounded-full bg-red-600 shadow-2xl ring-4 ring-white/20 transition group-hover:scale-110 group-hover:bg-red-500"
+              >
+                <span className="ml-1 border-y-[10px] border-l-[16px] border-y-transparent border-l-white" />
+              </span>
+              <p className="mt-3 text-sm font-bold drop-shadow sm:text-base">
+                Watch {fruit.name} showcases
+              </p>
+              <p className="text-xs text-white/70">on YouTube</p>
+            </div>
+            <span className="absolute bottom-3 right-3 inline-flex items-center gap-1 rounded bg-black/60 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white backdrop-blur-sm">
+              <span className="inline-flex h-3 w-3 items-center justify-center rounded-sm bg-red-600 text-[8px]">▶</span>
+              YouTube
             </span>
-            Watch {fruit.name} showcases on YouTube
-          </a>
-        </div>
+          </div>
+        </a>
       )}
     </article>
   );

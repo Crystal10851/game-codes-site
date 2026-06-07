@@ -103,36 +103,45 @@ export default function BloxFruitsWhichFruitPage() {
       <GameHeader game={game} active="/which-fruit" />
       <AuthorByline verifiedOn={lastUpdated} />
 
-      <section>
-        <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">
-          Which Blox Fruit Should You Buy?
-        </h1>
-        <p className="mt-2 text-sm text-slate-500">
-          A four-question quiz across {fruitCount} active fruits · Updated weekly
-        </p>
-        <p className="mt-4 max-w-3xl text-slate-700 leading-relaxed">
-          Picking your first Blox Fruit (or your third, or a Mythical upgrade) is
-          a Robux and Beli decision you don't want to redo. This helper walks
-          through four short questions about your budget, what you want the
-          fruit to do, your experience, and your party setup, then ranks the top
-          three matches from the full{' '}
-          <Link
-            href="/blox-fruits/tier-list"
-            className="font-semibold text-brand-700 hover:underline"
-          >
-            Blox Fruits tier list
-          </Link>
-          . Every answer is independent — you can retake the quiz at any time.
-          New to redeeming? Start with the{' '}
-          <Link
-            href="/blox-fruits/redeem-guide"
-            className="font-semibold text-brand-700 hover:underline"
-          >
-            redeem guide
-          </Link>{' '}
-          for the in-game code box, then come back here to plan your fruit
-          purchase.
-        </p>
+      <section className="animate-fade-in-up relative overflow-hidden rounded-2xl bg-gradient-to-br from-brand-600 via-indigo-600 to-fuchsia-600 p-8 text-white shadow-xl sm:p-12">
+        <div className="animate-gradient absolute inset-0 bg-gradient-to-tr from-brand-500/0 via-sky-400/25 to-emerald-400/30" aria-hidden />
+        <div className="absolute -right-12 -top-12 h-48 w-48 animate-float rounded-full bg-amber-300/30 blur-3xl" aria-hidden />
+        <div className="absolute -bottom-12 -left-12 h-48 w-48 animate-float rounded-full bg-rose-300/25 blur-3xl" style={{ animationDelay: '1.5s' }} aria-hidden />
+        <div className="relative">
+          <span className="inline-flex items-center gap-2 rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-wide backdrop-blur-sm ring-1 ring-white/30">
+            <span aria-hidden>🧭</span>
+            Interactive quiz · 4 questions
+          </span>
+          <h1 className="mt-4 text-4xl font-extrabold leading-tight drop-shadow-sm sm:text-5xl">
+            Which Blox Fruit <span className="block text-amber-200">Should You Buy?</span>
+          </h1>
+          <p className="mt-3 text-sm font-medium text-white/85">
+            A four-question quiz across {fruitCount} active fruits · Updated weekly
+          </p>
+          <p className="mt-5 max-w-3xl text-base leading-relaxed text-white/95">
+            Picking your first Blox Fruit (or your third, or a Mythical upgrade) is
+            a Robux and Beli decision you don't want to redo. This helper walks
+            through four short questions about your budget, what you want the
+            fruit to do, your experience, and your party setup, then ranks the top
+            three matches from the full{' '}
+            <Link
+              href="/blox-fruits/tier-list"
+              className="font-bold text-amber-200 underline-offset-2 hover:underline"
+            >
+              Blox Fruits tier list
+            </Link>
+            . Every answer is independent — you can retake the quiz at any time.
+            New to redeeming? Start with the{' '}
+            <Link
+              href="/blox-fruits/redeem-guide"
+              className="font-bold text-amber-200 underline-offset-2 hover:underline"
+            >
+              redeem guide
+            </Link>{' '}
+            for the in-game code box, then come back here to plan your fruit
+            purchase.
+          </p>
+        </div>
       </section>
 
       <FruitQuiz />
