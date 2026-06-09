@@ -8,7 +8,7 @@ import { AdSlot } from '@/components/AdSlot';
 import { AffiliateBar } from '@/components/AffiliateBar';
 import { JsonLd } from '@/components/JsonLd';
 import { AuthorByline } from '@/components/AuthorByline';
-import { Screenshot } from '@/components/Screenshot';
+import { StepIllustration } from '@/components/StepIllustration';
 import { YouTubeEmbed } from '@/components/YouTubeEmbed';
 import { StatHero, buildCodeStats } from '@/components/StatHero';
 import { SectionHeading } from '@/components/SectionHeading';
@@ -161,10 +161,12 @@ export default async function RedeemGuidePage({ params }: PageProps) {
               </div>
               {step.screenshot && (
                 <div className="mt-4 sm:pl-14">
-                  <Screenshot
+                  <StepIllustration
                     src={step.screenshot}
-                    alt={`${game.name} redeem step ${i + 1}: ${step.title}`}
-                    caption={`Step ${i + 1} — ${step.title}`}
+                    stepNumber={i + 1}
+                    stepTitle={step.title}
+                    gameName={game.name}
+                    accentColor={game.color}
                   />
                 </div>
               )}
