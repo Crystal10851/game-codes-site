@@ -149,51 +149,79 @@ export default function HomePage() {
             >
               Browse code lists
             </SectionHeading>
-            <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+            <ul className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {games.map((g) => {
                 const summary = getGameSummary(g);
                 const base = g.color ?? '#1b3aa5';
-                const cardBg = `linear-gradient(135deg, ${base} 0%, ${darken(base, 0.7)} 100%)`;
+                const latestActive = g.codes.find((c) => c.status === 'active');
                 return (
                   <li key={g.slug}>
                     <Link
                       href={`/${g.slug}/latest`}
-                      className="group flex h-full overflow-hidden rounded-xl text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg"
-                      style={{ background: cardBg }}
+                      className="group flex h-full flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-lg"
                     >
-                      <div className="flex-1 p-4">
-                        <p className="text-[10px] font-bold uppercase tracking-widest text-white/80">
-                          {g.platform}
-                        </p>
-                        <h3 className="mt-1 text-lg font-extrabold leading-tight">
-                          {g.name} Codes
-                        </h3>
-                        <p className="mt-1 line-clamp-2 text-xs text-white/85">
-                          {g.tagline}
-                        </p>
-                        <div className="mt-3 flex flex-wrap items-center gap-2 text-xs">
-                          <span className="rounded-full bg-emerald-400/25 px-2 py-0.5 font-bold text-emerald-100 ring-1 ring-emerald-300/40">
-                            {summary.activeCount} active
-                          </span>
-                          <span className="text-white/70">{summary.expiredCount} archived</span>
-                        </div>
-                      </div>
-                      {g.heroImage && (
-                        <div className="relative hidden w-32 shrink-0 sm:block">
-                          {}
+                      <div className="relative aspect-[16/9] overflow-hidden bg-slate-100">
+                        {g.heroImage && (
                           <img
                             src={g.heroImage}
                             alt=""
                             loading="lazy"
-                            className="h-full w-full object-cover"
+                            className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                           />
-                          <div
+                        )}
+                        <div
+                          aria-hidden
+                          className="absolute inset-x-0 bottom-0 h-16"
+                          style={{
+                            background: `linear-gradient(to top, ${base}cc 0%, transparent 100%)`,
+                          }}
+                        />
+                        <span
+                          className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-md bg-white/95 px-2 py-1 text-[10px] font-extrabold uppercase tracking-widest text-slate-800 shadow-sm ring-1 ring-black/5 backdrop-blur"
+                        >
+                          <span
                             aria-hidden
-                            className="absolute inset-y-0 left-0 w-16"
-                            style={{ background: `linear-gradient(to right, ${base} 0%, transparent 100%)` }}
+                            className="h-1.5 w-1.5 rounded-full"
+                            style={{ backgroundColor: base }}
                           />
+                          {g.platform}
+                        </span>
+                        <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-md bg-emerald-500 px-2 py-1 text-[10px] font-extrabold uppercase tracking-widest text-white shadow-sm">
+                          <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-white" />
+                          {summary.activeCount} active
+                        </span>
+                      </div>
+                      <div className="flex flex-1 flex-col p-4">
+                        <h3 className="text-lg font-extrabold leading-tight text-slate-900 group-hover:text-brand-700">
+                          {g.name} Codes
+                        </h3>
+                        <p className="mt-1 line-clamp-2 text-xs text-slate-600">
+                          {g.tagline}
+                        </p>
+
+                        {latestActive && (
+                          <div className="mt-3 rounded-md border border-slate-200 bg-slate-50 px-2.5 py-2">
+                            <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500">
+                              Latest working
+                            </p>
+                            <p className="mt-0.5 truncate font-mono text-xs font-bold text-slate-900">
+                              {latestActive.code}
+                            </p>
+                            <p className="mt-0.5 truncate text-[11px] text-slate-600">
+                              {latestActive.reward}
+                            </p>
+                          </div>
+                        )}
+
+                        <div className="mt-3 flex items-center justify-between border-t border-slate-100 pt-3 text-xs">
+                          <span className="text-slate-500">
+                            {summary.expiredCount} archived
+                          </span>
+                          <span className="font-bold text-brand-700 group-hover:underline">
+                            View codes →
+                          </span>
                         </div>
-                      )}
+                      </div>
                     </Link>
                   </li>
                 );
