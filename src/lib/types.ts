@@ -45,6 +45,7 @@ export interface Game {
   codes: GameCode[];
   lastVerifiedOn?: string;
   heroImage?: string;
+  thumbnailUrl?: string;
   videoId?: string;
   videoTitle?: string;
   longDescription?: string;
