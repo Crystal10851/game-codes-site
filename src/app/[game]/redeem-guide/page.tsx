@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Container } from '@/components/Container';
 import { GameHeader } from '@/components/GameHeader';
+import { GameHero } from '@/components/GameHero';
 import { AdSlot } from '@/components/AdSlot';
 import { AffiliateBar } from '@/components/AffiliateBar';
 import { JsonLd } from '@/components/JsonLd';
@@ -11,6 +12,7 @@ import { Screenshot } from '@/components/Screenshot';
 import { YouTubeEmbed } from '@/components/YouTubeEmbed';
 import { StatHero, buildCodeStats } from '@/components/StatHero';
 import { SectionHeading } from '@/components/SectionHeading';
+import { RelatedGames } from '@/components/RelatedGames';
 import { getGame, getGameSlugs } from '@/lib/games';
 import { getLatestCodes, getExpiredCodes, getLastUpdated, isRecentlyAdded } from '@/lib/codes';
 import { buildMetadata } from '@/lib/seo';
@@ -107,27 +109,17 @@ export default async function RedeemGuidePage({ params }: PageProps) {
         data={faqLd ? [howToLd, faqLd, breadcrumbLd] : [howToLd, breadcrumbLd]}
       />
       <GameHeader game={game} active="/redeem-guide" />
-      <AuthorByline verifiedOn={lastUpdated} />
 
-      <section>
-        <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">
-          How to Redeem {game.name} Codes
-        </h1>
-        <p className="mt-3 max-w-3xl text-slate-700 leading-relaxed">
-          Redeeming a {game.name} code takes under a minute once you know where
-          the code box is. The full flow is identical across PC, mobile, Xbox,
-          and the {game.platform} web player — only the position of the
-          on-screen icon changes. Follow the {game.redeemSteps.length} steps
-          below, then jump straight to the{' '}
-          <Link
-            href={`/${game.slug}/latest`}
-            className="font-semibold text-brand-700 hover:underline"
-          >
-            latest {active.length} working codes
-          </Link>{' '}
-          to start redeeming.
-        </p>
-      </section>
+      <GameHero
+        game={game}
+        activeCount={active.length}
+        lastUpdated={lastUpdated}
+        primaryCta={{ href: '#steps-heading', label: `Jump to ${game.redeemSteps.length} redemption steps` }}
+        secondaryCta={{ href: `/${game.slug}/latest`, label: `${active.length} working codes` }}
+        eyebrow={`${game.redeemSteps.length}-step redeem guide`}
+      />
+
+      <AuthorByline verifiedOn={lastUpdated} />
 
       <StatHero
         tiles={buildCodeStats({
@@ -304,6 +296,8 @@ export default async function RedeemGuidePage({ params }: PageProps) {
       )}
 
       <AffiliateBar game={game} heading="Useful for this game" />
+
+      <RelatedGames excludeSlug={game.slug} />
     </Container>
   );
 }

@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Container } from '@/components/Container';
 import { GameHeader } from '@/components/GameHeader';
+import { GameHero } from '@/components/GameHero';
 import { CodeList } from '@/components/CodeList';
 import { AdSlot } from '@/components/AdSlot';
 import { AffiliateBar } from '@/components/AffiliateBar';
@@ -15,6 +16,7 @@ import { Paragraphs } from '@/components/Prose';
 import { StatHero, buildCodeStats } from '@/components/StatHero';
 import { SectionHeading } from '@/components/SectionHeading';
 import { RewardBreakdown } from '@/components/RewardBreakdown';
+import { RelatedGames } from '@/components/RelatedGames';
 import { getGame, getGameSlugs } from '@/lib/games';
 import { getLatestCodes, getExpiredCodes, getLastUpdated, isRecentlyAdded } from '@/lib/codes';
 import { buildMetadata } from '@/lib/seo';
@@ -96,39 +98,17 @@ export default async function GamePage({ params }: PageProps) {
     <Container className="space-y-8 py-8">
       <JsonLd id="ld-article" data={[articleLd, breadcrumbLd]} />
       <GameHeader game={game} active="" />
-      <AuthorByline verifiedOn={lastUpdated} />
 
-      <section>
-        <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">
-          {game.name} Codes ({new Date().getFullYear()})
-        </h1>
-        <p className="mt-3 max-w-3xl text-slate-700 leading-relaxed">
-          {game.tagline} This page is the single home for {game.name} codes —
-          every code is verified against the live game before publishing, and
-          dead codes are moved to the{' '}
-          <Link
-            href={`/${game.slug}/expired`}
-            className="font-semibold text-brand-700 hover:underline"
-          >
-            archive
-          </Link>{' '}
-          within 24 hours of expiry.
-        </p>
-        <div className="mt-5 flex flex-wrap gap-3">
-          <Link
-            href={`/${game.slug}/latest`}
-            className="inline-flex items-center gap-2 rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-700"
-          >
-            See all {latest.length} working codes →
-          </Link>
-          <Link
-            href={`/${game.slug}/redeem-guide`}
-            className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 shadow-sm transition hover:bg-slate-50"
-          >
-            How to redeem →
-          </Link>
-        </div>
-      </section>
+      <GameHero
+        game={game}
+        activeCount={latest.length}
+        lastUpdated={lastUpdated}
+        primaryCta={{ href: `/${game.slug}/latest`, label: `See ${latest.length} working codes` }}
+        secondaryCta={{ href: `/${game.slug}/redeem-guide`, label: 'How to redeem' }}
+        eyebrow={`${new Date().getFullYear()} codes`}
+      />
+
+      <AuthorByline verifiedOn={lastUpdated} />
 
       <StatHero
         tiles={buildCodeStats({
@@ -299,6 +279,8 @@ export default async function GamePage({ params }: PageProps) {
           </Link>
         </div>
       </section>
+
+      <RelatedGames excludeSlug={game.slug} />
     </Container>
   );
 }

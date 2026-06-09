@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Container } from '@/components/Container';
 import { GameHeader } from '@/components/GameHeader';
+import { GameHero } from '@/components/GameHero';
 import { CodeList } from '@/components/CodeList';
 import { AdSlot } from '@/components/AdSlot';
 import { JsonLd } from '@/components/JsonLd';
@@ -12,6 +13,7 @@ import { Paragraphs } from '@/components/Prose';
 import { StatHero, buildCodeStats } from '@/components/StatHero';
 import { SectionHeading } from '@/components/SectionHeading';
 import { RewardBreakdown } from '@/components/RewardBreakdown';
+import { RelatedGames } from '@/components/RelatedGames';
 import { getGame, getGameSlugs } from '@/lib/games';
 import { getLatestCodes, getLastUpdated, isRecentlyAdded } from '@/lib/codes';
 import { buildMetadata } from '@/lib/seo';
@@ -94,26 +96,17 @@ export default async function LatestPage({ params }: PageProps) {
     <Container className="space-y-8 py-8">
       <JsonLd id="ld-latest" data={[breadcrumbLd, itemListLd]} />
       <GameHeader game={game} active="/latest" />
-      <AuthorByline verifiedOn={lastUpdated} />
 
-      <section>
-        <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">
-          Latest {game.name} Codes ({new Date().getFullYear()})
-        </h1>
-        <p className="mt-3 max-w-3xl text-slate-700 leading-relaxed">
-          Every {game.name} code on this page is currently working. We test the
-          list against the live game on every refresh and move any code that
-          stops paying out to the{' '}
-          <Link
-            href={`/${game.slug}/expired`}
-            className="font-semibold text-brand-700 hover:underline"
-          >
-            expired archive
-          </Link>{' '}
-          within 24 hours, so what you see below is what you can actually redeem
-          today.
-        </p>
-      </section>
+      <GameHero
+        game={game}
+        activeCount={latest.length}
+        lastUpdated={lastUpdated}
+        primaryCta={{ href: '#codes-heading', label: `Jump to ${latest.length} working codes` }}
+        secondaryCta={{ href: `/${game.slug}/redeem-guide`, label: 'How to redeem' }}
+        eyebrow="Latest working codes"
+      />
+
+      <AuthorByline verifiedOn={lastUpdated} />
 
       <StatHero
         tiles={buildCodeStats({
@@ -274,6 +267,8 @@ export default async function LatestPage({ params }: PageProps) {
           is kept up to date so you do not waste time retrying dead codes.
         </p>
       </section>
+
+      <RelatedGames excludeSlug={game.slug} />
     </Container>
   );
 }

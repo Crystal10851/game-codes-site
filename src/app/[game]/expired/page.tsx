@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Container } from '@/components/Container';
 import { GameHeader } from '@/components/GameHeader';
+import { GameHero } from '@/components/GameHero';
 import { CodeList } from '@/components/CodeList';
 import { AdSlot } from '@/components/AdSlot';
 import { JsonLd } from '@/components/JsonLd';
@@ -10,6 +11,7 @@ import { AuthorByline } from '@/components/AuthorByline';
 import { Paragraphs } from '@/components/Prose';
 import { StatHero, buildCodeStats } from '@/components/StatHero';
 import { SectionHeading } from '@/components/SectionHeading';
+import { RelatedGames } from '@/components/RelatedGames';
 import { getGame, getGameSlugs } from '@/lib/games';
 import { getExpiredCodes, getLatestCodes, getLastUpdated, isRecentlyAdded } from '@/lib/codes';
 import { buildMetadata } from '@/lib/seo';
@@ -77,20 +79,17 @@ export default async function ExpiredPage({ params }: PageProps) {
     <Container className="space-y-8 py-8">
       <JsonLd id="ld-expired" data={breadcrumbLd} />
       <GameHeader game={game} active="/expired" />
-      <AuthorByline verifiedOn={lastUpdated} />
 
-      <section>
-        <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">
-          Expired {game.name} Codes — Full Archive
-        </h1>
-        <p className="mt-3 max-w-3xl text-slate-700 leading-relaxed">
-          These {game.name} codes no longer work. We keep the archive live so
-          you can quickly confirm a code you saw on YouTube or in a Discord
-          screenshot is genuinely dead before wasting time retyping it, and so
-          the addition / expiry dates document the game's release history at a
-          glance.
-        </p>
-      </section>
+      <GameHero
+        game={game}
+        activeCount={active.length}
+        lastUpdated={lastUpdated}
+        primaryCta={{ href: `/${game.slug}/latest`, label: `See ${active.length} working codes` }}
+        secondaryCta={{ href: '#expired-heading', label: `Jump to ${expired.length} expired` }}
+        eyebrow="Expired code archive"
+      />
+
+      <AuthorByline verifiedOn={lastUpdated} />
 
       <StatHero
         tiles={buildCodeStats({
@@ -154,6 +153,8 @@ export default async function ExpiredPage({ params }: PageProps) {
           walks through the in-game flow step by step.
         </p>
       </section>
+
+      <RelatedGames excludeSlug={game.slug} />
     </Container>
   );
 }
