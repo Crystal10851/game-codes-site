@@ -7,14 +7,6 @@ interface Props {
   heading?: string;
 }
 
-function darken(hex: string, factor: number): string {
-  const clean = hex.replace('#', '');
-  const r = Math.max(0, Math.floor(parseInt(clean.slice(0, 2), 16) * factor));
-  const g = Math.max(0, Math.floor(parseInt(clean.slice(2, 4), 16) * factor));
-  const b = Math.max(0, Math.floor(parseInt(clean.slice(4, 6), 16) * factor));
-  return `rgb(${r}, ${g}, ${b})`;
-}
-
 export function RelatedGames({ excludeSlug, heading = 'More game code guides' }: Props) {
   const games = getAllGames()
     .filter((g) => g.slug !== excludeSlug)
@@ -31,35 +23,74 @@ export function RelatedGames({ excludeSlug, heading = 'More game code guides' }:
       >
         {heading}
       </SectionHeading>
-      <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      <ul className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {games.map((g) => {
           const summary = getGameSummary(g);
           const base = g.color ?? '#1b3aa5';
-          const background = `linear-gradient(135deg, ${base} 0%, ${darken(base, 0.75)} 100%)`;
+          const latestActive = g.codes.find((c) => c.status === 'active');
           return (
             <li key={g.slug}>
               <Link
                 href={`/${g.slug}/latest`}
-                className="group block overflow-hidden rounded-xl text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg"
-                style={{ background }}
+                className="group flex h-full flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-lg"
               >
-                <div className="p-4">
-                  <p className="text-xs font-bold uppercase tracking-widest text-white/80">
+                <div className="relative aspect-[16/9] overflow-hidden bg-slate-100">
+                  {g.heroImage && (
+                    <img
+                      src={g.heroImage}
+                      alt=""
+                      loading="lazy"
+                      className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                    />
+                  )}
+                  <div
+                    aria-hidden
+                    className="absolute inset-x-0 bottom-0 h-16"
+                    style={{
+                      background: `linear-gradient(to top, ${base}cc 0%, transparent 100%)`,
+                    }}
+                  />
+                  <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-md bg-white/95 px-2 py-1 text-[10px] font-extrabold uppercase tracking-widest text-slate-800 shadow-sm ring-1 ring-black/5 backdrop-blur">
+                    <span
+                      aria-hidden
+                      className="h-1.5 w-1.5 rounded-full"
+                      style={{ backgroundColor: base }}
+                    />
                     {g.platform}
-                  </p>
-                  <p className="mt-1 text-lg font-extrabold leading-tight">
+                  </span>
+                  <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-md bg-emerald-500 px-2 py-1 text-[10px] font-extrabold uppercase tracking-widest text-white shadow-sm">
+                    <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-white" />
+                    {summary.activeCount} active
+                  </span>
+                </div>
+                <div className="flex flex-1 flex-col p-4">
+                  <h3 className="text-lg font-extrabold leading-tight text-slate-900 group-hover:text-brand-700">
                     {g.name}
-                  </p>
-                  <p className="mt-1 line-clamp-2 text-xs text-white/85">
+                  </h3>
+                  <p className="mt-1 line-clamp-2 text-xs text-slate-600">
                     {g.tagline}
                   </p>
-                  <div className="mt-3 flex items-center justify-between border-t border-white/15 pt-3 text-xs">
-                    <span className="font-semibold text-white">
-                      {summary.activeCount} active
+
+                  {latestActive && (
+                    <div className="mt-3 rounded-md border border-slate-200 bg-slate-50 px-2.5 py-2">
+                      <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500">
+                        Latest working
+                      </p>
+                      <p className="mt-0.5 truncate font-mono text-xs font-bold text-slate-900">
+                        {latestActive.code}
+                      </p>
+                      <p className="mt-0.5 truncate text-[11px] text-slate-600">
+                        {latestActive.reward}
+                      </p>
+                    </div>
+                  )}
+
+                  <div className="mt-3 flex items-center justify-between border-t border-slate-100 pt-3 text-xs">
+                    <span className="text-slate-500">
+                      {summary.expiredCount} archived
                     </span>
-                    <span className="text-white/75">{summary.expiredCount} archived</span>
-                    <span aria-hidden className="text-white opacity-70 transition group-hover:translate-x-0.5">
-                      →
+                    <span className="font-bold text-brand-700 group-hover:underline">
+                      View codes →
                     </span>
                   </div>
                 </div>
