@@ -15,23 +15,28 @@
   "redeemSteps": [
     {
       "title": "Launch Pet Simulator 99",
-      "detail": "Open Roblox and start any Pet Simulator 99 session."
+      "detail": "Open Roblox and start any Pet Simulator 99 session.",
+      "screenshot": "diagram:launch"
     },
     {
       "title": "Open the Settings menu",
-      "detail": "Tap the Settings (gear) icon on the right side of the screen."
+      "detail": "Tap the Settings (gear) icon on the right side of the screen.",
+      "screenshot": "diagram:settings"
     },
     {
       "title": "Find the Codes box",
-      "detail": "Inside Settings, scroll to the Codes input box."
+      "detail": "Inside Settings, scroll to the Codes input box.",
+      "screenshot": "diagram:redeem"
     },
     {
       "title": "Enter the code",
-      "detail": "Type or paste the code exactly. Pet Simulator 99 codes are case-sensitive and usually all lowercase."
+      "detail": "Type or paste the code exactly. Pet Simulator 99 codes are case-sensitive and usually all lowercase.",
+      "screenshot": "diagram:paste"
     },
     {
       "title": "Hit Submit",
-      "detail": "Working codes deliver the reward instantly. If the box flashes red, the code is invalid or expired."
+      "detail": "Working codes deliver the reward instantly. If the box flashes red, the code is invalid or expired.",
+      "screenshot": "diagram:success"
     }
   ],
   "faq": [

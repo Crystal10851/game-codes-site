@@ -21,22 +21,22 @@
     {
       "title": "Launch Blox Fruits on Roblox",
       "detail": "Open Roblox on your platform of choice — PC, Xbox, mobile or web — and start a Blox Fruits session. You can be on any island in any of the three seas; codes can be redeemed from anywhere as long as you are in the live game, not the lobby. If you have an unfinished private server session, codes will work there too.",
-      "screenshot": "/screenshots/blox-fruits/redeem-01-launch.png"
+      "screenshot": "diagram:launch"
     },
     {
       "title": "Click the Twitter / X icon on the left side of the screen",
       "detail": "Look for the small blue bird icon stacked vertically with the other quick-action buttons on the left edge of your screen. Tap or click it once. This opens the in-game code redemption text box directly — you do not need to open the Settings or Menu screens first. On mobile the icon is slightly smaller; on Xbox it sits in the same column under the inventory button.",
-      "screenshot": "/screenshots/blox-fruits/redeem-02-twitter-icon.png"
+      "screenshot": "diagram:twitter"
     },
     {
       "title": "Paste the code character-for-character",
       "detail": "Copy a code from this page using the Copy button next to it, then paste it into the in-game text box. Codes are case-sensitive — `KITT_RESET` and `kitt_reset` are not the same, and `Sub2CaptainMaui` will fail if pasted as `sub2captainmaui`. The safest workflow is always to paste rather than retype. The text box does not auto-correct, but it will trim trailing spaces on submit.",
-      "screenshot": "/screenshots/blox-fruits/redeem-03-paste-code.png"
+      "screenshot": "diagram:paste"
     },
     {
       "title": "Hit the Try button and confirm the reward",
       "detail": "Press the green Try button below the text box. A green 'Success' banner confirms the reward has been applied and the boost / Beli / stat reset is now live on your character. A red error message means the code is expired, mistyped, or already redeemed on this account. If you just saw the success banner but the 2x XP timer is not ticking down, your character may be K.O.'d — respawn and the boost will resume.",
-      "screenshot": "/screenshots/blox-fruits/redeem-04-success.png"
+      "screenshot": "diagram:success"
     }
   ],
   "troubleshooting": [

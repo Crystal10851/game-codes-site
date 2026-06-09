@@ -20,27 +20,27 @@
     {
       "title": "Reach Adventure Rank 10",
       "detail": "Your account must be at least AR 10 before the code redemption portal will accept any code. New players: complete the Statue of the Seven quest in Mondstadt as part of the opening campaign, and you will hit AR 10 within an hour of starting. The redemption endpoint silently rejects sub-AR 10 accounts — there is no error message, the code just refuses to apply.",
-      "screenshot": "/screenshots/genshin-impact/redeem-01-ar10.png"
+      "screenshot": "diagram:account"
     },
     {
       "title": "Open the redemption portal",
       "detail": "Go to the official HoYoverse redemption page at [genshin.hoyoverse.com/en/gift](https://genshin.hoyoverse.com/en/gift). On mobile only, you can also redeem in-game via Paimon menu → Settings → Account → Redeem Now, which deep-links to the same portal. The PC and PlayStation builds do not have an in-game redemption button — you must use the web portal.",
-      "screenshot": "/screenshots/genshin-impact/redeem-02-portal.png"
+      "screenshot": "diagram:portal"
     },
     {
       "title": "Log in and pick your server",
       "detail": "Sign in with the HoYoverse account that owns your Genshin Impact profile (the email, mobile, or social login linked to that account). On the portal, select the correct server: America, Europe, Asia, or TW/HK/MO. Each server is a separate gacha pool and a separate redemption registry — redeem on the wrong server and the code is consumed without paying out.",
-      "screenshot": "/screenshots/genshin-impact/redeem-03-login.png"
+      "screenshot": "diagram:server"
     },
     {
       "title": "Paste the code and submit",
       "detail": "Copy a code from this page using the Copy button next to it. Paste it character-for-character into the code box on the portal. Genshin codes are case-sensitive and almost always all uppercase — `GENSHINGIFT` and `genshingift` are not the same. Hit Submit and confirm on the modal that appears.",
-      "screenshot": "/screenshots/genshin-impact/redeem-04-paste.png"
+      "screenshot": "diagram:paste"
     },
     {
       "title": "Claim rewards from in-game mail",
       "detail": "Primogems, Mora, and items arrive via in-game mail within five minutes of a successful redemption. Open the Paimon menu, tap Mail, and claim the rewards from the entry labelled 'Redemption Code'. Mail is held for 30 days before being purged, so claim it within the window even if you are not pulling immediately.",
-      "screenshot": "/screenshots/genshin-impact/redeem-05-mail.png"
+      "screenshot": "diagram:mail"
     }
   ],
   "troubleshooting": [

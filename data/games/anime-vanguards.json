@@ -21,27 +21,27 @@
     {
       "title": "Launch Anime Vanguards on Roblox",
       "detail": "Open Roblox on your platform of choice and start an Anime Vanguards session. You will land in the main lobby — the code redemption flow is accessible from there once the UI finishes loading. If you have an unfinished match in a private server, the codes flow still works there, though some level-gated codes will not pay out until you hit the required Mastery level.",
-      "screenshot": "/screenshots/anime-vanguards/redeem-01-launch.png"
+      "screenshot": "diagram:launch"
     },
     {
       "title": "Open the Profile menu",
       "detail": "Tap the Profile icon on the right-hand side of the screen. The Codes redeem entry moved here from the Settings menu in a UI refresh during early 2026 — older YouTube tutorials still pointing at the gear icon are out of date and will leave you searching the wrong menu. The Profile icon is the small head silhouette in the right-side icon column.",
-      "screenshot": "/screenshots/anime-vanguards/redeem-02-profile.png"
+      "screenshot": "diagram:profile"
     },
     {
       "title": "Tap the Codes icon inside Profile",
       "detail": "On the profile panel that slides in, tap the Codes icon on the left side. This opens a single-line text input box plus a Redeem Code button. The box does not have a paste shortcut on PC — you need to right-click and select Paste, or use Ctrl+V after focusing the box.",
-      "screenshot": "/screenshots/anime-vanguards/redeem-03-codes.png"
+      "screenshot": "diagram:redeem"
     },
     {
       "title": "Paste the code character-for-character",
       "detail": "Copy a code from this page using the Copy button next to it, then paste it into the in-game text box. Codes are case-sensitive — `BumBum` and `bumbum` are not the same — and several codes include digits or special characters that are easy to mistype. Always copy-paste rather than retyping. The text box does not auto-correct but does trim trailing spaces.",
-      "screenshot": "/screenshots/anime-vanguards/redeem-04-paste.png"
+      "screenshot": "diagram:paste"
     },
     {
       "title": "Hit Redeem Code and check your inventory",
       "detail": "Press the green Redeem Code button. A confirmation message appears on success. If the code is rejected, the most common cause is that your account level is below the gate — most version 9.0 codes require Mastery level 30. Trait Rerolls, Memoria Shards, and Gems arrive instantly in your inventory; check the corresponding counter on the lobby UI to confirm.",
-      "screenshot": "/screenshots/anime-vanguards/redeem-05-success.png"
+      "screenshot": "diagram:success"
     }
   ],
   "troubleshooting": [

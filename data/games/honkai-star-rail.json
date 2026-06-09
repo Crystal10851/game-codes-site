@@ -20,27 +20,27 @@
     {
       "title": "Reach Trailblaze Level 10",
       "detail": "Your account must be at least Trailblaze Level 10 (TL 10) before the redemption portal will accept any code. New trailblazers will hit TL 10 within an hour of starting the game — complete the opening Herta Space Station arc as part of the main campaign. The redemption endpoint silently rejects sub-TL 10 accounts: there is no error message, the code simply refuses to apply.",
-      "screenshot": "/screenshots/honkai-star-rail/redeem-01-tl10.png"
+      "screenshot": "diagram:account"
     },
     {
       "title": "Open the redemption portal",
       "detail": "Go to the official HoYoverse redemption page at [hsr.hoyoverse.com/gift](https://hsr.hoyoverse.com/gift). On mobile only, you can also redeem in-game via Phone menu → Profile → Redemption Code, which deep-links to the same portal. The PC and PlayStation builds do not have an in-game redemption button — the web portal is the only option.",
-      "screenshot": "/screenshots/honkai-star-rail/redeem-02-portal.png"
+      "screenshot": "diagram:portal"
     },
     {
       "title": "Log in and select your server",
       "detail": "Sign in with the HoYoverse account that owns your Star Rail profile, then pick the correct server from the dropdown: America, Europe, Asia, or TW/HK/MO. Each server is a separate gacha pool and a separate redemption registry — redeeming on the wrong server consumes the code without paying rewards to your active character. Each HoYoverse account can have characters on multiple servers, so be careful to pick the right one.",
-      "screenshot": "/screenshots/honkai-star-rail/redeem-03-server.png"
+      "screenshot": "diagram:server"
     },
     {
       "title": "Paste the code and submit",
       "detail": "Copy a code from this page using the Copy button next to it. Paste it character-for-character into the code input box on the portal. Star Rail codes are case-sensitive and almost always uppercase — `OMEGA` and `omega` are not the same. Hit the Redeem button and confirm on the modal that appears.",
-      "screenshot": "/screenshots/honkai-star-rail/redeem-04-paste.png"
+      "screenshot": "diagram:paste"
     },
     {
       "title": "Claim rewards from in-game mail",
       "detail": "Stellar Jade, Credits, and materials arrive via in-game mail within a few minutes of a successful redemption. Open the Phone menu, tap Mail, and claim the rewards from the entry labelled 'Redemption Code'. Mail is held for 30 days before being purged, so claim it within the window even if you are not pulling immediately.",
-      "screenshot": "/screenshots/honkai-star-rail/redeem-05-mail.png"
+      "screenshot": "diagram:mail"
     }
   ],
   "troubleshooting": [

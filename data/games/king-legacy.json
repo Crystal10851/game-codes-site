@@ -21,27 +21,27 @@
     {
       "title": "Launch King Legacy on Roblox",
       "detail": "Open Roblox on your platform of choice — PC, mobile, Xbox, or web — and start any King Legacy session. You can be on any island in any sea; codes can be redeemed from anywhere as long as you are in the live game. The codes flow works in private servers too, but stat-reset codes redeemed there still apply to your main account.",
-      "screenshot": "/screenshots/king-legacy/redeem-01-launch.png"
+      "screenshot": "diagram:launch"
     },
     {
       "title": "Open the in-game menu (M on PC, menu button on mobile)",
       "detail": "Press M on PC to bring up the main menu, or tap the menu button (three lines, usually at the top of the mobile UI) on phones and tablets. On Xbox the menu opens via the View button. You should see a panel slide in with several tabs — Inventory, Settings, Shop, Stats, and so on.",
-      "screenshot": "/screenshots/king-legacy/redeem-02-menu.png"
+      "screenshot": "diagram:menu"
     },
     {
       "title": "Tap the Twitter / X icon inside the menu",
       "detail": "Look for the small blue bird icon among the top row of menu icons — it sits between the Stats and Settings tabs. Tapping it opens a single-line code redemption text box and a Redeem button. Older YouTube tutorials still point at the Shop panel for codes; that location was moved to the Twitter icon in an early 2026 UI refresh.",
-      "screenshot": "/screenshots/king-legacy/redeem-03-twitter-icon.png"
+      "screenshot": "diagram:twitter"
     },
     {
       "title": "Paste the code character-for-character",
       "detail": "Copy a code from this page using the Copy button next to it, then paste it into the in-game text box. King Legacy codes are case-sensitive and often include special characters and numbers (e.g. `<3LEEPUNGG`, `FIXEDBUG1003`) that are easy to mistype. Always copy-paste rather than retyping. The text box does not auto-correct.",
-      "screenshot": "/screenshots/king-legacy/redeem-04-paste.png"
+      "screenshot": "diagram:paste"
     },
     {
       "title": "Press Redeem and confirm",
       "detail": "Tap the green Redeem button below the text box. A confirmation toast appears on success. If the code is rejected, the most common cause is mistyped capitalisation or a special character (the `<3` in `<3LEEPUNGG` is two characters, not one). Stat resets and Gems arrive instantly; XP boost timers begin counting down on your character.",
-      "screenshot": "/screenshots/king-legacy/redeem-05-success.png"
+      "screenshot": "diagram:success"
     }
   ],
   "troubleshooting": [
