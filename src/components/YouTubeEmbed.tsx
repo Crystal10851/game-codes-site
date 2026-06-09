@@ -5,17 +5,19 @@ import { useState } from 'react';
 interface YouTubeEmbedProps {
   videoId: string;
   title: string;
+  thumbnailSrc?: string;
   thumbnailQuality?: 'mqdefault' | 'hqdefault' | 'sddefault' | 'maxresdefault';
 }
 
 export function YouTubeEmbed({
   videoId,
   title,
+  thumbnailSrc,
   thumbnailQuality = 'hqdefault',
 }: YouTubeEmbedProps) {
   const [loaded, setLoaded] = useState(false);
 
-  const thumbnailUrl = `https://i.ytimg.com/vi/${videoId}/${thumbnailQuality}.jpg`;
+  const thumbnailUrl = thumbnailSrc ?? `https://i.ytimg.com/vi/${videoId}/${thumbnailQuality}.jpg`;
   const embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`;
   const watchUrl = `https://www.youtube.com/watch?v=${videoId}`;
 

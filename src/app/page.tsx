@@ -97,12 +97,12 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-          {featured.thumbnailUrl && (
+          {featured.heroImage && (
             <div className="relative hidden md:block">
               {}
               <img
-                src={featured.thumbnailUrl}
-                alt={`${featured.name} game art`}
+                src={featured.heroImage}
+                alt={`${featured.name} gameplay still`}
                 loading="eager"
                 className="h-full w-full object-cover"
               />
@@ -178,11 +178,11 @@ export default function HomePage() {
                           <span className="text-white/70">{summary.expiredCount} archived</span>
                         </div>
                       </div>
-                      {g.thumbnailUrl && (
+                      {g.heroImage && (
                         <div className="relative hidden w-32 shrink-0 sm:block">
                           {}
                           <img
-                            src={g.thumbnailUrl}
+                            src={g.heroImage}
                             alt=""
                             loading="lazy"
                             className="h-full w-full object-cover"

@@ -106,11 +106,11 @@ export function GameHero({
           </div>
         </div>
 
-        {game.thumbnailUrl && (
+        {game.heroImage && (
           <div className="relative hidden md:block">
             <img
-              src={game.thumbnailUrl}
-              alt={`${game.name} game art`}
+              src={game.heroImage}
+              alt={`${game.name} gameplay still`}
               loading="lazy"
               className="h-full w-full object-cover"
             />

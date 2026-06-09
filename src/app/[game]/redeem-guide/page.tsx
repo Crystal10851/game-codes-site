@@ -188,6 +188,7 @@ export default async function RedeemGuidePage({ params }: PageProps) {
             <YouTubeEmbed
               videoId={game.videoId}
               title={game.videoTitle ?? `${game.name} codes walkthrough`}
+              thumbnailSrc={game.heroImage}
             />
           </div>
         </section>
