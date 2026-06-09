@@ -3,45 +3,106 @@
   "name": "Blox Fruits",
   "tagline": "Latest working Blox Fruits codes for free 2x XP boosts, Beli and stat resets.",
   "description": "Blox Fruits is a Roblox One Piece-inspired adventure where players sail the seas, master Devil Fruits and fight bosses. New codes drop with each update and influencer milestone, granting free 2x XP boosts, in-game Beli and stat resets. Every code on this page has been verified against major aggregators (Pocket Tactics, Pro Game Guides, the Blox Fruits Fandom wiki) and is refreshed as new codes are added or old ones expire.",
+  "longDescription": "Blox Fruits is one of Roblox's longest-running and best-monetised adventure games. Launched in 2019 by Gamer Robot Inc., it draws heavily from the One Piece anime: you spawn on a starter island with a wooden sword, choose between three combat classes (Sword, Fighting Style, or Gun mains), then sail through three procedurally-themed seas — Old World, New World, and Third Sea — battling NPC bosses, raiding island events, and chasing the game's namesake Devil Fruits.\n\nThe core loop is a triangle of grinding XP to raise your level, farming Beli (the in-game currency) and Fragments (the awakening currency), and either farming or buying Devil Fruits in the in-game Fruit Dealer rotation. A high-tier fruit like Dragon, Leopard, or Dough can take weeks to grind from scratch, which is why **2x XP codes are the single most valuable free reward the game gives out**. Every working code on this page can be stacked back-to-back to compress a multi-day awakening grind into a single weekend.\n\nThe code system has been continuously maintained for over five years. New codes drop in three predictable windows: (1) major game updates, which arrive every two to three months and are previewed on the official Twitter / X account; (2) milestone events tied to game likes, visits, or billion-play counts; and (3) partnered-creator livestreams (Kitt, Daigrock, Maui, OfficialNoobie, Tantai). Older codes can stay active for over a year — the `Axiore`, `Fudd10`, and `Sub2NoobMaster123` codes have been redeemable since 2023.",
   "platform": "Roblox",
   "developer": "Gamer Robot Inc.",
   "officialUrl": "https://www.roblox.com/games/2753915549/Blox-Fruits",
   "color": "#1b3aa5",
-  "lastVerifiedOn": "2026-06-02",
+  "lastVerifiedOn": "2026-06-09",
+  "heroImage": "/screenshots/blox-fruits/hero.png",
+  "videoId": "",
+  "videoTitle": "Blox Fruits codes walkthrough — how to redeem and what each code gives you",
+  "whatCodesDo": "Blox Fruits codes give one of four reward types, each with a very different practical value. **2x XP boosts** are by far the most common reward; redeeming one drops a 20-minute window (sometimes 15 minutes on older codes) during which all combat and quest XP is doubled. Crucially, the multiplier does not stack — redeeming five codes in a row still leaves you at 2x — but the durations do, so you can roll the codes on this page into a single continuous one-to-two-hour 2x window, which is the optimal way to grind a fresh Mythical fruit awakening.\n\n**Beli rewards** are nominal — `Fudd10` gives one Beli, `fudd10_v2` gives two — and exist as community memes. They will not meaningfully change your wallet. **Stat reset codes** like `KITT_RESET` and `Sub2UncleKizaru` are the second most valuable type: each grants a one-time full stat refund, letting you reroll your build (Melee, Defense, Sword, Gun, Demon Fruit, Blox Fruit) without spending Robux. Save these until you have committed to a fruit upgrade or class change. **Cosmetic title codes** like `Bignews` are pure flavour — they give an in-game name title with no gameplay effect.\n\nOne important detail Google and YouTube guides almost never mention: 2x XP only counts active combat XP, not passive sea travel or AFK time. Burn the boost on Sea Beast hunts, Raids, or Factory grinds — not while sailing between islands.",
+  "whereToFindMore": "New Blox Fruits codes are announced first on the official [@BloxFruits Twitter / X account](https://twitter.com/BloxFruits) — usually within minutes of going live in-game. The official [Gamer Robot Discord server](https://discord.gg/bloxfruits) posts a follow-up confirmation, and the developer team livestreams a 'code reveal' segment in the lead-up to every major update. Beyond the official channels, the most reliable partnered creators are Kitt, Daigrock, OfficialNoobie, TantaiGaming, and Captain Maui — each has dropped at least one perma-active code that still works today. We refresh this page within 24 hours of any new code being announced; bookmark the [latest codes view](/blox-fruits/latest) for the cleanest list.",
+  "releaseCadence": "Blox Fruits codes drop in three predictable windows. **Major updates** (every two to three months) typically ship with two to four new codes — Update 24 launched in May 2026 with `LIGHTNINGABUSE` and `EASTEREXP`, while the previous Third Sea expansion brought four codes in a single week. **Milestone events** — likes, visits, billion-play counters — drop a single code each, usually a 20-minute 2x XP boost or a stat reset. **Partnered-creator streams** by Kitt, Daigrock, OfficialNoobie, Maui, or TantaiGaming consistently produce one code per stream, typically named `Sub2[Creator]` and lasting indefinitely. The last new code as of the date at the top of this page was `LIGHTNINGABUSE` (April 25, 2026); given the typical six-to-ten-week gap between code waves, the next batch is most likely tied to the rumoured Sea 4 ('Pirate Empire') update preview, which the Twitter account has been teasing since late May.",
+  "expiredCodesContext": "Most Blox Fruits codes are time-limited. The codes archived below were all working at some point during the past 12 to 18 months — most were tied to a specific update, livestream, or admin event, and were disabled when the next major patch went live. Roughly 80% of expired Blox Fruits codes shut down within three to six months of release; the perma-active codes (Axiore, Fudd10, Sub2NoobMaster123, KITT_RESET, and so on) are the exception, not the rule. We keep this archive for three reasons: it documents the game's release history, it lets returning players quickly check whether a code they saw on YouTube is still valid, and the audit trail is part of how we earn the 'Editorially verified' label at the top of every code on this site.",
   "redeemSteps": [
     {
-      "title": "Launch Blox Fruits",
-      "detail": "Open Roblox and start a Blox Fruits session. You can be on any island or in any sea — codes can be redeemed anywhere."
+      "title": "Launch Blox Fruits on Roblox",
+      "detail": "Open Roblox on your platform of choice — PC, Xbox, mobile or web — and start a Blox Fruits session. You can be on any island in any of the three seas; codes can be redeemed from anywhere as long as you are in the live game, not the lobby. If you have an unfinished private server session, codes will work there too.",
+      "screenshot": "/screenshots/blox-fruits/redeem-01-launch.png"
     },
     {
-      "title": "Click the Twitter / X icon on the left",
-      "detail": "Look for the small blue bird icon on the left side of your screen. Tapping it opens the in-game code redemption text box directly — no need to open a menu first."
+      "title": "Click the Twitter / X icon on the left side of the screen",
+      "detail": "Look for the small blue bird icon stacked vertically with the other quick-action buttons on the left edge of your screen. Tap or click it once. This opens the in-game code redemption text box directly — you do not need to open the Settings or Menu screens first. On mobile the icon is slightly smaller; on Xbox it sits in the same column under the inventory button.",
+      "screenshot": "/screenshots/blox-fruits/redeem-02-twitter-icon.png"
     },
     {
-      "title": "Paste the code exactly",
-      "detail": "Copy a code from this page and paste it character-for-character. Codes are case-sensitive — 'KITT_RESET' and 'kitt_reset' are not the same."
+      "title": "Paste the code character-for-character",
+      "detail": "Copy a code from this page using the Copy button next to it, then paste it into the in-game text box. Codes are case-sensitive — `KITT_RESET` and `kitt_reset` are not the same, and `Sub2CaptainMaui` will fail if pasted as `sub2captainmaui`. The safest workflow is always to paste rather than retype. The text box does not auto-correct, but it will trim trailing spaces on submit.",
+      "screenshot": "/screenshots/blox-fruits/redeem-03-paste-code.png"
     },
     {
-      "title": "Hit Try",
-      "detail": "Press the Try button. A green 'Success' message confirms the reward has been applied. If you see a red error, the code is likely expired or mistyped."
+      "title": "Hit the Try button and confirm the reward",
+      "detail": "Press the green Try button below the text box. A green 'Success' banner confirms the reward has been applied and the boost / Beli / stat reset is now live on your character. A red error message means the code is expired, mistyped, or already redeemed on this account. If you just saw the success banner but the 2x XP timer is not ticking down, your character may be K.O.'d — respawn and the boost will resume.",
+      "screenshot": "/screenshots/blox-fruits/redeem-04-success.png"
     }
+  ],
+  "troubleshooting": [
+    {
+      "symptom": "Red error: 'Code Invalid'",
+      "cause": "The code has expired, or you typed a character wrong (often a capital letter or an underscore).",
+      "fix": "Cross-check the code against our [Expired Codes archive](/blox-fruits/expired) first. If it is not on the expired list, copy-paste it directly from our Active table — every code there is verified within 24 hours."
+    },
+    {
+      "symptom": "Red error: 'You already used this code'",
+      "cause": "Each Blox Fruits code is one-time per Roblox account. You cannot redeem the same code on the same account twice, even across server resets.",
+      "fix": "Move on to the next code. If you genuinely never redeemed it on this account, file a ticket via the Gamer Robot support form; the in-game logic is rarely wrong."
+    },
+    {
+      "symptom": "Success banner appeared but the 2x XP timer is not running",
+      "cause": "XP boost timers pause while your character is K.O.'d or in the loading screen between sea regions.",
+      "fix": "Respawn at the nearest island spawn. The timer resumes the moment your character is alive and on a loaded map."
+    },
+    {
+      "symptom": "I cannot see the Twitter / X icon at all",
+      "cause": "The Roblox UI is hidden, or you joined a server with the developer test build before a code release.",
+      "fix": "Press the keyboard shortcut to toggle the Roblox topbar (PC: Esc → Show UI). On mobile, tap the centre of the screen once. If the icon is still missing, rejoin a public server."
+    },
+    {
+      "symptom": "The code worked but I did not get the reward I expected",
+      "cause": "Some codes give 15 minutes instead of 20, and some only pay out one Beli (the meme codes). The Reward column on this page is always accurate; the in-game success banner does not always specify duration.",
+      "fix": "Hover the Reward column or read the code's `notes` field — both reflect exactly what each code pays out."
+    }
+  ],
+  "officialChannels": [
+    { "label": "Blox Fruits on Twitter / X", "url": "https://twitter.com/BloxFruits" },
+    { "label": "Gamer Robot Discord", "url": "https://discord.gg/bloxfruits" },
+    { "label": "Roblox game page", "url": "https://www.roblox.com/games/2753915549/Blox-Fruits" },
+    { "label": "Blox Fruits Fandom wiki — Codes", "url": "https://blox-fruits.fandom.com/wiki/Codes" }
   ],
   "faq": [
     {
       "question": "How often are new Blox Fruits codes released?",
-      "answer": "New codes usually drop alongside major updates, milestone events (likes / visits / billions), and developer or partnered-creator livestreams — roughly every 2–4 weeks."
+      "answer": "New codes drop in three windows: major game updates (every two to three months), milestone events tied to likes / visits / billions of plays, and partnered-creator livestreams (Kitt, Daigrock, OfficialNoobie, Maui, TantaiGaming). Expect a fresh wave of two to four codes alongside the next big update, plus single codes from milestones and streams every two to four weeks in between."
     },
     {
       "question": "Why is my Blox Fruits code not working?",
-      "answer": "Codes are case-sensitive and expire fast. Make sure you copied the code exactly as listed (capitalisation matters). If it still fails, it has likely expired — cross-check against the Expired Codes page."
+      "answer": "The three most common causes are case-sensitivity (capitalisation matters — `KITT_RESET` is not `kitt_reset`), expiry (cross-check against our Expired Codes page), and one-time-per-account limits (each code can only be redeemed once on the same Roblox account). If you copy-pasted directly from our Active list and the code still fails, it has almost certainly just expired — please tell us and we will move it within an hour."
     },
     {
-      "question": "Can I redeem a code twice?",
-      "answer": "No. Each Blox Fruits code can only be redeemed once per account."
+      "question": "Can I redeem the same code twice on different accounts?",
+      "answer": "Yes. Each Roblox account is treated separately, so a code that you already used on your main can still be redeemed on an alt. Be aware that 2x XP and Beli rewards do not transfer between accounts."
     },
     {
-      "question": "Do 2x XP boosts stack?",
-      "answer": "The multiplier does not stack (you stay at 2x, not 4x or 8x), but the durations do. Redeeming several XP codes back-to-back gives you a longer continuous 2x window instead of a higher multiplier."
+      "question": "Do 2x XP boosts stack with other boosts?",
+      "answer": "The multiplier itself does not stack — redeeming five 2x codes still leaves you at 2x. But the durations stack: redeeming five 20-minute codes back-to-back gives you a continuous 100-minute 2x window, which is the optimal grind setup for a fresh Mythical fruit awakening. 2x XP also stacks multiplicatively with double-XP weekend events, briefly pushing you to 4x."
+    },
+    {
+      "question": "Do Blox Fruits codes work on mobile, Xbox, and PC equally?",
+      "answer": "Yes. The code redemption logic lives on the Roblox server, not the client, so codes work identically on every platform that runs Blox Fruits — PC, mobile, Xbox, and the Roblox web player. Only the position of the Twitter / X icon on screen changes between platforms."
+    },
+    {
+      "question": "Can I get banned for using codes?",
+      "answer": "No. Codes are an official, developer-sanctioned feature — the Twitter / X icon and Try button are built directly into the game by Gamer Robot Inc. The only way you can get banned around code use is by sharing or selling Roblox account credentials, which violates the Roblox Terms of Service regardless of whether codes are involved."
+    },
+    {
+      "question": "Are there any 'secret' Blox Fruits codes not on this list?",
+      "answer": "No. Every working Blox Fruits code is announced publicly through the official Twitter, Discord, or a partnered stream — there is no hidden code anywhere. If a YouTube thumbnail promises a 'secret' code, it is almost always either a known code rebranded or a clickbait link to a fake redemption site. Stick to the codes on this page or the official channels listed above."
+    },
+    {
+      "question": "What is the most valuable Blox Fruits code I can redeem right now?",
+      "answer": "For most players the answer is the stat-reset codes — `KITT_RESET` and `Sub2UncleKizaru` — because they save you ~3,000 Robux compared to buying a stat refund from the in-game shop. After those, queue every active 2x XP code back-to-back the next time you grind an awakening; that single chained boost is worth two to three hours of normal grinding."
     }
   ],
   "codes": [

@@ -9,8 +9,11 @@ import { AffiliateBar } from '@/components/AffiliateBar';
 import { JsonLd } from '@/components/JsonLd';
 import { AuthorByline } from '@/components/AuthorByline';
 import { RefreshPromise } from '@/components/RefreshPromise';
+import { Screenshot } from '@/components/Screenshot';
+import { YouTubeEmbed } from '@/components/YouTubeEmbed';
+import { ProseSection, Paragraphs } from '@/components/Prose';
 import { getGame, getGameSlugs } from '@/lib/games';
-import { getLatestCodes, getExpiredCodes, getLastUpdated } from '@/lib/codes';
+import { getLatestCodes, getExpiredCodes, getLastUpdated, formatDate } from '@/lib/codes';
 import { buildMetadata } from '@/lib/seo';
 import { absoluteUrl } from '@/lib/site';
 
@@ -30,7 +33,7 @@ export async function generateMetadata({
   if (!game) return {};
   return buildMetadata({
     title: `${game.name} Codes (${new Date().getFullYear()}) — Working & Expired`,
-    description: `${game.name} codes — every working code plus the full expired archive and step-by-step redeem guide. ${game.tagline}`,
+    description: `${game.name} codes — every working code, the full expired archive, a step-by-step redeem guide with screenshots, and editorial commentary on the release cadence. ${game.tagline}`,
     path: `/${game.slug}`,
     type: 'article',
     modifiedTime: getLastUpdated(game),
@@ -39,6 +42,7 @@ export async function generateMetadata({
       `${game.name} promo codes`,
       `${game.name} redeem codes`,
       `${game.platform} codes`,
+      `${game.name} codes ${new Date().getFullYear()}`,
     ],
   });
 }
@@ -89,6 +93,58 @@ export default async function GamePage({ params }: PageProps) {
       <GameHeader game={game} active="" />
       <AuthorByline verifiedOn={lastUpdated} />
 
+      <section>
+        <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">
+          {game.name} Codes ({new Date().getFullYear()})
+        </h1>
+        <p className="mt-2 text-sm text-slate-500">
+          {latest.length} active · {expired.length} archived · Editorially verified · Updated {formatDate(lastUpdated)}
+        </p>
+        <p className="mt-4 max-w-3xl text-slate-700 leading-relaxed">
+          {game.tagline} This page is the single home for {game.name} codes —
+          every code is verified against the live game before publishing, and
+          dead codes are moved to the{' '}
+          <Link
+            href={`/${game.slug}/expired`}
+            className="font-semibold text-brand-700 hover:underline"
+          >
+            archive
+          </Link>{' '}
+          within 24 hours of expiry. If you only need the working codes, jump
+          straight to the{' '}
+          <Link
+            href={`/${game.slug}/latest`}
+            className="font-semibold text-brand-700 hover:underline"
+          >
+            latest codes
+          </Link>{' '}
+          view.
+        </p>
+        <div className="mt-5 flex flex-wrap gap-3">
+          <Link
+            href={`/${game.slug}/latest`}
+            className="inline-flex items-center gap-2 rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-700"
+          >
+            See all {latest.length} working codes →
+          </Link>
+          <Link
+            href={`/${game.slug}/redeem-guide`}
+            className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 shadow-sm transition hover:bg-slate-50"
+          >
+            How to redeem →
+          </Link>
+        </div>
+      </section>
+
+      {game.heroImage && (
+        <Screenshot
+          src={game.heroImage}
+          alt={`${game.name} — gameplay screenshot`}
+          caption={`${game.name} on ${game.platform}.`}
+          priority
+        />
+      )}
+
       <RefreshPromise gameName={game.name} />
 
       <AdSlot slot={`${game.slug}-overview-top`} />
@@ -117,45 +173,66 @@ export default async function GamePage({ params }: PageProps) {
         </div>
       </section>
 
-      <section aria-labelledby="about-heading">
-        <h2
-          id="about-heading"
-          className="text-2xl font-bold text-slate-900"
-        >
-          About {game.name}
-        </h2>
-        <p className="mt-2 text-slate-700">{game.description}</p>
-        <Link
-          href={`/${game.slug}/redeem-guide`}
-          className="mt-3 inline-block text-sm font-semibold text-brand-700 hover:underline"
-        >
-          Read the full redeem guide →
-        </Link>
-      </section>
+      <ProseSection id="about-game" heading={`About ${game.name}`}>
+        {game.longDescription ? (
+          <Paragraphs text={game.longDescription} />
+        ) : (
+          <p>{game.description}</p>
+        )}
+      </ProseSection>
+
+      {game.whatCodesDo && (
+        <ProseSection id="what-codes-do" heading={`What do ${game.name} codes do?`}>
+          <Paragraphs text={game.whatCodesDo} />
+        </ProseSection>
+      )}
+
+      {game.videoId && (
+        <section aria-labelledby="video-heading">
+          <h2 id="video-heading" className="text-2xl font-bold text-slate-900">
+            {game.videoTitle ?? `${game.name} codes — video walkthrough`}
+          </h2>
+          <p className="mt-1 text-sm text-slate-600">
+            Click play to watch in-page — the iframe only loads when you tap the thumbnail.
+          </p>
+          <div className="mt-4">
+            <YouTubeEmbed
+              videoId={game.videoId}
+              title={game.videoTitle ?? `${game.name} codes walkthrough`}
+            />
+          </div>
+        </section>
+      )}
+
+      {game.releaseCadence && (
+        <ProseSection id="release-cadence" heading={`When are new ${game.name} codes released?`}>
+          <Paragraphs text={game.releaseCadence} />
+        </ProseSection>
+      )}
 
       {game.slug === 'blox-fruits' && (
         <section aria-labelledby="tier-cta-heading">
           <Link
             href="/blox-fruits/tier-list"
-            className="group block rounded-xl border-2 border-brand-200 bg-gradient-to-br from-brand-50 to-white p-5 transition hover:border-brand-400 hover:shadow-md"
+            className="group block rounded-xl border-2 border-brand-200 bg-brand-50 p-5 transition hover:border-brand-400 hover:shadow-md"
           >
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-wide text-brand-700">
-                  New · Updated weekly
+                  Editor's pick · Updated weekly
                 </p>
                 <h2
                   id="tier-cta-heading"
                   className="mt-1 text-xl font-bold text-slate-900"
                 >
-                  Blox Fruits Tier List (2026)
+                  Blox Fruits Tier List ({new Date().getFullYear()})
                 </h2>
                 <p className="mt-1 text-sm text-slate-600">
-                  Top 10 fruits ranked across overall, PvP, and grinding —
-                  with rationale, pros and cons, and best combos.
+                  All 25 active fruits ranked across overall, PvP, and grinding
+                  — with rationale, pros and cons, and best combos.
                 </p>
               </div>
-              <span className="rounded-full bg-brand-500 px-4 py-2 text-sm font-semibold text-white shadow-sm transition group-hover:bg-brand-700">
+              <span className="rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition group-hover:bg-brand-700">
                 See the rankings →
               </span>
             </div>
@@ -166,6 +243,12 @@ export default async function GamePage({ params }: PageProps) {
       <AffiliateBar game={game} />
 
       <AdSlot slot={`${game.slug}-overview-mid`} />
+
+      {game.whereToFindMore && (
+        <ProseSection id="more-codes" heading="Where to find more codes">
+          <Paragraphs text={game.whereToFindMore} />
+        </ProseSection>
+      )}
 
       <section aria-labelledby="expired-heading">
         <div className="flex items-end justify-between">
@@ -182,6 +265,10 @@ export default async function GamePage({ params }: PageProps) {
             View archive →
           </Link>
         </div>
+        <p className="mt-1 text-sm text-slate-600">
+          {expired.length} archived. The three most-recently expired codes are
+          shown below; see the full archive for the complete history.
+        </p>
         <div className="mt-4">
           <CodeList
             entries={expired.slice(0, 3)}

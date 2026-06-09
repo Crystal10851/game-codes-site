@@ -12,11 +12,23 @@ export interface GameCode {
 export interface RedeemStep {
   title: string;
   detail: string;
+  screenshot?: string;
 }
 
 export interface FaqItem {
   question: string;
   answer: string;
+}
+
+export interface TroubleshootItem {
+  symptom: string;
+  cause: string;
+  fix: string;
+}
+
+export interface OfficialChannel {
+  label: string;
+  url: string;
 }
 
 export interface Game {
@@ -32,6 +44,16 @@ export interface Game {
   faq: FaqItem[];
   codes: GameCode[];
   lastVerifiedOn?: string;
+  heroImage?: string;
+  videoId?: string;
+  videoTitle?: string;
+  longDescription?: string;
+  whatCodesDo?: string;
+  whereToFindMore?: string;
+  releaseCadence?: string;
+  troubleshooting?: TroubleshootItem[];
+  expiredCodesContext?: string;
+  officialChannels?: OfficialChannel[];
 }
 
 export interface GameSummary {
