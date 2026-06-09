@@ -11,9 +11,12 @@ import { AuthorByline } from '@/components/AuthorByline';
 import { RefreshPromise } from '@/components/RefreshPromise';
 import { Screenshot } from '@/components/Screenshot';
 import { YouTubeEmbed } from '@/components/YouTubeEmbed';
-import { ProseSection, Paragraphs } from '@/components/Prose';
+import { Paragraphs } from '@/components/Prose';
+import { StatHero, buildCodeStats } from '@/components/StatHero';
+import { SectionHeading } from '@/components/SectionHeading';
+import { RewardBreakdown } from '@/components/RewardBreakdown';
 import { getGame, getGameSlugs } from '@/lib/games';
-import { getLatestCodes, getExpiredCodes, getLastUpdated, formatDate } from '@/lib/codes';
+import { getLatestCodes, getExpiredCodes, getLastUpdated, isRecentlyAdded } from '@/lib/codes';
 import { buildMetadata } from '@/lib/seo';
 import { absoluteUrl } from '@/lib/site';
 
@@ -55,6 +58,8 @@ export default async function GamePage({ params }: PageProps) {
   const latest = getLatestCodes(game);
   const expired = getExpiredCodes(game);
   const lastUpdated = getLastUpdated(game);
+  const freshCount = latest.filter((c) => isRecentlyAdded(c.addedOn)).length;
+  const activeRewards = latest.map((c) => c.reward);
 
   const articleLd = {
     '@context': 'https://schema.org',
@@ -97,10 +102,7 @@ export default async function GamePage({ params }: PageProps) {
         <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">
           {game.name} Codes ({new Date().getFullYear()})
         </h1>
-        <p className="mt-2 text-sm text-slate-500">
-          {latest.length} active · {expired.length} archived · Editorially verified · Updated {formatDate(lastUpdated)}
-        </p>
-        <p className="mt-4 max-w-3xl text-slate-700 leading-relaxed">
+        <p className="mt-3 max-w-3xl text-slate-700 leading-relaxed">
           {game.tagline} This page is the single home for {game.name} codes —
           every code is verified against the live game before publishing, and
           dead codes are moved to the{' '}
@@ -110,15 +112,7 @@ export default async function GamePage({ params }: PageProps) {
           >
             archive
           </Link>{' '}
-          within 24 hours of expiry. If you only need the working codes, jump
-          straight to the{' '}
-          <Link
-            href={`/${game.slug}/latest`}
-            className="font-semibold text-brand-700 hover:underline"
-          >
-            latest codes
-          </Link>{' '}
-          view.
+          within 24 hours of expiry.
         </p>
         <div className="mt-5 flex flex-wrap gap-3">
           <Link
@@ -136,6 +130,15 @@ export default async function GamePage({ params }: PageProps) {
         </div>
       </section>
 
+      <StatHero
+        tiles={buildCodeStats({
+          activeCount: latest.length,
+          expiredCount: expired.length,
+          lastUpdated,
+          freshCount,
+        })}
+      />
+
       {game.heroImage && (
         <Screenshot
           src={game.heroImage}
@@ -150,51 +153,63 @@ export default async function GamePage({ params }: PageProps) {
       <AdSlot slot={`${game.slug}-overview-top`} />
 
       <section aria-labelledby="latest-heading">
-        <div className="flex items-end justify-between">
-          <h2
-            id="latest-heading"
-            className="text-2xl font-bold text-slate-900"
-          >
-            Latest working {game.name} codes
-          </h2>
+        <SectionHeading
+          id="latest-heading"
+          icon="list"
+          subtitle={`${latest.length} working ${latest.length === 1 ? 'code' : 'codes'}, verified manually.`}
+        >
+          Latest working {game.name} codes
+        </SectionHeading>
+        <div className="mt-4">
+          <CodeList entries={latest.slice(0, 5)} variant="active" />
+        </div>
+        <div className="mt-3 text-right">
           <Link
             href={`/${game.slug}/latest`}
             className="text-sm font-semibold text-brand-700 hover:underline"
           >
-            View all →
+            View all {latest.length} active codes →
           </Link>
-        </div>
-        <p className="mt-1 text-sm text-slate-600">
-          {latest.length} working {latest.length === 1 ? 'code' : 'codes'},
-          verified manually.
-        </p>
-        <div className="mt-4">
-          <CodeList entries={latest.slice(0, 5)} variant="active" />
         </div>
       </section>
 
-      <ProseSection id="about-game" heading={`About ${game.name}`}>
-        {game.longDescription ? (
-          <Paragraphs text={game.longDescription} />
-        ) : (
-          <p>{game.description}</p>
-        )}
-      </ProseSection>
+      {activeRewards.length > 0 && (
+        <RewardBreakdown rewards={activeRewards} />
+      )}
+
+      <section aria-labelledby="about-game">
+        <SectionHeading id="about-game" icon="info">
+          About {game.name}
+        </SectionHeading>
+        <div className="prose prose-slate mt-3 max-w-none text-slate-700 leading-relaxed [&_p]:mt-3 [&_p:first-child]:mt-0 [&_strong]:text-slate-900 [&_a]:font-semibold [&_a]:text-brand-700 hover:[&_a]:underline">
+          {game.longDescription ? (
+            <Paragraphs text={game.longDescription} />
+          ) : (
+            <p>{game.description}</p>
+          )}
+        </div>
+      </section>
 
       {game.whatCodesDo && (
-        <ProseSection id="what-codes-do" heading={`What do ${game.name} codes do?`}>
-          <Paragraphs text={game.whatCodesDo} />
-        </ProseSection>
+        <section aria-labelledby="what-codes-do">
+          <SectionHeading id="what-codes-do" icon="reward">
+            What do {game.name} codes do?
+          </SectionHeading>
+          <div className="prose prose-slate mt-3 max-w-none text-slate-700 leading-relaxed [&_p]:mt-3 [&_p:first-child]:mt-0 [&_strong]:text-slate-900 [&_a]:font-semibold [&_a]:text-brand-700 hover:[&_a]:underline">
+            <Paragraphs text={game.whatCodesDo} />
+          </div>
+        </section>
       )}
 
       {game.videoId && (
         <section aria-labelledby="video-heading">
-          <h2 id="video-heading" className="text-2xl font-bold text-slate-900">
+          <SectionHeading
+            id="video-heading"
+            icon="video"
+            subtitle="Click play to watch in-page — the iframe only loads when you tap the thumbnail."
+          >
             {game.videoTitle ?? `${game.name} codes — video walkthrough`}
-          </h2>
-          <p className="mt-1 text-sm text-slate-600">
-            Click play to watch in-page — the iframe only loads when you tap the thumbnail.
-          </p>
+          </SectionHeading>
           <div className="mt-4">
             <YouTubeEmbed
               videoId={game.videoId}
@@ -205,20 +220,25 @@ export default async function GamePage({ params }: PageProps) {
       )}
 
       {game.releaseCadence && (
-        <ProseSection id="release-cadence" heading={`When are new ${game.name} codes released?`}>
-          <Paragraphs text={game.releaseCadence} />
-        </ProseSection>
+        <section aria-labelledby="release-cadence">
+          <SectionHeading id="release-cadence" icon="calendar">
+            When are new {game.name} codes released?
+          </SectionHeading>
+          <div className="prose prose-slate mt-3 max-w-none text-slate-700 leading-relaxed [&_p]:mt-3 [&_p:first-child]:mt-0 [&_strong]:text-slate-900 [&_a]:font-semibold [&_a]:text-brand-700 hover:[&_a]:underline">
+            <Paragraphs text={game.releaseCadence} />
+          </div>
+        </section>
       )}
 
       {game.slug === 'blox-fruits' && (
         <section aria-labelledby="tier-cta-heading">
           <Link
             href="/blox-fruits/tier-list"
-            className="group block rounded-xl border-2 border-brand-200 bg-brand-50 p-5 transition hover:border-brand-400 hover:shadow-md"
+            className="group block rounded-xl border-l-4 border-brand-500 border-y border-r border-y-brand-100 border-r-brand-100 bg-brand-50 p-5 transition hover:bg-brand-100"
           >
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wide text-brand-700">
+                <p className="text-xs font-bold uppercase tracking-wider text-brand-700">
                   Editor's pick · Updated weekly
                 </p>
                 <h2
@@ -232,7 +252,7 @@ export default async function GamePage({ params }: PageProps) {
                   — with rationale, pros and cons, and best combos.
                 </p>
               </div>
-              <span className="rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition group-hover:bg-brand-700">
+              <span className="rounded-md bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition group-hover:bg-brand-700">
                 See the rankings →
               </span>
             </div>
@@ -245,36 +265,38 @@ export default async function GamePage({ params }: PageProps) {
       <AdSlot slot={`${game.slug}-overview-mid`} />
 
       {game.whereToFindMore && (
-        <ProseSection id="more-codes" heading="Where to find more codes">
-          <Paragraphs text={game.whereToFindMore} />
-        </ProseSection>
+        <section aria-labelledby="more-codes">
+          <SectionHeading id="more-codes" icon="compass">
+            Where to find more codes
+          </SectionHeading>
+          <div className="prose prose-slate mt-3 max-w-none text-slate-700 leading-relaxed [&_p]:mt-3 [&_p:first-child]:mt-0 [&_strong]:text-slate-900 [&_a]:font-semibold [&_a]:text-brand-700 hover:[&_a]:underline">
+            <Paragraphs text={game.whereToFindMore} />
+          </div>
+        </section>
       )}
 
       <section aria-labelledby="expired-heading">
-        <div className="flex items-end justify-between">
-          <h2
-            id="expired-heading"
-            className="text-2xl font-bold text-slate-900"
-          >
-            Recently expired
-          </h2>
-          <Link
-            href={`/${game.slug}/expired`}
-            className="text-sm font-semibold text-brand-700 hover:underline"
-          >
-            View archive →
-          </Link>
-        </div>
-        <p className="mt-1 text-sm text-slate-600">
-          {expired.length} archived. The three most-recently expired codes are
-          shown below; see the full archive for the complete history.
-        </p>
+        <SectionHeading
+          id="expired-heading"
+          icon="archive"
+          subtitle={`${expired.length} archived. The three most-recently expired codes are shown below; see the full archive for the complete history.`}
+        >
+          Recently expired
+        </SectionHeading>
         <div className="mt-4">
           <CodeList
             entries={expired.slice(0, 3)}
             variant="expired"
             emptyMessage="No expired codes archived yet."
           />
+        </div>
+        <div className="mt-3 text-right">
+          <Link
+            href={`/${game.slug}/expired`}
+            className="text-sm font-semibold text-brand-700 hover:underline"
+          >
+            View full archive →
+          </Link>
         </div>
       </section>
     </Container>

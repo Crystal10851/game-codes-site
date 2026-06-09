@@ -7,9 +7,11 @@ import { CodeList } from '@/components/CodeList';
 import { AdSlot } from '@/components/AdSlot';
 import { JsonLd } from '@/components/JsonLd';
 import { AuthorByline } from '@/components/AuthorByline';
-import { ProseSection, Paragraphs } from '@/components/Prose';
+import { Paragraphs } from '@/components/Prose';
+import { StatHero, buildCodeStats } from '@/components/StatHero';
+import { SectionHeading } from '@/components/SectionHeading';
 import { getGame, getGameSlugs } from '@/lib/games';
-import { getExpiredCodes, getLatestCodes, getLastUpdated, formatDate } from '@/lib/codes';
+import { getExpiredCodes, getLatestCodes, getLastUpdated, isRecentlyAdded } from '@/lib/codes';
 import { buildMetadata } from '@/lib/seo';
 import { absoluteUrl } from '@/lib/site';
 
@@ -29,7 +31,7 @@ export async function generateMetadata({
   if (!game) return {};
   return buildMetadata({
     title: `Expired ${game.name} Codes — Full Archive`,
-    description: `The full archive of expired ${game.name} codes with the original reward, the date each code was added, and the date it stopped working. Useful for confirming a code is dead and seeing how the developer's release cadence has evolved.`,
+    description: `The full archive of expired ${game.name} codes with the original reward, the date each code was added, and the date it stopped working.`,
     path: `/${game.slug}/expired`,
     type: 'article',
     modifiedTime: getLastUpdated(game),
@@ -49,6 +51,7 @@ export default async function ExpiredPage({ params }: PageProps) {
   const expired = getExpiredCodes(game);
   const active = getLatestCodes(game);
   const lastUpdated = getLastUpdated(game);
+  const freshCount = active.filter((c) => isRecentlyAdded(c.addedOn)).length;
 
   const breadcrumbLd = {
     '@context': 'https://schema.org',
@@ -80,38 +83,34 @@ export default async function ExpiredPage({ params }: PageProps) {
         <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">
           Expired {game.name} Codes — Full Archive
         </h1>
-        <p className="mt-2 text-sm text-slate-500">
-          {expired.length} archived {expired.length === 1 ? 'code' : 'codes'} ·
-          Sorted by expiry date · Updated {formatDate(lastUpdated)}
-        </p>
-        <p className="mt-4 max-w-3xl text-slate-700 leading-relaxed">
-          These {game.name} codes no longer work. We keep the archive live for
-          three practical reasons: (1) you can quickly confirm a code you saw on
-          YouTube or in a Discord screenshot is genuinely dead before wasting
-          time retyping it, (2) the addition and expiry dates document the
-          game's release history at a glance, and (3) the archive is part of how
-          we prove the {active.length} codes on the{' '}
-          <Link
-            href={`/${game.slug}/latest`}
-            className="font-semibold text-brand-700 hover:underline"
-          >
-            active list
-          </Link>{' '}
-          are genuinely verified — every retired code lived here, with dates,
-          before being moved.
+        <p className="mt-3 max-w-3xl text-slate-700 leading-relaxed">
+          These {game.name} codes no longer work. We keep the archive live so
+          you can quickly confirm a code you saw on YouTube or in a Discord
+          screenshot is genuinely dead before wasting time retyping it, and so
+          the addition / expiry dates document the game's release history at a
+          glance.
         </p>
       </section>
+
+      <StatHero
+        tiles={buildCodeStats({
+          activeCount: active.length,
+          expiredCount: expired.length,
+          lastUpdated,
+          freshCount,
+        })}
+      />
 
       <AdSlot slot={`${game.slug}-expired-top`} />
 
       <section aria-labelledby="expired-heading">
-        <h2 id="expired-heading" className="text-2xl font-bold text-slate-900">
+        <SectionHeading
+          id="expired-heading"
+          icon="archive"
+          subtitle="Most-recently expired first. Reward column shows what the code paid out while it was still active."
+        >
           All expired {game.name} codes
-        </h2>
-        <p className="mt-1 text-sm text-slate-600">
-          Most-recently expired first. Reward column shows what the code paid
-          out while it was still active.
-        </p>
+        </SectionHeading>
         <div className="mt-4">
           <CodeList
             entries={expired}
@@ -122,12 +121,17 @@ export default async function ExpiredPage({ params }: PageProps) {
       </section>
 
       {game.expiredCodesContext && (
-        <ProseSection id="why-expired" heading={`Why ${game.name} codes expire`}>
-          <Paragraphs text={game.expiredCodesContext} />
-        </ProseSection>
+        <section aria-labelledby="why-expired">
+          <SectionHeading id="why-expired" icon="info">
+            Why {game.name} codes expire
+          </SectionHeading>
+          <div className="prose prose-slate mt-3 max-w-none text-slate-700 leading-relaxed [&_p]:mt-3 [&_p:first-child]:mt-0 [&_strong]:text-slate-900 [&_a]:font-semibold [&_a]:text-brand-700 hover:[&_a]:underline">
+            <Paragraphs text={game.expiredCodesContext} />
+          </div>
+        </section>
       )}
 
-      <section className="rounded-xl border border-brand-100 bg-brand-50 p-6">
+      <section className="rounded-xl border-l-4 border-emerald-500 border-y border-r border-y-emerald-100 border-r-emerald-100 bg-emerald-50 p-6">
         <h2 className="text-xl font-bold text-slate-900">
           Looking for codes that still work?
         </h2>
@@ -135,7 +139,7 @@ export default async function ExpiredPage({ params }: PageProps) {
           The{' '}
           <Link
             href={`/${game.slug}/latest`}
-            className="font-semibold text-brand-700 hover:underline"
+            className="font-semibold text-emerald-800 hover:underline"
           >
             latest {game.name} codes
           </Link>{' '}
@@ -143,7 +147,7 @@ export default async function ExpiredPage({ params }: PageProps) {
           game. New to redeeming? The{' '}
           <Link
             href={`/${game.slug}/redeem-guide`}
-            className="font-semibold text-brand-700 hover:underline"
+            className="font-semibold text-emerald-800 hover:underline"
           >
             redeem guide
           </Link>{' '}

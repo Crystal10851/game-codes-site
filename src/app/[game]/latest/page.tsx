@@ -8,9 +8,12 @@ import { AdSlot } from '@/components/AdSlot';
 import { JsonLd } from '@/components/JsonLd';
 import { AuthorByline } from '@/components/AuthorByline';
 import { YouTubeEmbed } from '@/components/YouTubeEmbed';
-import { ProseSection, Paragraphs } from '@/components/Prose';
+import { Paragraphs } from '@/components/Prose';
+import { StatHero, buildCodeStats } from '@/components/StatHero';
+import { SectionHeading } from '@/components/SectionHeading';
+import { RewardBreakdown } from '@/components/RewardBreakdown';
 import { getGame, getGameSlugs } from '@/lib/games';
-import { getLatestCodes, getLastUpdated, formatDate } from '@/lib/codes';
+import { getLatestCodes, getLastUpdated, isRecentlyAdded } from '@/lib/codes';
 import { buildMetadata } from '@/lib/seo';
 import { absoluteUrl } from '@/lib/site';
 
@@ -48,7 +51,10 @@ export default async function LatestPage({ params }: PageProps) {
   const game = getGame(slug);
   if (!game) notFound();
   const latest = getLatestCodes(game);
+  const expired = game.codes.filter((c) => c.status === 'expired');
   const lastUpdated = getLastUpdated(game);
+  const freshCount = latest.filter((c) => isRecentlyAdded(c.addedOn)).length;
+  const activeRewards = latest.map((c) => c.reward);
 
   const breadcrumbLd = {
     '@context': 'https://schema.org',
@@ -94,11 +100,7 @@ export default async function LatestPage({ params }: PageProps) {
         <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">
           Latest {game.name} Codes ({new Date().getFullYear()})
         </h1>
-        <p className="mt-2 text-sm text-slate-500">
-          {latest.length} active {latest.length === 1 ? 'code' : 'codes'} ·
-          Editorially verified · Updated {formatDate(lastUpdated)}
-        </p>
-        <p className="mt-4 max-w-3xl text-slate-700 leading-relaxed">
+        <p className="mt-3 max-w-3xl text-slate-700 leading-relaxed">
           Every {game.name} code on this page is currently working. We test the
           list against the live game on every refresh and move any code that
           stops paying out to the{' '}
@@ -113,15 +115,25 @@ export default async function LatestPage({ params }: PageProps) {
         </p>
       </section>
 
+      <StatHero
+        tiles={buildCodeStats({
+          activeCount: latest.length,
+          expiredCount: expired.length,
+          lastUpdated,
+          freshCount,
+        })}
+      />
+
       <AdSlot slot={`${game.slug}-latest-top`} />
 
       <section aria-labelledby="codes-heading">
-        <h2 id="codes-heading" className="text-2xl font-bold text-slate-900">
+        <SectionHeading
+          id="codes-heading"
+          icon="list"
+          subtitle="Newest first. Codes are case-sensitive — tap Copy to grab them safely."
+        >
           All working {game.name} codes
-        </h2>
-        <p className="mt-1 text-sm text-slate-600">
-          Newest first. Codes are case-sensitive — tap Copy to grab them safely.
-        </p>
+        </SectionHeading>
         <div className="mt-4">
           <CodeList
             entries={latest}
@@ -131,21 +143,33 @@ export default async function LatestPage({ params }: PageProps) {
         </div>
       </section>
 
+      {activeRewards.length > 0 && (
+        <RewardBreakdown rewards={activeRewards} />
+      )}
+
       {game.whatCodesDo && (
-        <ProseSection id="what-codes-do" heading={`What do ${game.name} codes do?`}>
-          <Paragraphs text={game.whatCodesDo} />
-        </ProseSection>
+        <section aria-labelledby="what-codes-do">
+          <SectionHeading id="what-codes-do" icon="reward">
+            What do {game.name} codes do?
+          </SectionHeading>
+          <div className="prose prose-slate mt-3 max-w-none text-slate-700 leading-relaxed [&_p]:mt-3 [&_p:first-child]:mt-0 [&_strong]:text-slate-900 [&_a]:font-semibold [&_a]:text-brand-700 hover:[&_a]:underline">
+            <Paragraphs text={game.whatCodesDo} />
+          </div>
+        </section>
       )}
 
       {game.videoId && (
         <section aria-labelledby="video-heading">
-          <h2 id="video-heading" className="text-2xl font-bold text-slate-900">
+          <SectionHeading
+            id="video-heading"
+            icon="video"
+            subtitle={
+              game.videoTitle ??
+              `Watch how ${game.name} codes are redeemed in-game and what each reward looks like.`
+            }
+          >
             Video walkthrough
-          </h2>
-          <p className="mt-1 text-sm text-slate-600">
-            {game.videoTitle ??
-              `Watch how ${game.name} codes are redeemed in-game and what each reward looks like.`}
-          </p>
+          </SectionHeading>
           <div className="mt-4">
             <YouTubeEmbed
               videoId={game.videoId}
@@ -156,30 +180,38 @@ export default async function LatestPage({ params }: PageProps) {
       )}
 
       {game.releaseCadence && (
-        <ProseSection id="release-cadence" heading="When are new codes released?">
-          <Paragraphs text={game.releaseCadence} />
-        </ProseSection>
+        <section aria-labelledby="release-cadence">
+          <SectionHeading id="release-cadence" icon="calendar">
+            When are new codes released?
+          </SectionHeading>
+          <div className="prose prose-slate mt-3 max-w-none text-slate-700 leading-relaxed [&_p]:mt-3 [&_p:first-child]:mt-0 [&_strong]:text-slate-900 [&_a]:font-semibold [&_a]:text-brand-700 hover:[&_a]:underline">
+            <Paragraphs text={game.releaseCadence} />
+          </div>
+        </section>
       )}
 
       {game.troubleshooting && game.troubleshooting.length > 0 && (
         <section aria-labelledby="troubleshooting-heading">
-          <h2
+          <SectionHeading
             id="troubleshooting-heading"
-            className="text-2xl font-bold text-slate-900"
+            icon="wrench"
+            subtitle={`${game.troubleshooting.length} things that usually cause a ${game.name} code to fail, and the fastest fix for each.`}
           >
             Code not working? Common fixes
-          </h2>
-          <p className="mt-1 text-sm text-slate-600">
-            Five things that usually cause a {game.name} code to fail, and the
-            fastest fix for each.
-          </p>
+          </SectionHeading>
           <div className="mt-4 space-y-3">
             {game.troubleshooting.map((t) => (
               <div
                 key={t.symptom}
-                className="rounded-lg border border-slate-200 bg-white p-4"
+                className="rounded-lg border-l-4 border-amber-300 border-y border-r border-y-slate-200 border-r-slate-200 bg-amber-50/40 p-4"
               >
-                <p className="font-semibold text-slate-900">{t.symptom}</p>
+                <p className="flex items-start gap-2 font-semibold text-slate-900">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mt-0.5 h-4 w-4 shrink-0 text-amber-700" aria-hidden>
+                    <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
+                    <path d="M12 9v4 M12 17h.01" />
+                  </svg>
+                  {t.symptom}
+                </p>
                 <p className="mt-1 text-sm text-slate-700">
                   <span className="font-semibold text-slate-900">Cause:</span>{' '}
                   {t.cause}
@@ -209,12 +241,17 @@ export default async function LatestPage({ params }: PageProps) {
       )}
 
       {game.whereToFindMore && (
-        <ProseSection id="more-codes" heading="Where to find more codes">
-          <Paragraphs text={game.whereToFindMore} />
-        </ProseSection>
+        <section aria-labelledby="more-codes">
+          <SectionHeading id="more-codes" icon="compass">
+            Where to find more codes
+          </SectionHeading>
+          <div className="prose prose-slate mt-3 max-w-none text-slate-700 leading-relaxed [&_p]:mt-3 [&_p:first-child]:mt-0 [&_strong]:text-slate-900 [&_a]:font-semibold [&_a]:text-brand-700 hover:[&_a]:underline">
+            <Paragraphs text={game.whereToFindMore} />
+          </div>
+        </section>
       )}
 
-      <section className="rounded-xl border border-brand-100 bg-brand-50 p-6">
+      <section className="rounded-xl border-l-4 border-brand-500 border-y border-r border-y-brand-100 border-r-brand-100 bg-brand-50 p-6">
         <h2 className="text-xl font-bold text-slate-900">
           Need step-by-step instructions?
         </h2>
