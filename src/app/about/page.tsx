@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Container } from '@/components/Container';
 import { JsonLd } from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
-import { siteConfig, absoluteUrl } from '@/lib/site';
+import { siteConfig, absoluteUrl, primaryEditor } from '@/lib/site';
 
 export const metadata: Metadata = buildMetadata({
   title: `About ${siteConfig.name}`,
@@ -46,6 +46,38 @@ export default function AboutPage() {
         a human before it goes live, and we move codes to our Expired archive
         the moment they stop working.
       </p>
+
+      <h2 className="mt-10 text-2xl font-bold text-slate-900">Meet the editor</h2>
+      <div className="not-prose mt-4 flex flex-col gap-4 rounded-xl border border-slate-200 bg-white p-5 shadow-sm sm:flex-row sm:items-start">
+        <span
+          aria-hidden
+          className="relative inline-flex h-16 w-16 shrink-0 items-center justify-center rounded-full text-lg font-extrabold text-white shadow-md ring-2 ring-white"
+          style={{
+            background: `linear-gradient(135deg, ${primaryEditor.avatarGradient[0]} 0%, ${primaryEditor.avatarGradient[1]} 100%)`,
+          }}
+        >
+          {primaryEditor.avatarInitials}
+        </span>
+        <div className="flex-1">
+          <p className="text-xs font-bold uppercase tracking-widest text-slate-500">
+            {primaryEditor.role}
+          </p>
+          <p className="mt-0.5 text-lg font-extrabold text-slate-900">
+            <Link href={`/editors/${primaryEditor.slug}`} className="hover:text-brand-700">
+              {primaryEditor.name}
+            </Link>
+          </p>
+          <p className="mt-2 text-sm leading-relaxed text-slate-700">
+            {primaryEditor.shortBio}
+          </p>
+          <Link
+            href={`/editors/${primaryEditor.slug}`}
+            className="mt-3 inline-flex items-center gap-1 text-sm font-bold text-brand-700 hover:underline"
+          >
+            Read full editor profile <span aria-hidden>→</span>
+          </Link>
+        </div>
+      </div>
 
       <h2 className="mt-10 text-2xl font-bold text-slate-900">
         How we source codes

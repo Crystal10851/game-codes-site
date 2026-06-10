@@ -20,7 +20,7 @@ import { RelatedGames } from '@/components/RelatedGames';
 import { getGame, getGameSlugs } from '@/lib/games';
 import { getLatestCodes, getExpiredCodes, getLastUpdated, isRecentlyAdded } from '@/lib/codes';
 import { buildMetadata } from '@/lib/seo';
-import { absoluteUrl } from '@/lib/site';
+import { absoluteUrl, primaryEditor, siteConfig } from '@/lib/site';
 
 interface PageProps {
   params: Promise<{ game: string }>;
@@ -71,6 +71,17 @@ export default async function GamePage({ params }: PageProps) {
     datePublished: lastUpdated,
     dateModified: lastUpdated,
     mainEntityOfPage: absoluteUrl(`/${game.slug}`),
+    author: {
+      '@type': 'Person',
+      name: primaryEditor.name,
+      url: absoluteUrl(`/editors/${primaryEditor.slug}`),
+      jobTitle: primaryEditor.role,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
     about: {
       '@type': 'VideoGame',
       name: game.name,

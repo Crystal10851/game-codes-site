@@ -1,3 +1,33 @@
+export interface Editor {
+  slug: string;
+  name: string;
+  role: string;
+  shortBio: string;
+  longBio: string;
+  avatarInitials: string;
+  avatarGradient: [string, string];
+  joinedYear: number;
+  beatTags: string[];
+}
+
+export const editors: Editor[] = [
+  {
+    slug: 'ben-yu',
+    name: 'Ben Yu',
+    role: 'Founder & codes editor',
+    shortBio:
+      'Tracks Roblox and HoYoverse code drops in real time, then verifies each one in the live game before publishing.',
+    longBio:
+      'Ben started GameCodes Hub in 2024 after spending hours sifting through stale code lists himself. He follows every official developer Twitter, Discord and livestream the games on this site publish to, and cross-checks each drop against the long-standing aggregators before adding it here. Every code on the site has been redeemed on a real account before publication; codes that stop working get moved to the Expired archive within 24 hours of the first failed report.',
+    avatarInitials: 'BY',
+    avatarGradient: ['#1b3aa5', '#0ea5e9'],
+    joinedYear: 2024,
+    beatTags: ['Roblox', 'HoYoverse', 'Blox Fruits'],
+  },
+];
+
+export const primaryEditor: Editor = editors[0];
+
 export const siteConfig = {
   name: 'GameCodes Hub',
   shortName: 'GameCodes',

@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { getAllGames } from '@/lib/games';
 import { getLastUpdated } from '@/lib/codes';
-import { absoluteUrl } from '@/lib/site';
+import { absoluteUrl, editors } from '@/lib/site';
 import bloxFruitsTierList from '../../data/games/blox-fruits/tier-list.json';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -33,6 +33,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.3,
     },
+    ...editors.map((e) => ({
+      url: absoluteUrl(`/editors/${e.slug}`),
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.5,
+    })),
   ];
 
   entries.push(
