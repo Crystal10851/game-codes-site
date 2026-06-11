@@ -8,7 +8,7 @@
   "developer": "HoYoverse",
   "officialUrl": "https://hsr.hoyoverse.com",
   "color": "#7b3fe4",
-  "lastVerifiedOn": "2026-06-09",
+  "lastVerifiedOn": "2026-06-11",
   "heroImage": "/screenshots/honkai-star-rail/hero.jpg",
   "videoId": "l2xN_QhlkIs",
   "videoTitle": "How to redeem Honkai: Star Rail codes — mobile and PC full guide",
@@ -118,6 +118,14 @@
       "expiresOn": null,
       "status": "active",
       "notes": "Permanent code, works on every server."
+    },
+    {
+      "code": "BladeFitCheck",
+      "reward": "3 Traveler's Guide + 2 Cold Jokes",
+      "addedOn": "2026-06-11",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Newly published upstream around the 4.4 cycle; treat as time-limited and redeem soon (source: Pocket Tactics)."
     },
     {
       "code": "SitByEvanescia",
