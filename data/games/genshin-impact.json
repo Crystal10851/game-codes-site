@@ -8,7 +8,7 @@
   "developer": "HoYoverse",
   "officialUrl": "https://genshin.hoyoverse.com",
   "color": "#1f6feb",
-  "lastVerifiedOn": "2026-06-11",
+  "lastVerifiedOn": "2026-06-16",
   "heroImage": "/screenshots/genshin-impact/hero.jpg",
   "videoId": "EugGx0Fw2Aw",
   "videoTitle": "How to redeem Genshin Impact codes — mobile and PC",
@@ -120,6 +120,14 @@
       "notes": "Permanent code for new and returning players."
     },
     {
+      "code": "LCXGEA5SX65L",
+      "reward": "10,000 Mora + 10 Adventurer's Experience + 5 Fine Enhancement Ore + 5 Jueyun Chili Chicken + 5 Stir-Fried Fish Noodles",
+      "addedOn": "2026-06-16",
+      "expiresOn": null,
+      "status": "active",
+      "notes": "Livestream-window code added in the 6.6 cycle; verified active on Pocket Tactics 2026-06-16 — redeem promptly."
+    },
+    {
       "code": "NMI20MAJGIBP",
       "reward": "20 Primogems + 160 Geodes of Replication",
       "addedOn": "2026-05-31",
@@ -131,9 +139,9 @@
       "code": "YMYD76U85Z1U",
       "reward": "10,000 Mora + 10 Adventurer's Experience + 5 Fine Enhancement Ore + 5 Jueyun Chili Chicken + 5 Stir-Fried Fish Noodles",
       "addedOn": "2026-05-31",
-      "expiresOn": null,
-      "status": "active",
-      "notes": "Livestream-window code; verified active on Pocket Tactics 2026-05-31 — redeem promptly."
+      "expiresOn": "2026-06-16",
+      "status": "expired",
+      "notes": "Livestream-window code from the 5/31 sweep; expired by Pocket Tactics 2026-06-16."
     },
     {
       "code": "MageNicolesPuzzle",
@@ -171,9 +179,9 @@
       "code": "PSCA8NL4ZSPD",
       "reward": "60 Primogems + 5 Adventurer's Experience",
       "addedOn": "2026-05-13",
-      "expiresOn": null,
-      "status": "active",
-      "notes": "Latest version livestream code."
+      "expiresOn": "2026-06-16",
+      "status": "expired",
+      "notes": "Past version livestream code; expired by Pocket Tactics 2026-06-16."
     },
     {
       "code": "OHOHONICOLE",
