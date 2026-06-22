@@ -2,9 +2,13 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import type { GameSummary } from '@/lib/types';
 
-export function MobileMenu({ games }: { games: GameSummary[] }) {
+interface NavLink {
+  href: string;
+  label: string;
+}
+
+export function MobileMenu({ links }: { links: NavLink[] }) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -65,17 +69,17 @@ export function MobileMenu({ games }: { games: GameSummary[] }) {
           className="fixed inset-x-0 top-14 z-40 border-b border-slate-200 bg-white shadow-md lg:hidden"
         >
           <nav
-            aria-label="Games"
+            aria-label="Primary"
             className="mx-auto flex w-full max-w-5xl flex-col px-4 py-2 sm:px-6"
           >
-            {games.map((g) => (
+            {links.map((l) => (
               <Link
-                key={g.slug}
-                href={`/${g.slug}`}
+                key={l.href}
+                href={l.href}
                 onClick={() => setOpen(false)}
                 className="rounded px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-700"
               >
-                {g.name}
+                {l.label}
               </Link>
             ))}
           </nav>

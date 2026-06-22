@@ -17,16 +17,23 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      {
-        source: '/anime-adventures',
-        destination: '/anime-vanguards',
-        permanent: true,
-      },
-      {
-        source: '/anime-adventures/:path*',
-        destination: '/anime-vanguards/:path*',
-        permanent: true,
-      },
+      // Old sub-routes — content merged into the single /blox-fruits/ hub.
+      { source: '/blox-fruits/latest', destination: '/blox-fruits', permanent: true },
+      { source: '/blox-fruits/expired', destination: '/blox-fruits', permanent: true },
+      { source: '/blox-fruits/redeem-guide', destination: '/blox-fruits', permanent: true },
+      // Removed games — site is now Blox-Fruits-only. Send any legacy URL to home.
+      { source: '/anime-adventures', destination: '/', permanent: true },
+      { source: '/anime-adventures/:path*', destination: '/', permanent: true },
+      { source: '/anime-vanguards', destination: '/', permanent: true },
+      { source: '/anime-vanguards/:path*', destination: '/', permanent: true },
+      { source: '/genshin-impact', destination: '/', permanent: true },
+      { source: '/genshin-impact/:path*', destination: '/', permanent: true },
+      { source: '/honkai-star-rail', destination: '/', permanent: true },
+      { source: '/honkai-star-rail/:path*', destination: '/', permanent: true },
+      { source: '/king-legacy', destination: '/', permanent: true },
+      { source: '/king-legacy/:path*', destination: '/', permanent: true },
+      { source: '/pet-simulator-99', destination: '/', permanent: true },
+      { source: '/pet-simulator-99/:path*', destination: '/', permanent: true },
     ];
   },
   async headers() {

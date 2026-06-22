@@ -489,7 +489,7 @@ function Results({
           ranks all 25 active fruits across overall, PvP, and grinding. Pair
           your pick with active{' '}
           <Link
-            href="/blox-fruits/latest"
+            href="/blox-fruits#latest-heading"
             className="font-semibold text-brand-700 hover:underline"
           >
             XP codes

@@ -3,16 +3,13 @@ import type { Game } from '@/lib/types';
 import { getLastUpdated, formatDate, getLatestCodes, getExpiredCodes } from '@/lib/codes';
 
 const BASE_TABS = [
-  { href: '', label: 'Overview' },
-  { href: '/latest', label: 'Latest' },
-  { href: '/expired', label: 'Expired' },
-  { href: '/redeem-guide', label: 'How to redeem' },
+  { href: '', label: 'Codes hub' },
 ];
 
 const EXTRA_TABS_BY_SLUG: Record<string, { href: string; label: string }[]> = {
   'blox-fruits': [
-    { href: '/tier-list', label: 'Tier List' },
-    { href: '/which-fruit', label: 'Which Fruit?' },
+    { href: '/tier-list', label: 'Tier list' },
+    { href: '/which-fruit', label: 'Which fruit?' },
   ],
 };
 
@@ -21,7 +18,7 @@ export function GameHeader({
   active,
 }: {
   game: Game;
-  active: '' | '/latest' | '/expired' | '/redeem-guide' | '/tier-list' | '/which-fruit';
+  active: '' | '/tier-list' | '/which-fruit';
 }) {
   const lastUpdated = getLastUpdated(game);
   const activeCount = getLatestCodes(game).length;
@@ -42,7 +39,7 @@ export function GameHeader({
           href="/"
           className="flex items-center gap-1 font-bold text-slate-500 transition hover:text-slate-900"
         >
-          <span aria-hidden>←</span> All games
+          <span aria-hidden>←</span> Home
         </Link>
         <span aria-hidden className="text-slate-300">/</span>
         <span className="flex items-center gap-1.5 font-bold text-slate-900">

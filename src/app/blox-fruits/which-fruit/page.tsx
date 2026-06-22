@@ -125,7 +125,7 @@ export default function BloxFruitsWhichFruitPage() {
           . Every answer is independent — you can retake the quiz at any time.
           New to redeeming? Start with the{' '}
           <Link
-            href="/blox-fruits/redeem-guide"
+            href="/blox-fruits#redeem-heading"
             className="font-semibold text-brand-700 hover:underline"
           >
             redeem guide
@@ -183,7 +183,7 @@ export default function BloxFruitsWhichFruitPage() {
           XP codes compound especially well when you're grinding a fresh
           Mythical or paying down the awakening fragment cost. Check the{' '}
           <Link
-            href="/blox-fruits/latest"
+            href="/blox-fruits#latest-heading"
             className="font-semibold text-brand-700 hover:underline"
           >
             latest Blox Fruits codes

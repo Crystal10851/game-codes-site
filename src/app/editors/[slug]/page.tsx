@@ -41,27 +41,31 @@ export default async function EditorPage({ params }: PageProps) {
       {
         href: `/${g.slug}`,
         title: `${g.name} Codes (${new Date(lastUpdated).toLocaleString('en', { month: 'long', year: 'numeric' })})`,
-        kicker: 'Overview',
+        kicker: 'Codes hub',
         game: g.name,
         date: lastUpdated,
         activeCount: summary.activeCount,
       },
-      {
-        href: `/${g.slug}/latest`,
-        title: `Latest working ${g.name} codes`,
-        kicker: 'Live codes',
-        game: g.name,
-        date: lastUpdated,
-        activeCount: summary.activeCount,
-      },
-      {
-        href: `/${g.slug}/redeem-guide`,
-        title: `How to redeem ${g.name} codes — step by step`,
-        kicker: 'Redeem guide',
-        game: g.name,
-        date: lastUpdated,
-        activeCount: summary.activeCount,
-      },
+      ...(g.slug === 'blox-fruits'
+        ? [
+            {
+              href: `/${g.slug}/tier-list`,
+              title: `${g.name} Tier List — all 25 active fruits ranked`,
+              kicker: 'Tier list',
+              game: g.name,
+              date: lastUpdated,
+              activeCount: summary.activeCount,
+            },
+            {
+              href: `/${g.slug}/which-fruit`,
+              title: `Which ${g.name} fruit should I buy? — interactive decision quiz`,
+              kicker: 'Interactive tool',
+              game: g.name,
+              date: lastUpdated,
+              activeCount: summary.activeCount,
+            },
+          ]
+        : []),
     ];
   });
 

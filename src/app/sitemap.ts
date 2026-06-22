@@ -57,33 +57,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   );
 
   for (const game of games) {
-    const lastModified = new Date(getLastUpdated(game));
-    entries.push(
-      {
-        url: absoluteUrl(`/${game.slug}`),
-        lastModified,
-        changeFrequency: 'daily',
-        priority: 0.9,
-      },
-      {
-        url: absoluteUrl(`/${game.slug}/latest`),
-        lastModified,
-        changeFrequency: 'daily',
-        priority: 0.9,
-      },
-      {
-        url: absoluteUrl(`/${game.slug}/expired`),
-        lastModified,
-        changeFrequency: 'weekly',
-        priority: 0.5,
-      },
-      {
-        url: absoluteUrl(`/${game.slug}/redeem-guide`),
-        lastModified,
-        changeFrequency: 'monthly',
-        priority: 0.6,
-      },
-    );
+    entries.push({
+      url: absoluteUrl(`/${game.slug}`),
+      lastModified: new Date(getLastUpdated(game)),
+      changeFrequency: 'daily',
+      priority: 0.9,
+    });
   }
 
   return entries;

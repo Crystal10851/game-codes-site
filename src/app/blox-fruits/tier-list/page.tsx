@@ -184,7 +184,7 @@ export default function BloxFruitsTierListPage() {
             <span aria-hidden>→</span>
           </Link>
           <Link
-            href="/blox-fruits/latest"
+            href="/blox-fruits#latest-heading"
             className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 shadow-sm transition hover:bg-slate-50"
           >
             Latest XP codes
@@ -265,14 +265,14 @@ export default function BloxFruitsTierListPage() {
           XP boosts compound especially well when you're grinding a fresh
           Mythical or pushing the awakening fragment cost. See the{' '}
           <Link
-            href="/blox-fruits/latest"
+            href="/blox-fruits#latest-heading"
             className="font-semibold text-brand-700 hover:underline"
           >
             latest Blox Fruits codes
           </Link>{' '}
           for active 2x XP promos, or the{' '}
           <Link
-            href="/blox-fruits/redeem-guide"
+            href="/blox-fruits#redeem-heading"
             className="font-semibold text-brand-700 hover:underline"
           >
             redeem guide

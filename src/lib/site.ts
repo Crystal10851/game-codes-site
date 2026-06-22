@@ -32,7 +32,7 @@ export const siteConfig = {
   name: 'GameCodes Hub',
   shortName: 'GameCodes',
   description:
-    'Up-to-date working codes, expired codes archive and redeem guides for the most popular games.',
+    'Hand-verified Blox Fruits codes, a 25-fruit tier list, and an interactive Fruit Decision quiz — maintained by a single editor since 2024.',
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://example.com',
   locale: 'en_US',
   twitter: '@gamecodeshub',
