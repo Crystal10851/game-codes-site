@@ -4,10 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/generate-sitemap.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
+    "gen:sitemap": "node scripts/generate-sitemap.mjs",
     "scrape:codes": "node scripts/scrape-codes.mjs"
   },
   "dependencies": {
