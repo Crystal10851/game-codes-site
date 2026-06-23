@@ -53,8 +53,9 @@ const body =
     .join('\n') +
   '\n</urlset>\n';
 
-const outPath = path.join(ROOT, 'public/sitemap.xml');
-fs.writeFileSync(outPath, body, 'utf8');
+for (const filename of ['sitemap.xml', 'sitemap-feed.xml']) {
+  fs.writeFileSync(path.join(ROOT, 'public', filename), body, 'utf8');
+}
 console.log(
-  `✓ sitemap.xml written (${entries.length} entries, bf=${bfLastmod.slice(0, 10)}, tier=${tierLastmod.slice(0, 10)})`,
+  `✓ sitemap.xml + sitemap-feed.xml written (${entries.length} entries, bf=${bfLastmod.slice(0, 10)}, tier=${tierLastmod.slice(0, 10)})`,
 );
