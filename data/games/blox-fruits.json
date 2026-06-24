@@ -112,7 +112,8 @@
       "addedOn": "2026-04-25",
       "expiresOn": null,
       "status": "active",
-      "notes": "Released after a partnered-creator stream; still redeemable as of mid-May 2026."
+      "notes": "Released after a partnered-creator stream; still redeemable as of mid-May 2026.",
+      "commentary": "Dropped during a partnered-creator livestream and is one of the longer-running 20-minute boost codes on the active list. Most useful inside the level 1200-1500 grind window — chained with a second creator-stream code into a 40-minute 2x XP block, it makes the Pirate Yonko and Marine Admiral spawn cycle the dominant XP source for the session. The 2x multiplier does not stack with itself but the durations stack, so the chain is the only way to extend a single boost window. Case-sensitive at the redemption layer; paste from the Copy button rather than typing."
     },
     {
       "code": "EASTEREXP",
@@ -120,7 +121,8 @@
       "addedOn": "2026-03-28",
       "expiresOn": null,
       "status": "active",
-      "notes": "Easter Event reward from Update 31."
+      "notes": "Easter Event reward from Update 31.",
+      "commentary": "Tied to the Update 31 spring patch as the Easter event reward. Unusually long-lived for an event code — most event-specific drops get retired within a week of the event window closing, but this one has stayed redeemable for multiple weekly refresh cycles. The reward is the standard 20-minute 2x XP window, so its real value is that it adds another slot to a chain when stacking back-to-back boosts. Treat it as a reliable filler in the middle of a longer chain rather than an opening anchor, since the rarer Stat Reset codes on this list deserve the high-attention slots."
     },
     {
       "code": "Sub2CaptainMaui",
@@ -128,7 +130,8 @@
       "addedOn": "2026-02-18",
       "expiresOn": null,
       "status": "active",
-      "notes": "Partnered-creator code — case matters: capital S and C."
+      "notes": "Partnered-creator code — case matters: capital S and C.",
+      "commentary": "Partnered-creator code in the Sub2{ProperName} convention that Gamer Robot uses for most stream-derived rewards. Capital S and capital C are both deliberate — the redemption layer rejects sub2captainmaui in all lowercase even though the rest of the string is identical. This is the single most common reason a code from this list fails on the first attempt, which is why every active code on this page has a Copy button. Pairs cleanly with the other Sub2-prefixed codes in this table; the 2x XP duration stacks even though the multiplier itself does not."
     },
     {
       "code": "JCWK",
@@ -136,7 +139,8 @@
       "addedOn": "2025-12-10",
       "expiresOn": null,
       "status": "active",
-      "notes": ""
+      "notes": "",
+      "commentary": "Short partnered-creator code, all-caps with no special handling beyond the case-sensitivity rule that applies to every code on this list. The brevity makes it one of the only codes here that is realistically typeable on a mobile keyboard, though we still recommend the Copy button to avoid the C-versus-K confusion at the end. No known expiry as of the most recent weekly cross-check, which makes it a dependable inclusion when you are building a stacked 2x XP chain — slot it next to one of the longer-named Sub2 codes to land cleanly on a 40-minute block."
     },
     {
       "code": "Bluxxy",
@@ -144,7 +148,8 @@
       "addedOn": "2025-10-04",
       "expiresOn": null,
       "status": "active",
-      "notes": ""
+      "notes": "",
+      "commentary": "Partnered-creator stream code. Pays the standard 20-minute 2x XP window with no cosmetic component, no Beli, no stat refund. Best used as filler in the middle of a longer boost chain rather than redeemed on its own — the genuinely valuable codes on this list (KITT_RESET, Sub2UncleKizaru) deserve to anchor a chain at one end, with generic boosts like Bluxxy filling out the middle. The leading capital B is required; bluxxy in all-lowercase fails the redemption check, which is the same trap as every other CamelCase code in this table."
     },
     {
       "code": "Enyu_is_Pro",
@@ -152,7 +157,8 @@
       "addedOn": "2025-08-15",
       "expiresOn": null,
       "status": "active",
-      "notes": ""
+      "notes": "",
+      "commentary": "Creator code with a deliberately playful editorialised string. The underscore between Enyu, is and Pro is required at the redemption layer — both the leading capital E and the underscore positions are character-sensitive. Functionally a standard 20-minute 2x XP boost, useful in any chain. The naming convention here is unusual against the broader code roster, which mostly follows the cleaner Sub2{Name} or single-creator-handle format — every once in a while the developer surfaces a more personality-driven string, and Enyu_is_Pro is the most stable example currently on the list."
     },
     {
       "code": "Magicbus",
@@ -160,7 +166,8 @@
       "addedOn": "2025-06-22",
       "expiresOn": null,
       "status": "active",
-      "notes": ""
+      "notes": "",
+      "commentary": "Lower-case-leading creator code that has stayed on the active list across multiple weekly refreshes, suggesting Gamer Robot has no current plan to retire it. Standard 20-minute 2x XP behaviour with no event lockouts and no per-account quota beyond the universal one-redemption-per-code rule. Chain it with three or four other boost codes from this list to clear the longest XP grind currently in the game — the Tushita / Yama awakening grind in the Third Sea — in a single uninterrupted session, which otherwise tends to break across multiple play sessions for most players."
     },
     {
       "code": "kittgaming",
@@ -168,7 +175,8 @@
       "addedOn": "2025-04-10",
       "expiresOn": null,
       "status": "active",
-      "notes": "All lowercase."
+      "notes": "All lowercase.",
+      "commentary": "Kitt is one of the most prominent partnered creators in the Blox Fruits orbit and the developer routes stream-window codes through Kitt's channel frequently, which is why two Kitt-attributed codes (this and KITT_RESET) appear on the active list simultaneously. The all-lowercase string is the unusual part — most partner codes follow CamelCase or Sub2{Name} conventions, but kittgaming intentionally rejects the capital-K version. The redemption layer enforces the case strictly. The reward here is the standard 20-minute boost; the more valuable Kitt-attributed code on this list is KITT_RESET, which refunds your full stat allocation."
     },
     {
       "code": "KITT_RESET",
@@ -176,7 +184,8 @@
       "addedOn": "2025-02-05",
       "expiresOn": null,
       "status": "active",
-      "notes": "One-time stat refund — useful for build reroll."
+      "notes": "One-time stat refund — useful for build reroll.",
+      "commentary": "The single most valuable code on the active list. A Stat Reset normally costs 2,500,000 Beli at the in-game NPC, or roughly 850 Robux through the premium shop — this code refunds every Melee, Defense, Sword, Gun and Devil Fruit point you have already spent, for free. Best held until you are about to commit to a new awakening or rebuild around a recently-bought Mythical fruit; once redeemed the reset is consumed and there is no taking it back. The most common timing is the moment you finish unlocking Yama or Tushita in the Third Sea, where the optimal sword build has different stat ratios than the early-game grind build."
     },
     {
       "code": "StrawHatMaine",
@@ -184,7 +193,8 @@
       "addedOn": "2024-11-18",
       "expiresOn": null,
       "status": "active",
-      "notes": ""
+      "notes": "",
+      "commentary": "Maine is a partnered creator on the smaller end of the rotation, which is reflected in the shorter 15-minute boost window rather than the standard 20. The shortfall does not change the multiplier itself — only the total accumulated time. Pair with one of the 20-minute codes to land on a 35-minute block, which conveniently matches the average raid-boss respawn timer in the Second Sea, so the boost stays active across two consecutive raid clears. The CamelCase pattern (S-H-M all capitalised, lowercase aine) is the most common mistype, so prefer the Copy button over typing."
     },
     {
       "code": "Sub2OfficialNoobie",
@@ -192,7 +202,8 @@
       "addedOn": "2024-09-12",
       "expiresOn": null,
       "status": "active",
-      "notes": ""
+      "notes": "",
+      "commentary": "Officialnoobie is a long-standing Blox Fruits partnered creator whose code has rotated through multiple sub-stream cycles. The capital S, capital O and capital N are deliberate, following the Sub2{ProperName} convention shared by most stream-derived codes on this list. Standard 20-minute boost with no event lockouts. Best slotted into the middle of a longer chain since neither end of a chain deserves a generic boost when there is a Stat Reset (KITT_RESET, Sub2UncleKizaru) available on the same list to anchor it more profitably."
     },
     {
       "code": "TheGreatAce",
@@ -200,7 +211,8 @@
       "addedOn": "2024-07-08",
       "expiresOn": null,
       "status": "active",
-      "notes": ""
+      "notes": "",
+      "commentary": "Creator code from one of the Sea-event content channels. The CamelCase pattern with three capitalised letters (T, G, A) is the most common mistype on this list — the visual instinct is to lowercase the middle word great, which fails the redemption check. Use the Copy button. The reward is a clean 20-minute 2x XP window with no event-specific lockouts, so it works the same whether you redeem in the First Sea (early grind), Second Sea (Marine Admiral cycle) or Third Sea (awakening grind). One of the more reliably stable codes across weekly refreshes."
     },
     {
       "code": "fudd10_v2",
@@ -208,7 +220,8 @@
       "addedOn": "2024-05-15",
       "expiresOn": null,
       "status": "active",
-      "notes": "Symbolic reward — meme code, but the script still pays out."
+      "notes": "Symbolic reward — meme code, but the script still pays out.",
+      "commentary": "Pure meme reward. Two Beli will not buy you a single Common-rarity fruit reroll, let alone any progression item — the lowest-priced Common fruit at Blueno's shop is 5,000 Beli, two-and-a-half thousand times the payout of this code. The whole point of fudd10_v2 is that it is the v2 of the original Fudd10 meme further down this list, which paid one Beli; the developer doubled the joke. Redeem for the Discord-friendly screenshot, not the economic value. Nothing else on the list has the same cultural-artefact status."
     },
     {
       "code": "Sub2UncleKizaru",
@@ -216,7 +229,8 @@
       "addedOn": "2024-03-10",
       "expiresOn": null,
       "status": "active",
-      "notes": ""
+      "notes": "",
+      "commentary": "The second Stat Reset code on the active list, alongside KITT_RESET. Functionally identical: refunds every spent stat point across Melee, Defense, Sword, Gun and Devil Fruit. If you have both Stat Reset codes currently un-redeemed, treat them as two separate respec opportunities — each is consumed on use and there is no way to undo. UncleKizaru is one of the partnered creators most associated with awakened-fruit gameplay, which is the most common reason to want a respec in the first place: the optimal stat distribution for a non-awakened build rarely matches the optimal distribution after awakening unlocks."
     },
     {
       "code": "Sub2Daigrock",
@@ -224,7 +238,8 @@
       "addedOn": "2024-01-22",
       "expiresOn": null,
       "status": "active",
-      "notes": ""
+      "notes": "",
+      "commentary": "Daigrock is a Roblox-creator channel that Gamer Robot has cycled code drops through for multiple update windows. The 15-minute duration rather than 20 reflects the smaller-channel reward tier shared with NoobMaster123, Maine and TantaiGaming. Still useful as chain filler — the Daigrock channel is also one of the more reliable real-time code-drop sources between our weekly refreshes, so if a stream-window code drops mid-week it often surfaces on Daigrock's live chat before it reaches the upstream aggregators. Worth following if you want sub-day code freshness rather than weekly."
     },
     {
       "code": "Axiore",
@@ -232,7 +247,8 @@
       "addedOn": "2023-11-05",
       "expiresOn": null,
       "status": "active",
-      "notes": ""
+      "notes": "",
+      "commentary": "Single-name creator code from one of the longer-tenured partnered Blox Fruits channels. The full string is Axiore with the leading A capitalised and everything else lowercase. Standard 20-minute 2x XP. The Axiore channel has a deeper Blox Fruits history than most of the partnered roster — the code itself predates several major updates and has stayed redeemable across all of them, which makes it one of the most reliable inclusions on this list. If a brand-new account is grinding up from level 1, Axiore is usually the first code we recommend redeeming because of how stable it has proven across our refresh cycles."
     },
     {
       "code": "Sub2NoobMaster123",
@@ -240,7 +256,8 @@
       "addedOn": "2023-08-18",
       "expiresOn": null,
       "status": "active",
-      "notes": ""
+      "notes": "",
+      "commentary": "NoobMaster123 is one of the smaller-channel partnered creators, which is why this code drops at the 15-minute boost tier rather than the 20-minute tier reserved for the larger channels. The numerical 123 is part of the string — leaving it off will fail the redemption check even if the Sub2NoobMaster prefix is exactly right. Most useful in a multi-creator boost chain rather than as a one-off, since 15 minutes alone is not enough to clear a full mid-game grind objective; pair it with at least one of the 20-minute codes (Bluxxy, JCWK, Axiore) to land in the practical 35-minute-plus chain range."
     },
     {
       "code": "TantaiGaming",
@@ -248,7 +265,8 @@
       "addedOn": "2023-06-25",
       "expiresOn": null,
       "status": "active",
-      "notes": ""
+      "notes": "",
+      "commentary": "TantaiGaming is one of the partnered creators in the Asian-Pacific stream rotation. The 15-minute window is consistent with the smaller-channel reward tier shared with Daigrock, NoobMaster123 and Maine. The CamelCase pattern (T-G both capitalised) is the standard partnered-code convention; copy rather than type. This code has stayed on the active list across more than a year of weekly cross-checks, so it pairs cleanly with the other 15-minute creator codes into 30- and 45-minute blocks for an evening grind session, which is the most common reason to chain shorter codes together at all."
     },
     {
       "code": "Fudd10",
@@ -256,7 +274,8 @@
       "addedOn": "2023-04-12",
       "expiresOn": null,
       "status": "active",
-      "notes": "The original meme reward."
+      "notes": "The original meme reward.",
+      "commentary": "The original meme code. One Beli, full stop — less than the cost of a single banana in the in-game shop. The point is the joke, not the economy. Redeem it for the screenshot, the way you would collect a niche achievement, then move on. Fudd10_v2 above is the deliberate doubling of this same gag, making the pair a small cultural-history detail of the Blox Fruits codes scene. If you can only redeem one of the two for some reason, redeem this one — the original is the more shareable artefact, and the v2 only really lands as a callback once you know the v1 existed first."
     },
     {
       "code": "Bignews",
@@ -264,7 +283,8 @@
       "addedOn": "2023-02-20",
       "expiresOn": null,
       "status": "active",
-      "notes": "Cosmetic title only — no XP / Beli."
+      "notes": "Cosmetic title only — no XP / Beli.",
+      "commentary": "Cosmetic-only code from a community milestone event — likely the original Likes-target or visits-target celebration. It grants a single in-game title with no XP, Beli, stat or fruit component. The title floats above your character in lobby spaces and in raid lobbies, which is the entire value. Bignews has stayed live longer than most milestone titles, which has quietly turned it into a long-time-player flex — newer accounts can still claim it, but its redemption window will not stay open indefinitely. If you are levelling up a fresh account, claim it once and forget; the value is collection, not utility."
     },
     {
       "code": "ADMIN_TROLL",

@@ -7,6 +7,7 @@ export interface GameCode {
   expiresOn: string | null;
   status: CodeStatus;
   notes?: string;
+  commentary?: string;
 }
 
 export interface RedeemStep {
