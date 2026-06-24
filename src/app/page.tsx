@@ -184,25 +184,6 @@ export default function HomePage() {
             <ul className="mt-4 grid gap-4 sm:grid-cols-2">
               <li className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
                 <p className="text-xs font-bold uppercase tracking-wider text-brand-700">
-                  Codes &amp; redeem flow
-                </p>
-                <h3 className="mt-1 text-lg font-extrabold text-slate-900">
-                  <Link href={`/${featured.slug}`} className="hover:text-brand-700">
-                    {featured.name} Codes hub
-                  </Link>
-                </h3>
-                <p className="mt-2 text-sm text-slate-600">
-                  Every working code with the exact reward, addition date, and case-sensitive copy button — plus the full expired archive, illustrated 4-step redeem flow, FAQ, and troubleshooting in one place.
-                </p>
-                <Link
-                  href={`/${featured.slug}`}
-                  className="mt-3 inline-block text-sm font-bold text-brand-700 hover:underline"
-                >
-                  Open the codes hub →
-                </Link>
-              </li>
-              <li className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-                <p className="text-xs font-bold uppercase tracking-wider text-brand-700">
                   Original tier ranking
                 </p>
                 <h3 className="mt-1 text-lg font-extrabold text-slate-900">
@@ -237,6 +218,25 @@ export default function HomePage() {
                   className="mt-3 inline-block text-sm font-bold text-brand-700 hover:underline"
                 >
                   Take the quiz →
+                </Link>
+              </li>
+              <li className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+                <p className="text-xs font-bold uppercase tracking-wider text-brand-700">
+                  Codes &amp; redeem flow
+                </p>
+                <h3 className="mt-1 text-lg font-extrabold text-slate-900">
+                  <Link href={`/${featured.slug}`} className="hover:text-brand-700">
+                    {featured.name} Codes hub
+                  </Link>
+                </h3>
+                <p className="mt-2 text-sm text-slate-600">
+                  Every working code with the exact reward, addition date, and case-sensitive copy button — plus the full expired archive, illustrated 4-step redeem flow, FAQ, and troubleshooting in one place.
+                </p>
+                <Link
+                  href={`/${featured.slug}`}
+                  className="mt-3 inline-block text-sm font-bold text-brand-700 hover:underline"
+                >
+                  Open the codes hub →
                 </Link>
               </li>
               <li className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">

@@ -191,6 +191,48 @@ export default async function GamePage({ params }: PageProps) {
 
       <AdSlot slot={`${game.slug}-overview-top`} />
 
+      {game.slug === 'blox-fruits' && (
+        <section aria-labelledby="tier-cta-heading" className="grid gap-4 sm:grid-cols-2">
+          <Link
+            href="/blox-fruits/tier-list"
+            className="group block rounded-xl border-l-4 border-brand-500 border-y border-r border-y-brand-100 border-r-brand-100 bg-brand-50 p-5 transition hover:bg-brand-100"
+          >
+            <p className="text-xs font-bold uppercase tracking-wider text-brand-700">
+              Editor's pick · Updated weekly
+            </p>
+            <h2
+              id="tier-cta-heading"
+              className="mt-1 text-xl font-bold text-slate-900"
+            >
+              Blox Fruits Tier List ({new Date().getFullYear()})
+            </h2>
+            <p className="mt-1 text-sm text-slate-600">
+              All 25 active fruits ranked across overall, PvP, and grinding — with rationale, pros and cons, and best combos.
+            </p>
+            <span className="mt-3 inline-block text-sm font-bold text-brand-700 group-hover:underline">
+              See the rankings →
+            </span>
+          </Link>
+          <Link
+            href="/blox-fruits/which-fruit"
+            className="group block rounded-xl border-l-4 border-brand-500 border-y border-r border-y-brand-100 border-r-brand-100 bg-brand-50 p-5 transition hover:bg-brand-100"
+          >
+            <p className="text-xs font-bold uppercase tracking-wider text-brand-700">
+              Interactive tool · 4 questions
+            </p>
+            <h2 className="mt-1 text-xl font-bold text-slate-900">
+              Which Blox Fruit should I buy?
+            </h2>
+            <p className="mt-1 text-sm text-slate-600">
+              Answer four short questions and we'll recommend the best fruit for your budget, playstyle, and party.
+            </p>
+            <span className="mt-3 inline-block text-sm font-bold text-brand-700 group-hover:underline">
+              Take the quiz →
+            </span>
+          </Link>
+        </section>
+      )}
+
       <section aria-labelledby="latest-heading">
         <SectionHeading
           id="latest-heading"
@@ -451,48 +493,6 @@ export default async function GamePage({ params }: PageProps) {
               </li>
             ))}
           </ul>
-        </section>
-      )}
-
-      {game.slug === 'blox-fruits' && (
-        <section aria-labelledby="tier-cta-heading" className="grid gap-4 sm:grid-cols-2">
-          <Link
-            href="/blox-fruits/tier-list"
-            className="group block rounded-xl border-l-4 border-brand-500 border-y border-r border-y-brand-100 border-r-brand-100 bg-brand-50 p-5 transition hover:bg-brand-100"
-          >
-            <p className="text-xs font-bold uppercase tracking-wider text-brand-700">
-              Editor's pick · Updated weekly
-            </p>
-            <h2
-              id="tier-cta-heading"
-              className="mt-1 text-xl font-bold text-slate-900"
-            >
-              Blox Fruits Tier List ({new Date().getFullYear()})
-            </h2>
-            <p className="mt-1 text-sm text-slate-600">
-              All 25 active fruits ranked across overall, PvP, and grinding — with rationale, pros and cons, and best combos.
-            </p>
-            <span className="mt-3 inline-block text-sm font-bold text-brand-700 group-hover:underline">
-              See the rankings →
-            </span>
-          </Link>
-          <Link
-            href="/blox-fruits/which-fruit"
-            className="group block rounded-xl border-l-4 border-brand-500 border-y border-r border-y-brand-100 border-r-brand-100 bg-brand-50 p-5 transition hover:bg-brand-100"
-          >
-            <p className="text-xs font-bold uppercase tracking-wider text-brand-700">
-              Interactive tool · 4 questions
-            </p>
-            <h2 className="mt-1 text-xl font-bold text-slate-900">
-              Which Blox Fruit should I buy?
-            </h2>
-            <p className="mt-1 text-sm text-slate-600">
-              Answer four short questions and we'll recommend the best fruit for your budget, playstyle, and party.
-            </p>
-            <span className="mt-3 inline-block text-sm font-bold text-brand-700 group-hover:underline">
-              Take the quiz →
-            </span>
-          </Link>
         </section>
       )}
 
