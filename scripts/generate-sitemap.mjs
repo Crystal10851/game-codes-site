@@ -29,6 +29,8 @@ const tierLastmod = new Date(tierList.meta.lastUpdated).toISOString();
 const entries = [
   { url: '/', lastmod: bfLastmod, changefreq: 'daily', priority: '1.0' },
   { url: '/about', lastmod: bfLastmod, changefreq: 'yearly', priority: '0.4' },
+  { url: '/methodology', lastmod: bfLastmod, changefreq: 'monthly', priority: '0.6' },
+  { url: '/changelog', lastmod: bfLastmod, changefreq: 'monthly', priority: '0.5' },
   { url: '/contact', lastmod: bfLastmod, changefreq: 'yearly', priority: '0.4' },
   { url: '/privacy', lastmod: bfLastmod, changefreq: 'yearly', priority: '0.3' },
   { url: '/editors/ben-yu', lastmod: bfLastmod, changefreq: 'monthly', priority: '0.5' },

@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 interface Props {
   gameName: string;
 }
@@ -13,7 +15,14 @@ export function RefreshPromise({ gameName }: Props) {
         <span>
           <strong className="text-slate-900">We refresh this list every Sunday.</strong>{' '}
           New {gameName} codes drop with each major update or partnered livestream —
-          bookmark this page so you don't miss the next one.
+          bookmark this page so you don't miss the next one. See{' '}
+          <Link
+            href="/methodology"
+            className="font-semibold text-brand-700 underline hover:no-underline"
+          >
+            how we verify every code
+          </Link>
+          .
         </span>
       </p>
     </aside>

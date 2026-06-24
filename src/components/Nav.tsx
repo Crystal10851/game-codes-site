@@ -8,6 +8,7 @@ const PRIMARY_LINKS = [
   { href: '/blox-fruits', label: 'Codes hub' },
   { href: '/blox-fruits/tier-list', label: 'Tier list' },
   { href: '/blox-fruits/which-fruit', label: 'Fruit quiz' },
+  { href: '/methodology', label: 'Methodology' },
   { href: '/about', label: 'About' },
 ];
 

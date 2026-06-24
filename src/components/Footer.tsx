@@ -49,6 +49,8 @@ export function Footer() {
               <h3 className="text-xs font-bold uppercase tracking-widest text-white">Site</h3>
               <ul className="mt-3 space-y-1.5 text-sm">
                 <li><Link href="/about" className="text-slate-400 hover:text-white">About</Link></li>
+                <li><Link href="/methodology" className="text-slate-400 hover:text-white">Methodology</Link></li>
+                <li><Link href="/changelog" className="text-slate-400 hover:text-white">Changelog</Link></li>
                 <li><Link href="/editors/ben-yu" className="text-slate-400 hover:text-white">Editor — Ben Yu</Link></li>
                 <li><Link href="/contact" className="text-slate-400 hover:text-white">Contact</Link></li>
                 <li><Link href="/privacy" className="text-slate-400 hover:text-white">Privacy policy</Link></li>
