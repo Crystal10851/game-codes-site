@@ -102,7 +102,7 @@
     },
     {
       "question": "What is the most valuable Blox Fruits code I can redeem right now?",
-      "answer": "For most players the answer is the stat-reset codes — `KITT_RESET` and `Sub2UncleKizaru` — because they save you ~3,000 Robux compared to buying a stat refund from the in-game shop. After those, queue every active 2x XP code back-to-back the next time you grind an awakening; that single chained boost is worth two to three hours of normal grinding."
+      "answer": "For most players the answer is the stat-reset codes — `KITT_RESET` and `Sub2UncleKizaru` — because they save you roughly 150 Robux (75 per code) compared to buying two stat refunds from the in-game shop. After those, queue every active 2x XP code back-to-back the next time you grind an awakening; that single chained boost is worth two to three hours of normal grinding."
     }
   ],
   "codes": [
@@ -185,7 +185,7 @@
       "expiresOn": null,
       "status": "active",
       "notes": "One-time stat refund — useful for build reroll.",
-      "commentary": "The single most valuable code on the active list. A Stat Reset normally costs 2,500,000 Beli at the in-game NPC, or roughly 850 Robux through the premium shop — this code refunds every Melee, Defense, Sword, Gun and Devil Fruit point you have already spent, for free. Best held until you are about to commit to a new awakening or rebuild around a recently-bought Mythical fruit; once redeemed the reset is consumed and there is no taking it back. The most common timing is the moment you finish unlocking Yama or Tushita in the Third Sea, where the optimal sword build has different stat ratios than the early-game grind build."
+      "commentary": "The single most valuable code on the active list. A Stat Reset normally costs 75 Robux or 2,500 Fragments through the in-game shop — this code refunds every Melee, Defense, Sword, Gun and Devil Fruit point you have already spent, for free. Best held until you are about to commit to a new awakening or rebuild around a recently-bought Mythical fruit; once redeemed the reset is consumed and there is no taking it back. The most common timing is the moment you finish unlocking Yama or Tushita in the Third Sea, where the optimal sword build has different stat ratios than the early-game grind build."
     },
     {
       "code": "StrawHatMaine",
@@ -239,7 +239,7 @@
       "expiresOn": null,
       "status": "active",
       "notes": "",
-      "commentary": "Daigrock is a Roblox-creator channel that Gamer Robot has cycled code drops through for multiple update windows. The 15-minute duration rather than 20 reflects the smaller-channel reward tier shared with NoobMaster123, Maine and TantaiGaming. Still useful as chain filler — the Daigrock channel is also one of the more reliable real-time code-drop sources between our weekly refreshes, so if a stream-window code drops mid-week it often surfaces on Daigrock's live chat before it reaches the upstream aggregators. Worth following if you want sub-day code freshness rather than weekly."
+      "commentary": "Daigrock is a Roblox-creator channel that Gamer Robot has cycled code drops through for multiple update windows. The 15-minute duration rather than 20 is shared with the Sub2NoobMaster123, StrawHatMaine and TantaiGaming subset of partnered-creator codes. Still useful as chain filler — the Daigrock channel is also one of the more reliable real-time code-drop sources between our weekly refreshes, so if a stream-window code drops mid-week it often surfaces on Daigrock's live chat before it reaches the upstream aggregators. Worth following if you want sub-day code freshness rather than weekly."
     },
     {
       "code": "Axiore",
@@ -257,7 +257,7 @@
       "expiresOn": null,
       "status": "active",
       "notes": "",
-      "commentary": "NoobMaster123 is one of the smaller-channel partnered creators, which is why this code drops at the 15-minute boost tier rather than the 20-minute tier reserved for the larger channels. The numerical 123 is part of the string — leaving it off will fail the redemption check even if the Sub2NoobMaster prefix is exactly right. Most useful in a multi-creator boost chain rather than as a one-off, since 15 minutes alone is not enough to clear a full mid-game grind objective; pair it with at least one of the 20-minute codes (Bluxxy, JCWK, Axiore) to land in the practical 35-minute-plus chain range."
+      "commentary": "NoobMaster123 drops at the 15-minute boost tier, one of four active codes at this duration alongside Sub2Daigrock, StrawHatMaine and TantaiGaming. The numerical 123 is part of the string — leaving it off will fail the redemption check even if the Sub2NoobMaster prefix is exactly right. Most useful in a multi-creator boost chain rather than as a one-off, since 15 minutes alone is not enough to clear a full mid-game grind objective; pair it with at least one of the 20-minute codes (Bluxxy, JCWK, Axiore) to land in the practical 35-minute-plus chain range."
     },
     {
       "code": "TantaiGaming",
@@ -266,7 +266,7 @@
       "expiresOn": null,
       "status": "active",
       "notes": "",
-      "commentary": "TantaiGaming is one of the partnered creators in the Asian-Pacific stream rotation. The 15-minute window is consistent with the smaller-channel reward tier shared with Daigrock, NoobMaster123 and Maine. The CamelCase pattern (T-G both capitalised) is the standard partnered-code convention; copy rather than type. This code has stayed on the active list across more than a year of weekly cross-checks, so it pairs cleanly with the other 15-minute creator codes into 30- and 45-minute blocks for an evening grind session, which is the most common reason to chain shorter codes together at all."
+      "commentary": "TantaiGaming is the Vietnamese YouTube channel Tấn Tài Gaming, one of the Southeast Asian partnered creators. The 15-minute window is shared with the Sub2Daigrock, Sub2NoobMaster123 and StrawHatMaine subset of partnered-creator codes. The CamelCase pattern (T-G both capitalised) is the standard partnered-code convention; copy rather than type. This code has stayed on the active list across more than a year of weekly cross-checks, so it pairs cleanly with the other 15-minute creator codes into 30- and 45-minute blocks for an evening grind session, which is the most common reason to chain shorter codes together at all."
     },
     {
       "code": "Fudd10",
